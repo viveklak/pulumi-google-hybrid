@@ -2365,163 +2365,6 @@ const (
 	TransferJobStatusDeleted = TransferJobStatus("DELETED")
 )
 
-func (TransferJobStatus) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransferJobStatus)(nil)).Elem()
-}
-
-func (e TransferJobStatus) ToTransferJobStatusOutput() TransferJobStatusOutput {
-	return pulumi.ToOutput(e).(TransferJobStatusOutput)
-}
-
-func (e TransferJobStatus) ToTransferJobStatusOutputWithContext(ctx context.Context) TransferJobStatusOutput {
-	return pulumi.ToOutputWithContext(ctx, e).(TransferJobStatusOutput)
-}
-
-func (e TransferJobStatus) ToTransferJobStatusPtrOutput() TransferJobStatusPtrOutput {
-	return e.ToTransferJobStatusPtrOutputWithContext(context.Background())
-}
-
-func (e TransferJobStatus) ToTransferJobStatusPtrOutputWithContext(ctx context.Context) TransferJobStatusPtrOutput {
-	return TransferJobStatus(e).ToTransferJobStatusOutputWithContext(ctx).ToTransferJobStatusPtrOutputWithContext(ctx)
-}
-
-func (e TransferJobStatus) ToStringOutput() pulumi.StringOutput {
-	return pulumi.ToOutput(pulumi.String(e)).(pulumi.StringOutput)
-}
-
-func (e TransferJobStatus) ToStringOutputWithContext(ctx context.Context) pulumi.StringOutput {
-	return pulumi.ToOutputWithContext(ctx, pulumi.String(e)).(pulumi.StringOutput)
-}
-
-func (e TransferJobStatus) ToStringPtrOutput() pulumi.StringPtrOutput {
-	return pulumi.String(e).ToStringPtrOutputWithContext(context.Background())
-}
-
-func (e TransferJobStatus) ToStringPtrOutputWithContext(ctx context.Context) pulumi.StringPtrOutput {
-	return pulumi.String(e).ToStringOutputWithContext(ctx).ToStringPtrOutputWithContext(ctx)
-}
-
-type TransferJobStatusOutput struct{ *pulumi.OutputState }
-
-func (TransferJobStatusOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*TransferJobStatus)(nil)).Elem()
-}
-
-func (o TransferJobStatusOutput) ToTransferJobStatusOutput() TransferJobStatusOutput {
-	return o
-}
-
-func (o TransferJobStatusOutput) ToTransferJobStatusOutputWithContext(ctx context.Context) TransferJobStatusOutput {
-	return o
-}
-
-func (o TransferJobStatusOutput) ToTransferJobStatusPtrOutput() TransferJobStatusPtrOutput {
-	return o.ToTransferJobStatusPtrOutputWithContext(context.Background())
-}
-
-func (o TransferJobStatusOutput) ToTransferJobStatusPtrOutputWithContext(ctx context.Context) TransferJobStatusPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v TransferJobStatus) *TransferJobStatus {
-		return &v
-	}).(TransferJobStatusPtrOutput)
-}
-
-func (o TransferJobStatusOutput) ToStringOutput() pulumi.StringOutput {
-	return o.ToStringOutputWithContext(context.Background())
-}
-
-func (o TransferJobStatusOutput) ToStringOutputWithContext(ctx context.Context) pulumi.StringOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, e TransferJobStatus) string {
-		return string(e)
-	}).(pulumi.StringOutput)
-}
-
-func (o TransferJobStatusOutput) ToStringPtrOutput() pulumi.StringPtrOutput {
-	return o.ToStringPtrOutputWithContext(context.Background())
-}
-
-func (o TransferJobStatusOutput) ToStringPtrOutputWithContext(ctx context.Context) pulumi.StringPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, e TransferJobStatus) *string {
-		v := string(e)
-		return &v
-	}).(pulumi.StringPtrOutput)
-}
-
-type TransferJobStatusPtrOutput struct{ *pulumi.OutputState }
-
-func (TransferJobStatusPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**TransferJobStatus)(nil)).Elem()
-}
-
-func (o TransferJobStatusPtrOutput) ToTransferJobStatusPtrOutput() TransferJobStatusPtrOutput {
-	return o
-}
-
-func (o TransferJobStatusPtrOutput) ToTransferJobStatusPtrOutputWithContext(ctx context.Context) TransferJobStatusPtrOutput {
-	return o
-}
-
-func (o TransferJobStatusPtrOutput) Elem() TransferJobStatusOutput {
-	return o.ApplyT(func(v *TransferJobStatus) TransferJobStatus {
-		if v != nil {
-			return *v
-		}
-		var ret TransferJobStatus
-		return ret
-	}).(TransferJobStatusOutput)
-}
-
-func (o TransferJobStatusPtrOutput) ToStringPtrOutput() pulumi.StringPtrOutput {
-	return o.ToStringPtrOutputWithContext(context.Background())
-}
-
-func (o TransferJobStatusPtrOutput) ToStringPtrOutputWithContext(ctx context.Context) pulumi.StringPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, e *TransferJobStatus) *string {
-		if e == nil {
-			return nil
-		}
-		v := string(*e)
-		return &v
-	}).(pulumi.StringPtrOutput)
-}
-
-// TransferJobStatusInput is an input type that accepts TransferJobStatusArgs and TransferJobStatusOutput values.
-// You can construct a concrete instance of `TransferJobStatusInput` via:
-//
-//          TransferJobStatusArgs{...}
-type TransferJobStatusInput interface {
-	pulumi.Input
-
-	ToTransferJobStatusOutput() TransferJobStatusOutput
-	ToTransferJobStatusOutputWithContext(context.Context) TransferJobStatusOutput
-}
-
-var transferJobStatusPtrType = reflect.TypeOf((**TransferJobStatus)(nil)).Elem()
-
-type TransferJobStatusPtrInput interface {
-	pulumi.Input
-
-	ToTransferJobStatusPtrOutput() TransferJobStatusPtrOutput
-	ToTransferJobStatusPtrOutputWithContext(context.Context) TransferJobStatusPtrOutput
-}
-
-type transferJobStatusPtr string
-
-func TransferJobStatusPtr(v string) TransferJobStatusPtrInput {
-	return (*transferJobStatusPtr)(&v)
-}
-
-func (*transferJobStatusPtr) ElementType() reflect.Type {
-	return transferJobStatusPtrType
-}
-
-func (in *transferJobStatusPtr) ToTransferJobStatusPtrOutput() TransferJobStatusPtrOutput {
-	return pulumi.ToOutput(in).(TransferJobStatusPtrOutput)
-}
-
-func (in *transferJobStatusPtr) ToTransferJobStatusPtrOutputWithContext(ctx context.Context) TransferJobStatusPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, in).(TransferJobStatusPtrOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*LoggingConfigLogActionStatesItemInput)(nil)).Elem(), LoggingConfigLogActionStatesItem("LOGGABLE_ACTION_STATE_UNSPECIFIED"))
 	pulumi.RegisterInputType(reflect.TypeOf((*LoggingConfigLogActionStatesItemPtrInput)(nil)).Elem(), LoggingConfigLogActionStatesItem("LOGGABLE_ACTION_STATE_UNSPECIFIED"))
@@ -2552,8 +2395,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*NotificationConfigEventTypesItemArrayInput)(nil)).Elem(), NotificationConfigEventTypesItemArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*NotificationConfigPayloadFormatInput)(nil)).Elem(), NotificationConfigPayloadFormat("PAYLOAD_FORMAT_UNSPECIFIED"))
 	pulumi.RegisterInputType(reflect.TypeOf((*NotificationConfigPayloadFormatPtrInput)(nil)).Elem(), NotificationConfigPayloadFormat("PAYLOAD_FORMAT_UNSPECIFIED"))
-	pulumi.RegisterInputType(reflect.TypeOf((*TransferJobStatusInput)(nil)).Elem(), TransferJobStatus("STATUS_UNSPECIFIED"))
-	pulumi.RegisterInputType(reflect.TypeOf((*TransferJobStatusPtrInput)(nil)).Elem(), TransferJobStatus("STATUS_UNSPECIFIED"))
 	pulumi.RegisterOutputType(LoggingConfigLogActionStatesItemOutput{})
 	pulumi.RegisterOutputType(LoggingConfigLogActionStatesItemPtrOutput{})
 	pulumi.RegisterOutputType(LoggingConfigLogActionStatesItemArrayOutput{})
@@ -2583,6 +2424,4 @@ func init() {
 	pulumi.RegisterOutputType(NotificationConfigEventTypesItemArrayOutput{})
 	pulumi.RegisterOutputType(NotificationConfigPayloadFormatOutput{})
 	pulumi.RegisterOutputType(NotificationConfigPayloadFormatPtrOutput{})
-	pulumi.RegisterOutputType(TransferJobStatusOutput{})
-	pulumi.RegisterOutputType(TransferJobStatusPtrOutput{})
 }
