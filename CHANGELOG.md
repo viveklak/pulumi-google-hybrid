@@ -2,6 +2,9 @@ CHANGELOG
 =========
 
 ## HEAD (Unreleased)
+Bug fixes:
+
+- Add custom retry logic for cloud run [#411](https://github.com/pulumi/pulumi-google-native/pull/411)
 
 ## 0.17.1 (2022-03-17)
 Bug fixes:
