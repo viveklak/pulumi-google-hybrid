@@ -20,6 +20,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	"log"
 	"net/http"
 	"os"
@@ -33,10 +34,10 @@ import (
 	"github.com/iancoleman/strcase"
 	"github.com/jpillora/backoff"
 	"github.com/pkg/errors"
-	"github.com/pulumi/pulumi-google-native/provider/pkg/gen"
-	"github.com/pulumi/pulumi-google-native/provider/pkg/googleclient"
-	"github.com/pulumi/pulumi-google-native/provider/pkg/resources"
-	"github.com/pulumi/pulumi-google-native/provider/pkg/version"
+	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/gen"
+	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/googleclient"
+	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/resources"
+	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/version"
 	"github.com/pulumi/pulumi/pkg/v3/resource/provider"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/diag"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
@@ -61,14 +62,8 @@ type googleCloudProvider struct {
 }
 
 func makeProvider(host *provider.HostClient, name, version string, schemaBytes []byte,
-	cloudAPIResourcesBytes []byte) (rpc.ResourceProviderServer, error) {
-	resourceMap, err := loadMetadata(cloudAPIResourcesBytes)
-	if err != nil {
-		return nil, err
-	}
-
-	// Return the new provider
-	return &googleCloudProvider{
+	resourceMap *resources.CloudAPIMetadata) (rpc.ResourceProviderServer, error) {
+	nativeProvider := &googleCloudProvider{
 		host:        host,
 		name:        name,
 		version:     version,
@@ -76,6 +71,16 @@ func makeProvider(host *provider.HostClient, name, version string, schemaBytes [
 		schemaBytes: schemaBytes,
 		resourceMap: resourceMap,
 		converter:   &resources.SdkShapeConverter{Types: resourceMap.Types},
+	}
+
+	prov := Provider()
+	bridgedProvider := tfbridge.NewProvider(context.Background(), host, name, version, prov.P, prov, schemaBytes)
+	return &demuxProvider{
+		schemaBytes:            schemaBytes,
+		version:                version,
+		metadata:               resourceMap,
+		bridgedProvider:        bridgedProvider,
+		nativeProvider:         nativeProvider,
 	}, nil
 }
 
@@ -100,7 +105,7 @@ func loadMetadata(metadataBytes []byte) (*resources.CloudAPIMetadata, error) {
 func (p *googleCloudProvider) Configure(ctx context.Context,
 	req *rpc.ConfigureRequest) (*rpc.ConfigureResponse, error) {
 	for key, val := range req.GetVariables() {
-		p.config[strings.TrimPrefix(key, "google-native:config:")] = val
+		p.config[strings.TrimPrefix(key, "google-hybrid:config:")] = val
 	}
 
 	p.setLoggingContext(ctx)
@@ -263,7 +268,7 @@ func (p *googleCloudProvider) Check(_ context.Context, req *rpc.CheckRequest) (*
 			} else {
 				reason := fmt.Sprintf(
 					"missing required property '%s'. Either set it explicitly or configure it with "+
-						"'pulumi config set google-native:%s <value>'.", sdkName, configName)
+						"'pulumi config set google-hybrid:%s <value>'.", sdkName, configName)
 				failures = append(failures, &rpc.CheckFailure{
 					Reason: reason,
 				})
@@ -791,7 +796,7 @@ func (p *googleCloudProvider) Delete(_ context.Context, req *rpc.DeleteRequest) 
 	inputs := parseCheckpointObject(oldState)
 
 	// Look up operation functions by resourceKey
-	// Example: google-native:storage/v1:Bucket
+	// Example: google-hybrid:storage/v1:Bucket
 	// If defined, run that function instead of a single HTTP call
 	if f, ok := ResourceDeleteOverrides[resourceKey]; ok {
 		err := f(p, res, inputs.Mappable(), oldState.Mappable())

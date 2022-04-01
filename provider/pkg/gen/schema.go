@@ -26,7 +26,7 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"github.com/pulumi/pulumi-google-native/provider/pkg/resources"
+	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/resources"
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
@@ -34,13 +34,13 @@ import (
 )
 
 // Note - this needs to be kept in sync with the layout in the SDK package
-const goBasePath = "github.com/pulumi/pulumi-google-native/sdk/go/google"
+const goBasePath = "github.com/pulumi/pulumi-google-hybrid/sdk/go/google"
 
 // PulumiSchema will generate a Pulumi schema for the given Google Cloud discovery documents.
 func PulumiSchema() (*schema.PackageSpec, *resources.CloudAPIMetadata, error) {
 	pkg := schema.PackageSpec{
-		Name:        "google-native",
-		DisplayName: "Google Cloud Native",
+		Name:        "google-hybrid",
+		DisplayName: "Google Cloud Hybrid Provider",
 		Description: "A native Pulumi package for creating and managing Google Cloud resources.",
 		License:     "Apache-2.0",
 		Keywords:    []string{"pulumi", "google cloud", "category/cloud", "kind/native"},
@@ -172,7 +172,7 @@ func PulumiSchema() (*schema.PackageSpec, *resources.CloudAPIMetadata, error) {
 	}
 
 	csharpNamespaces := map[string]string{
-		"google-native": "GoogleNative",
+		"google-hybrid": "GoogleHybrid",
 	}
 	pythonModuleNames := map[string]string{}
 	golangImportAliases := map[string]string{}
@@ -641,7 +641,7 @@ func (g *packageGenerator) genResource(typeName string, dd discoveryDocumentReso
 		if err == nil {
 			requiredInputProperties.Delete("name")
 			resourceMeta.Create.Autoname.FieldName = namePattern
-		} else if name, ok := autonameOverrides[fmt.Sprintf("google-native:%s:%s", g.mod, typeName)]; ok {
+		} else if name, ok := autonameOverrides[fmt.Sprintf("google-hybrid:%s:%s", g.mod, typeName)]; ok {
 			requiredInputProperties.Delete(name)
 			resourceMeta.Create.Autoname.FieldName = fmt.Sprintf("%s", name)
 		} else {

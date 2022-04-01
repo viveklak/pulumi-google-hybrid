@@ -1,8 +1,8 @@
 PROJECT_NAME := Pulumi Native Google Cloud Resource Provider
 
-PACK            := google-native
+PACK            := google-hybrid
 PACKDIR         := sdk
-PROJECT         := github.com/pulumi/pulumi-google-native
+PROJECT         := github.com/pulumi/pulumi-google-hybrid
 PROVIDER        := pulumi-resource-${PACK}
 CODEGEN         := pulumi-gen-${PACK}
 VERSION         := $(shell pulumictl get version)
@@ -79,7 +79,7 @@ generate_go::
 	$(WORKING_DIR)/bin/$(CODEGEN) go ${VERSION}
 
 build_go::
-	cd sdk/ && go build github.com/pulumi/pulumi-google-native/sdk/go/google/...
+	cd sdk/ && go build github.com/pulumi/pulumi-google-hybrid/sdk/go/google/...
 
 clean::
 	rm -rf sdk/nodejs && mkdir sdk/nodejs && echo "module fake_nodejs_module // Exclude this directory from Go tools\n\ngo 1.16" > 'sdk/nodejs/go.mod'

@@ -17,7 +17,7 @@ package provider
 import (
 	"context"
 
-	"github.com/pulumi/pulumi-google-native/provider/pkg/resources"
+	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/resources"
 	"google.golang.org/api/cloudkms/v1"
 	"google.golang.org/api/option"
 )
@@ -27,7 +27,7 @@ var ResourceDeleteOverrides = map[string]func(
 	res resources.CloudAPIResource,
 	inputs, outputs map[string]interface{},
 ) error{
-	"google-native:cloudkms/v1:CryptoKey": func(
+	"google-hybrid:cloudkms/v1:CryptoKey": func(
 		providerInstance *googleCloudProvider,
 		res resources.CloudAPIResource,
 		inputs, outputs map[string]interface{},
