@@ -19,6 +19,13 @@ import (
 	"compress/gzip"
 	"encoding/json"
 	"fmt"
+	"github.com/imdario/mergo"
+	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/provider"
+	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/version"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/diag"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/spf13/afero"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -45,15 +52,45 @@ import (
 func main() {
 	languages := os.Args[1]
 
+	tfgen.Main("google-hybrid", version.Version, provider.Provider())
+	diagOpts := diag.FormatOptions{
+		Color: cmdutil.GetGlobalColorization(),
+		Debug: true,
+	}
+	cmdutil.InitDiag(diagOpts)
+	sink := cmdutil.Diag()
+
+	fs := afero.NewMemMapFs()
+	generator, err := tfgen.NewGenerator(tfgen.GeneratorOptions{
+		Package:      "google-hybrid",
+		Version:      version.Version,
+		Language:     tfgen.Schema,
+		ProviderInfo: provider.Provider(),
+		Root:         fs,
+		SkipDocs:     true,
+		SkipExamples: true,
+		Sink:         sink,
+	})
+	contract.AssertNoError(err)
+	contract.AssertNoError(generator.Generate())
+
+	f, err := fs.Open("schema.json")
+	contract.AssertNoError(err)
+	defer contract.IgnoreClose(f)
+	pkgSpec := &schema.PackageSpec{}
+	contract.AssertNoError(json.NewDecoder(f).Decode(&pkgSpec))
+
 	version := ""
 	if len(os.Args) == 3 {
 		version = os.Args[2]
 	}
 
-	pkgSpec, meta, err := gen.PulumiSchema()
+	nativeSpec, meta, err := gen.PulumiSchema()
 	if err != nil {
 		panic(err)
 	}
+
+	contract.AssertNoError(mergo.Merge(pkgSpec, nativeSpec, mergo.WithAppendSlice))
 
 	for _, language := range strings.Split(languages, ",") {
 		switch language {
