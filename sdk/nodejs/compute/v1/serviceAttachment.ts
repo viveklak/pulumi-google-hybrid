@@ -22,7 +22,7 @@ export class ServiceAttachment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/v1:ServiceAttachment';
+    public static readonly __pulumiType = 'google-hybrid:compute/v1:ServiceAttachment';
 
     /**
      * Returns true if the given object is an instance of ServiceAttachment.  This is designed to work even

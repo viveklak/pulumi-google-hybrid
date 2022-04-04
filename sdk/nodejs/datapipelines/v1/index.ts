@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:datapipelines/v1:Pipeline":
+            case "google-hybrid:datapipelines/v1:Pipeline":
                 return new Pipeline(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "datapipelines/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "datapipelines/v1", _module)

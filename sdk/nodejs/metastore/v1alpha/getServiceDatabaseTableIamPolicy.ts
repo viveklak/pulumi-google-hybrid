@@ -14,7 +14,7 @@ export function getServiceDatabaseTableIamPolicy(args: GetServiceDatabaseTableIa
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:metastore/v1alpha:getServiceDatabaseTableIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:metastore/v1alpha:getServiceDatabaseTableIamPolicy", {
         "databaseId": args.databaseId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

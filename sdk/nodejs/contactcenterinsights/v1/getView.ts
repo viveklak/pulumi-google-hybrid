@@ -13,7 +13,7 @@ export function getView(args: GetViewArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:contactcenterinsights/v1:getView", {
+    return pulumi.runtime.invoke("google-hybrid:contactcenterinsights/v1:getView", {
         "location": args.location,
         "project": args.project,
         "viewId": args.viewId,

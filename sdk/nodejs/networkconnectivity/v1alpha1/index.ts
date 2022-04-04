@@ -30,19 +30,19 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:networkconnectivity/v1alpha1:Hub":
+            case "google-hybrid:networkconnectivity/v1alpha1:Hub":
                 return new Hub(name, <any>undefined, { urn })
-            case "google-native:networkconnectivity/v1alpha1:HubIamPolicy":
+            case "google-hybrid:networkconnectivity/v1alpha1:HubIamPolicy":
                 return new HubIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkconnectivity/v1alpha1:InternalRangeIamPolicy":
+            case "google-hybrid:networkconnectivity/v1alpha1:InternalRangeIamPolicy":
                 return new InternalRangeIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkconnectivity/v1alpha1:Spoke":
+            case "google-hybrid:networkconnectivity/v1alpha1:Spoke":
                 return new Spoke(name, <any>undefined, { urn })
-            case "google-native:networkconnectivity/v1alpha1:SpokeIamPolicy":
+            case "google-hybrid:networkconnectivity/v1alpha1:SpokeIamPolicy":
                 return new SpokeIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "networkconnectivity/v1alpha1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "networkconnectivity/v1alpha1", _module)

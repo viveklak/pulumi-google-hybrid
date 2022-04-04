@@ -14,7 +14,7 @@ export function getInstanceClusterBackupIamPolicy(args: GetInstanceClusterBackup
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigtableadmin/v2:getInstanceClusterBackupIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:bigtableadmin/v2:getInstanceClusterBackupIamPolicy", {
         "backupId": args.backupId,
         "clusterId": args.clusterId,
         "instanceId": args.instanceId,

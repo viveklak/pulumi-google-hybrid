@@ -14,7 +14,7 @@ export function getIndex(args: GetIndexArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:firestore/v1:getIndex", {
+    return pulumi.runtime.invoke("google-hybrid:firestore/v1:getIndex", {
         "collectionGroupId": args.collectionGroupId,
         "databaseId": args.databaseId,
         "indexId": args.indexId,

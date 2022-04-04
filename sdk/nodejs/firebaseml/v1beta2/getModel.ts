@@ -14,7 +14,7 @@ export function getModel(args: GetModelArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:firebaseml/v1beta2:getModel", {
+    return pulumi.runtime.invoke("google-hybrid:firebaseml/v1beta2:getModel", {
         "modelId": args.modelId,
         "project": args.project,
     }, opts);

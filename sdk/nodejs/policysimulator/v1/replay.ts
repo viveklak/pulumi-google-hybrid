@@ -25,7 +25,7 @@ export class Replay extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:policysimulator/v1:Replay';
+    public static readonly __pulumiType = 'google-hybrid:policysimulator/v1:Replay';
 
     /**
      * Returns true if the given object is an instance of Replay.  This is designed to work even

@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:accesscontextmanager/v1beta:AccessLevel":
+            case "google-hybrid:accesscontextmanager/v1beta:AccessLevel":
                 return new AccessLevel(name, <any>undefined, { urn })
-            case "google-native:accesscontextmanager/v1beta:AccessPolicy":
+            case "google-hybrid:accesscontextmanager/v1beta:AccessPolicy":
                 return new AccessPolicy(name, <any>undefined, { urn })
-            case "google-native:accesscontextmanager/v1beta:ServicePerimeter":
+            case "google-hybrid:accesscontextmanager/v1beta:ServicePerimeter":
                 return new ServicePerimeter(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "accesscontextmanager/v1beta", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "accesscontextmanager/v1beta", _module)

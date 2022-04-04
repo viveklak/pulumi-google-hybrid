@@ -14,7 +14,7 @@ export function getAccessLevel(args: GetAccessLevelArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:accesscontextmanager/v1beta:getAccessLevel", {
+    return pulumi.runtime.invoke("google-hybrid:accesscontextmanager/v1beta:getAccessLevel", {
         "accessLevelFormat": args.accessLevelFormat,
         "accessLevelId": args.accessLevelId,
         "accessPolicyId": args.accessPolicyId,

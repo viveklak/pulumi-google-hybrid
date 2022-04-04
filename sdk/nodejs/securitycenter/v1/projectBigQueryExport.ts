@@ -22,7 +22,7 @@ export class ProjectBigQueryExport extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:securitycenter/v1:ProjectBigQueryExport';
+    public static readonly __pulumiType = 'google-hybrid:securitycenter/v1:ProjectBigQueryExport';
 
     /**
      * Returns true if the given object is an instance of ProjectBigQueryExport.  This is designed to work even

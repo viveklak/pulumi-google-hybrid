@@ -13,7 +13,7 @@ export function getDataCollector(args: GetDataCollectorArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getDataCollector", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getDataCollector", {
         "datacollectorId": args.datacollectorId,
         "organizationId": args.organizationId,
     }, opts);

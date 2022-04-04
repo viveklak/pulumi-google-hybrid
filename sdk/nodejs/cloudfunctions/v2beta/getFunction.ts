@@ -14,7 +14,7 @@ export function getFunction(args: GetFunctionArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudfunctions/v2beta:getFunction", {
+    return pulumi.runtime.invoke("google-hybrid:cloudfunctions/v2beta:getFunction", {
         "functionId": args.functionId,
         "location": args.location,
         "project": args.project,

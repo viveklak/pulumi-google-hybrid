@@ -14,7 +14,7 @@ export function getSslPolicy(args: GetSslPolicyArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getSslPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getSslPolicy", {
         "project": args.project,
         "sslPolicy": args.sslPolicy,
     }, opts);

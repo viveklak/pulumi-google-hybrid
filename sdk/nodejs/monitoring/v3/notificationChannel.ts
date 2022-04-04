@@ -22,7 +22,7 @@ export class NotificationChannel extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:monitoring/v3:NotificationChannel';
+    public static readonly __pulumiType = 'google-hybrid:monitoring/v3:NotificationChannel';
 
     /**
      * Returns true if the given object is an instance of NotificationChannel.  This is designed to work even

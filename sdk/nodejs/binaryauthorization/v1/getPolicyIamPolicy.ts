@@ -15,7 +15,7 @@ export function getPolicyIamPolicy(args?: GetPolicyIamPolicyArgs, opts?: pulumi.
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:binaryauthorization/v1:getPolicyIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:binaryauthorization/v1:getPolicyIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
     }, opts);

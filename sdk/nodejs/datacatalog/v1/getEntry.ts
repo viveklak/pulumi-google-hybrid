@@ -14,7 +14,7 @@ export function getEntry(args: GetEntryArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datacatalog/v1:getEntry", {
+    return pulumi.runtime.invoke("google-hybrid:datacatalog/v1:getEntry", {
         "entryGroupId": args.entryGroupId,
         "entryId": args.entryId,
         "location": args.location,

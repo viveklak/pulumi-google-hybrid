@@ -13,7 +13,7 @@ export function getConsentStore(args: GetConsentStoreArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1beta1:getConsentStore", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1beta1:getConsentStore", {
         "consentStoreId": args.consentStoreId,
         "datasetId": args.datasetId,
         "location": args.location,

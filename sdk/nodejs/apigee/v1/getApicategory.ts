@@ -14,7 +14,7 @@ export function getApicategory(args: GetApicategoryArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getApicategory", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getApicategory", {
         "apicategoryId": args.apicategoryId,
         "organizationId": args.organizationId,
         "siteId": args.siteId,

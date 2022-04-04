@@ -14,7 +14,7 @@ export function getRegionDisk(args: GetRegionDiskArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getRegionDisk", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getRegionDisk", {
         "disk": args.disk,
         "project": args.project,
         "region": args.region,

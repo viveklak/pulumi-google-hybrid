@@ -22,7 +22,7 @@ export class Task extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudtasks/v2beta2:Task';
+    public static readonly __pulumiType = 'google-hybrid:cloudtasks/v2beta2:Task';
 
     /**
      * Returns true if the given object is an instance of Task.  This is designed to work even

@@ -14,7 +14,7 @@ export function getRuntime(args: GetRuntimeArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:notebooks/v1:getRuntime", {
+    return pulumi.runtime.invoke("google-hybrid:notebooks/v1:getRuntime", {
         "location": args.location,
         "project": args.project,
         "runtimeId": args.runtimeId,

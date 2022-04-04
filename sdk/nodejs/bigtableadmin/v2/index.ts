@@ -39,25 +39,25 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:bigtableadmin/v2:AppProfile":
+            case "google-hybrid:bigtableadmin/v2:AppProfile":
                 return new AppProfile(name, <any>undefined, { urn })
-            case "google-native:bigtableadmin/v2:Backup":
+            case "google-hybrid:bigtableadmin/v2:Backup":
                 return new Backup(name, <any>undefined, { urn })
-            case "google-native:bigtableadmin/v2:Cluster":
+            case "google-hybrid:bigtableadmin/v2:Cluster":
                 return new Cluster(name, <any>undefined, { urn })
-            case "google-native:bigtableadmin/v2:Instance":
+            case "google-hybrid:bigtableadmin/v2:Instance":
                 return new Instance(name, <any>undefined, { urn })
-            case "google-native:bigtableadmin/v2:InstanceClusterBackupIamPolicy":
+            case "google-hybrid:bigtableadmin/v2:InstanceClusterBackupIamPolicy":
                 return new InstanceClusterBackupIamPolicy(name, <any>undefined, { urn })
-            case "google-native:bigtableadmin/v2:InstanceIamPolicy":
+            case "google-hybrid:bigtableadmin/v2:InstanceIamPolicy":
                 return new InstanceIamPolicy(name, <any>undefined, { urn })
-            case "google-native:bigtableadmin/v2:InstanceTableIamPolicy":
+            case "google-hybrid:bigtableadmin/v2:InstanceTableIamPolicy":
                 return new InstanceTableIamPolicy(name, <any>undefined, { urn })
-            case "google-native:bigtableadmin/v2:Table":
+            case "google-hybrid:bigtableadmin/v2:Table":
                 return new Table(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "bigtableadmin/v2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "bigtableadmin/v2", _module)

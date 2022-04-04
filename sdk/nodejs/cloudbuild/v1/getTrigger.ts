@@ -14,7 +14,7 @@ export function getTrigger(args: GetTriggerArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudbuild/v1:getTrigger", {
+    return pulumi.runtime.invoke("google-hybrid:cloudbuild/v1:getTrigger", {
         "location": args.location,
         "project": args.project,
         "projectId": args.projectId,

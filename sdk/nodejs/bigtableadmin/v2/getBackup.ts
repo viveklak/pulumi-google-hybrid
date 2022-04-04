@@ -14,7 +14,7 @@ export function getBackup(args: GetBackupArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigtableadmin/v2:getBackup", {
+    return pulumi.runtime.invoke("google-hybrid:bigtableadmin/v2:getBackup", {
         "backupId": args.backupId,
         "clusterId": args.clusterId,
         "instanceId": args.instanceId,

@@ -14,7 +14,7 @@ export function getConversation(args: GetConversationArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:contactcenterinsights/v1:getConversation", {
+    return pulumi.runtime.invoke("google-hybrid:contactcenterinsights/v1:getConversation", {
         "conversationId": args.conversationId,
         "location": args.location,
         "project": args.project,

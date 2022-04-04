@@ -13,7 +13,7 @@ export function getPeering(args: GetPeeringArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:managedidentities/v1:getPeering", {
+    return pulumi.runtime.invoke("google-hybrid:managedidentities/v1:getPeering", {
         "peeringId": args.peeringId,
         "project": args.project,
     }, opts);

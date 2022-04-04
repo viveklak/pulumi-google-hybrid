@@ -14,7 +14,7 @@ export function getTable(args: GetTableArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigquery/v2:getTable", {
+    return pulumi.runtime.invoke("google-hybrid:bigquery/v2:getTable", {
         "datasetId": args.datasetId,
         "project": args.project,
         "selectedFields": args.selectedFields,

@@ -13,7 +13,7 @@ export function getHmacKey(args: GetHmacKeyArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:storage/v1:getHmacKey", {
+    return pulumi.runtime.invoke("google-hybrid:storage/v1:getHmacKey", {
         "accessId": args.accessId,
         "project": args.project,
         "userProject": args.userProject,

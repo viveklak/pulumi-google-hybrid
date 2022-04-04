@@ -22,7 +22,7 @@ export class Model extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:ml/v1:Model';
+    public static readonly __pulumiType = 'google-hybrid:ml/v1:Model';
 
     /**
      * Returns true if the given object is an instance of Model.  This is designed to work even

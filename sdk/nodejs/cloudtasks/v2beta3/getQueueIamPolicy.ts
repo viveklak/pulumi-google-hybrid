@@ -14,7 +14,7 @@ export function getQueueIamPolicy(args: GetQueueIamPolicyArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudtasks/v2beta3:getQueueIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:cloudtasks/v2beta3:getQueueIamPolicy", {
         "location": args.location,
         "project": args.project,
         "queueId": args.queueId,

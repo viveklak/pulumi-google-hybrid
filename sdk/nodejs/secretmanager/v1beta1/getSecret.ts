@@ -14,7 +14,7 @@ export function getSecret(args: GetSecretArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:secretmanager/v1beta1:getSecret", {
+    return pulumi.runtime.invoke("google-hybrid:secretmanager/v1beta1:getSecret", {
         "project": args.project,
         "secretId": args.secretId,
     }, opts);

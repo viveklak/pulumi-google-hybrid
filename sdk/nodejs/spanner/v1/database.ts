@@ -23,7 +23,7 @@ export class Database extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:spanner/v1:Database';
+    public static readonly __pulumiType = 'google-hybrid:spanner/v1:Database';
 
     /**
      * Returns true if the given object is an instance of Database.  This is designed to work even

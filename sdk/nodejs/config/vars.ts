@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "../utilities";
 
 declare var exports: any;
-const __config = new pulumi.Config("google-native");
+const __config = new pulumi.Config("google-hybrid");
 
 /**
  * Additional user-agent string to append to the default one (<prod_name>/<ver>).

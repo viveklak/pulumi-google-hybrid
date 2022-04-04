@@ -14,7 +14,7 @@ export function getEntitlement(args: GetEntitlementArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudchannel/v1:getEntitlement", {
+    return pulumi.runtime.invoke("google-hybrid:cloudchannel/v1:getEntitlement", {
         "accountId": args.accountId,
         "customerId": args.customerId,
         "entitlementId": args.entitlementId,

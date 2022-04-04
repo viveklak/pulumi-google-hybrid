@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:baremetalsolution/v2:ProvisioningConfig":
+            case "google-hybrid:baremetalsolution/v2:ProvisioningConfig":
                 return new ProvisioningConfig(name, <any>undefined, { urn })
-            case "google-native:baremetalsolution/v2:Snapshot":
+            case "google-hybrid:baremetalsolution/v2:Snapshot":
                 return new Snapshot(name, <any>undefined, { urn })
-            case "google-native:baremetalsolution/v2:SnapshotSchedulePolicy":
+            case "google-hybrid:baremetalsolution/v2:SnapshotSchedulePolicy":
                 return new SnapshotSchedulePolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "baremetalsolution/v2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "baremetalsolution/v2", _module)

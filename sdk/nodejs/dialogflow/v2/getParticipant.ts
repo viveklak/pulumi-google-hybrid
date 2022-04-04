@@ -13,7 +13,7 @@ export function getParticipant(args: GetParticipantArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v2:getParticipant", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v2:getParticipant", {
         "conversationId": args.conversationId,
         "location": args.location,
         "participantId": args.participantId,

@@ -22,7 +22,7 @@ export class IssueModel extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:contactcenterinsights/v1:IssueModel';
+    public static readonly __pulumiType = 'google-hybrid:contactcenterinsights/v1:IssueModel';
 
     /**
      * Returns true if the given object is an instance of IssueModel.  This is designed to work even

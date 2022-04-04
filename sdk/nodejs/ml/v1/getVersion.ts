@@ -14,7 +14,7 @@ export function getVersion(args: GetVersionArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:ml/v1:getVersion", {
+    return pulumi.runtime.invoke("google-hybrid:ml/v1:getVersion", {
         "modelId": args.modelId,
         "project": args.project,
         "versionId": args.versionId,

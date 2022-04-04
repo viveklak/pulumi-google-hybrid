@@ -14,7 +14,7 @@ export function getSnapshotIamPolicy(args: GetSnapshotIamPolicyArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:pubsub/v1:getSnapshotIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:pubsub/v1:getSnapshotIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "snapshotId": args.snapshotId,

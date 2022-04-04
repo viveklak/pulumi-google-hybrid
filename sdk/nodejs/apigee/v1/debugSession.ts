@@ -23,7 +23,7 @@ export class DebugSession extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:DebugSession';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:DebugSession';
 
     /**
      * Returns true if the given object is an instance of DebugSession.  This is designed to work even

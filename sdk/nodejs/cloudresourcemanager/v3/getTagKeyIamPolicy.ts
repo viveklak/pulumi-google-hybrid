@@ -14,7 +14,7 @@ export function getTagKeyIamPolicy(args: GetTagKeyIamPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudresourcemanager/v3:getTagKeyIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:cloudresourcemanager/v3:getTagKeyIamPolicy", {
         "tagKeyId": args.tagKeyId,
     }, opts);
 }

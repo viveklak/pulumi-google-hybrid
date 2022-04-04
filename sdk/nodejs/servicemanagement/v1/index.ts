@@ -30,19 +30,19 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:servicemanagement/v1:Config":
+            case "google-hybrid:servicemanagement/v1:Config":
                 return new Config(name, <any>undefined, { urn })
-            case "google-native:servicemanagement/v1:Rollout":
+            case "google-hybrid:servicemanagement/v1:Rollout":
                 return new Rollout(name, <any>undefined, { urn })
-            case "google-native:servicemanagement/v1:Service":
+            case "google-hybrid:servicemanagement/v1:Service":
                 return new Service(name, <any>undefined, { urn })
-            case "google-native:servicemanagement/v1:ServiceConsumerIamPolicy":
+            case "google-hybrid:servicemanagement/v1:ServiceConsumerIamPolicy":
                 return new ServiceConsumerIamPolicy(name, <any>undefined, { urn })
-            case "google-native:servicemanagement/v1:ServiceIamPolicy":
+            case "google-hybrid:servicemanagement/v1:ServiceIamPolicy":
                 return new ServiceIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "servicemanagement/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "servicemanagement/v1", _module)

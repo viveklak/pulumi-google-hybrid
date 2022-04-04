@@ -14,7 +14,7 @@ export function getNotificationChannel(args: GetNotificationChannelArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:monitoring/v3:getNotificationChannel", {
+    return pulumi.runtime.invoke("google-hybrid:monitoring/v3:getNotificationChannel", {
         "notificationChannelId": args.notificationChannelId,
         "project": args.project,
     }, opts);

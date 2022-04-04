@@ -22,7 +22,7 @@ export class Snapshot extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:baremetalsolution/v2:Snapshot';
+    public static readonly __pulumiType = 'google-hybrid:baremetalsolution/v2:Snapshot';
 
     /**
      * Returns true if the given object is an instance of Snapshot.  This is designed to work even

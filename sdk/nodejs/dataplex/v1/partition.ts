@@ -22,7 +22,7 @@ export class Partition extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataplex/v1:Partition';
+    public static readonly __pulumiType = 'google-hybrid:dataplex/v1:Partition';
 
     /**
      * Returns true if the given object is an instance of Partition.  This is designed to work even

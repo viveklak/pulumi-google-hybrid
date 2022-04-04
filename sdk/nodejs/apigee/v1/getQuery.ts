@@ -14,7 +14,7 @@ export function getQuery(args: GetQueryArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getQuery", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getQuery", {
         "environmentId": args.environmentId,
         "organizationId": args.organizationId,
         "queryId": args.queryId,

@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:file/v1beta1:Backup":
+            case "google-hybrid:file/v1beta1:Backup":
                 return new Backup(name, <any>undefined, { urn })
-            case "google-native:file/v1beta1:Instance":
+            case "google-hybrid:file/v1beta1:Instance":
                 return new Instance(name, <any>undefined, { urn })
-            case "google-native:file/v1beta1:Snapshot":
+            case "google-hybrid:file/v1beta1:Snapshot":
                 return new Snapshot(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "file/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "file/v1beta1", _module)

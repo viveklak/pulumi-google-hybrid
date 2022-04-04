@@ -7,6 +7,7 @@ import (
 	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/gen"
 	"github.com/pulumi/pulumi-google-hybrid/provider/pkg/resources"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	rpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -65,6 +66,7 @@ func (f demuxProvider) Invoke(ctx context.Context, request *rpc.InvokeRequest) (
 	if _, ok := f.metadata.Functions[request.Tok]; ok {
 		return f.nativeProvider.Invoke(ctx, request)
 	}
+	logging.V(9).Infof("Invoking on bridge provider for: %q", request.Tok)
 	return f.bridgedProvider.Invoke(ctx, request)
 }
 

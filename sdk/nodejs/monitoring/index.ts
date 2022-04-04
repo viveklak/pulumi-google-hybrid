@@ -2,10 +2,12 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 // Export sub-modules:
+import * as classic from "./classic";
 import * as v1 from "./v1";
 import * as v3 from "./v3";
 
 export {
+    classic,
     v1,
     v3,
 };

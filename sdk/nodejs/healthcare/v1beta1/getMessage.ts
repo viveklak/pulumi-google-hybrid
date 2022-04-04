@@ -14,7 +14,7 @@ export function getMessage(args: GetMessageArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1beta1:getMessage", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1beta1:getMessage", {
         "datasetId": args.datasetId,
         "hl7V2StoreId": args.hl7V2StoreId,
         "location": args.location,

@@ -22,7 +22,7 @@ export class MuteConfig extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:securitycenter/v1:MuteConfig';
+    public static readonly __pulumiType = 'google-hybrid:securitycenter/v1:MuteConfig';
 
     /**
      * Returns true if the given object is an instance of MuteConfig.  This is designed to work even

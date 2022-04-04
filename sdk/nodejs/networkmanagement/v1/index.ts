@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:networkmanagement/v1:ConnectivityTest":
+            case "google-hybrid:networkmanagement/v1:ConnectivityTest":
                 return new ConnectivityTest(name, <any>undefined, { urn })
-            case "google-native:networkmanagement/v1:ConnectivityTestIamPolicy":
+            case "google-hybrid:networkmanagement/v1:ConnectivityTestIamPolicy":
                 return new ConnectivityTestIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "networkmanagement/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "networkmanagement/v1", _module)

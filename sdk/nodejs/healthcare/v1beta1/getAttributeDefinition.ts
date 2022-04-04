@@ -13,7 +13,7 @@ export function getAttributeDefinition(args: GetAttributeDefinitionArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1beta1:getAttributeDefinition", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1beta1:getAttributeDefinition", {
         "attributeDefinitionId": args.attributeDefinitionId,
         "consentStoreId": args.consentStoreId,
         "datasetId": args.datasetId,

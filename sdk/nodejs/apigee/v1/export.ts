@@ -24,7 +24,7 @@ export class Export extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Export';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Export';
 
     /**
      * Returns true if the given object is an instance of Export.  This is designed to work even

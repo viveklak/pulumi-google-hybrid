@@ -14,7 +14,7 @@ export function getRegionNotificationEndpoint(args: GetRegionNotificationEndpoin
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getRegionNotificationEndpoint", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getRegionNotificationEndpoint", {
         "notificationEndpoint": args.notificationEndpoint,
         "project": args.project,
         "region": args.region,

@@ -15,11 +15,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:documentai/v1beta3:Processor":
+            case "google-hybrid:documentai/v1beta3:Processor":
                 return new Processor(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "documentai/v1beta3", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "documentai/v1beta3", _module)

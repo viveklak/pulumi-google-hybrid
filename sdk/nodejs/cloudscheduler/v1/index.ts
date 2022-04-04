@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudscheduler/v1:Job":
+            case "google-hybrid:cloudscheduler/v1:Job":
                 return new Job(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudscheduler/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudscheduler/v1", _module)

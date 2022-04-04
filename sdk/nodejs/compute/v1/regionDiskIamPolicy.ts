@@ -24,7 +24,7 @@ export class RegionDiskIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/v1:RegionDiskIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/v1:RegionDiskIamPolicy';
 
     /**
      * Returns true if the given object is an instance of RegionDiskIamPolicy.  This is designed to work even

@@ -15,7 +15,7 @@ export function getProject(args?: GetProjectArgs, opts?: pulumi.InvokeOptions): 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudresourcemanager/v1:getProject", {
+    return pulumi.runtime.invoke("google-hybrid:cloudresourcemanager/v1:getProject", {
         "project": args.project,
     }, opts);
 }

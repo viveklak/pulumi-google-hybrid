@@ -23,7 +23,7 @@ export class Source extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:vmmigration/v1alpha1:Source';
+    public static readonly __pulumiType = 'google-hybrid:vmmigration/v1alpha1:Source';
 
     /**
      * Returns true if the given object is an instance of Source.  This is designed to work even

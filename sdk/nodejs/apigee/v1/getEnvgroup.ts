@@ -13,7 +13,7 @@ export function getEnvgroup(args: GetEnvgroupArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getEnvgroup", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getEnvgroup", {
         "envgroupId": args.envgroupId,
         "organizationId": args.organizationId,
     }, opts);

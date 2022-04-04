@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:assuredworkloads/v1:Workload":
+            case "google-hybrid:assuredworkloads/v1:Workload":
                 return new Workload(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "assuredworkloads/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "assuredworkloads/v1", _module)

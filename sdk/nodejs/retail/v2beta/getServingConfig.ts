@@ -14,7 +14,7 @@ export function getServingConfig(args: GetServingConfigArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:retail/v2beta:getServingConfig", {
+    return pulumi.runtime.invoke("google-hybrid:retail/v2beta:getServingConfig", {
         "catalogId": args.catalogId,
         "location": args.location,
         "project": args.project,

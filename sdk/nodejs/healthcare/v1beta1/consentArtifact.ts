@@ -22,7 +22,7 @@ export class ConsentArtifact extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:healthcare/v1beta1:ConsentArtifact';
+    public static readonly __pulumiType = 'google-hybrid:healthcare/v1beta1:ConsentArtifact';
 
     /**
      * Returns true if the given object is an instance of ConsentArtifact.  This is designed to work even

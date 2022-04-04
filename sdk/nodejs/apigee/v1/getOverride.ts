@@ -14,7 +14,7 @@ export function getOverride(args: GetOverrideArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getOverride", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getOverride", {
         "environmentId": args.environmentId,
         "organizationId": args.organizationId,
         "overrideId": args.overrideId,

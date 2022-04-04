@@ -22,7 +22,7 @@ export class Analysis extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:contactcenterinsights/v1:Analysis';
+    public static readonly __pulumiType = 'google-hybrid:contactcenterinsights/v1:Analysis';
 
     /**
      * Returns true if the given object is an instance of Analysis.  This is designed to work even

@@ -14,7 +14,7 @@ export function getDocument(args: GetDocumentArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v2beta1:getDocument", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v2beta1:getDocument", {
         "documentId": args.documentId,
         "knowledgeBaseId": args.knowledgeBaseId,
         "location": args.location,

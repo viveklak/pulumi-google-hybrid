@@ -24,7 +24,7 @@ export class MetadataImport extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:metastore/v1alpha:MetadataImport';
+    public static readonly __pulumiType = 'google-hybrid:metastore/v1alpha:MetadataImport';
 
     /**
      * Returns true if the given object is an instance of MetadataImport.  This is designed to work even

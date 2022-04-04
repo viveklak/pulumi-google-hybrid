@@ -23,7 +23,7 @@ export class Batch extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataproc/v1:Batch';
+    public static readonly __pulumiType = 'google-hybrid:dataproc/v1:Batch';
 
     /**
      * Returns true if the given object is an instance of Batch.  This is designed to work even

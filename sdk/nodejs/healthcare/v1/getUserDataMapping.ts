@@ -14,7 +14,7 @@ export function getUserDataMapping(args: GetUserDataMappingArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1:getUserDataMapping", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1:getUserDataMapping", {
         "consentStoreId": args.consentStoreId,
         "datasetId": args.datasetId,
         "location": args.location,

@@ -22,7 +22,7 @@ export class OsPolicyAssignment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:osconfig/v1:OsPolicyAssignment';
+    public static readonly __pulumiType = 'google-hybrid:osconfig/v1:OsPolicyAssignment';
 
     /**
      * Returns true if the given object is an instance of OsPolicyAssignment.  This is designed to work even

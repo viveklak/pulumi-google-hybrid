@@ -24,7 +24,7 @@ export class NodeTemplateIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:NodeTemplateIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:NodeTemplateIamPolicy';
 
     /**
      * Returns true if the given object is an instance of NodeTemplateIamPolicy.  This is designed to work even

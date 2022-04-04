@@ -14,7 +14,7 @@ export function getTargetIamPolicy(args: GetTargetIamPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:clouddeploy/v1:getTargetIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:clouddeploy/v1:getTargetIamPolicy", {
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

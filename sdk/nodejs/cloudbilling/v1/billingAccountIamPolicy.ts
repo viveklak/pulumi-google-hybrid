@@ -24,7 +24,7 @@ export class BillingAccountIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudbilling/v1:BillingAccountIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:cloudbilling/v1:BillingAccountIamPolicy';
 
     /**
      * Returns true if the given object is an instance of BillingAccountIamPolicy.  This is designed to work even

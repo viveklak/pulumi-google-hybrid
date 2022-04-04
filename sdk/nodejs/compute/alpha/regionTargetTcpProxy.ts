@@ -22,7 +22,7 @@ export class RegionTargetTcpProxy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:RegionTargetTcpProxy';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:RegionTargetTcpProxy';
 
     /**
      * Returns true if the given object is an instance of RegionTargetTcpProxy.  This is designed to work even

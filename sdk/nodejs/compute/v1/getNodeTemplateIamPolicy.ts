@@ -14,7 +14,7 @@ export function getNodeTemplateIamPolicy(args: GetNodeTemplateIamPolicyArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getNodeTemplateIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getNodeTemplateIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "region": args.region,

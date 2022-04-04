@@ -51,33 +51,33 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:networkservices/v1beta1:EndpointPolicy":
+            case "google-hybrid:networkservices/v1beta1:EndpointPolicy":
                 return new EndpointPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:EndpointPolicyIamPolicy":
+            case "google-hybrid:networkservices/v1beta1:EndpointPolicyIamPolicy":
                 return new EndpointPolicyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:Gateway":
+            case "google-hybrid:networkservices/v1beta1:Gateway":
                 return new Gateway(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:GatewayIamPolicy":
+            case "google-hybrid:networkservices/v1beta1:GatewayIamPolicy":
                 return new GatewayIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:GrpcRoute":
+            case "google-hybrid:networkservices/v1beta1:GrpcRoute":
                 return new GrpcRoute(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:HttpRoute":
+            case "google-hybrid:networkservices/v1beta1:HttpRoute":
                 return new HttpRoute(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:Mesh":
+            case "google-hybrid:networkservices/v1beta1:Mesh":
                 return new Mesh(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:MeshIamPolicy":
+            case "google-hybrid:networkservices/v1beta1:MeshIamPolicy":
                 return new MeshIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:ServiceBinding":
+            case "google-hybrid:networkservices/v1beta1:ServiceBinding":
                 return new ServiceBinding(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:ServiceBindingIamPolicy":
+            case "google-hybrid:networkservices/v1beta1:ServiceBindingIamPolicy":
                 return new ServiceBindingIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:TcpRoute":
+            case "google-hybrid:networkservices/v1beta1:TcpRoute":
                 return new TcpRoute(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1beta1:TlsRoute":
+            case "google-hybrid:networkservices/v1beta1:TlsRoute":
                 return new TlsRoute(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "networkservices/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "networkservices/v1beta1", _module)

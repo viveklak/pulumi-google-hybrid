@@ -23,7 +23,7 @@ export class CertificateTemplate extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:privateca/v1:CertificateTemplate';
+    public static readonly __pulumiType = 'google-hybrid:privateca/v1:CertificateTemplate';
 
     /**
      * Returns true if the given object is an instance of CertificateTemplate.  This is designed to work even

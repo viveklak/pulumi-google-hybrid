@@ -14,7 +14,7 @@ export function getOrganizationEnvironmentIamPolicy(args: GetOrganizationEnviron
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getOrganizationEnvironmentIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getOrganizationEnvironmentIamPolicy", {
         "environmentId": args.environmentId,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "organizationId": args.organizationId,

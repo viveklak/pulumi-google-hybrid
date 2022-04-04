@@ -14,7 +14,7 @@ export function getFeedbackMessage(args: GetFeedbackMessageArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datalabeling/v1beta1:getFeedbackMessage", {
+    return pulumi.runtime.invoke("google-hybrid:datalabeling/v1beta1:getFeedbackMessage", {
         "annotatedDatasetId": args.annotatedDatasetId,
         "datasetId": args.datasetId,
         "feedbackMessageId": args.feedbackMessageId,

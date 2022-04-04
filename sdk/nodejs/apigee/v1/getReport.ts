@@ -14,7 +14,7 @@ export function getReport(args: GetReportArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getReport", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getReport", {
         "organizationId": args.organizationId,
         "reportId": args.reportId,
     }, opts);

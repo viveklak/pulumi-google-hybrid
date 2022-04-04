@@ -14,7 +14,7 @@ export function getBatch(args: GetBatchArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1:getBatch", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1:getBatch", {
         "batchId": args.batchId,
         "location": args.location,
         "project": args.project,

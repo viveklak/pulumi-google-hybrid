@@ -22,7 +22,7 @@ export class PhraseMatcher extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:contactcenterinsights/v1:PhraseMatcher';
+    public static readonly __pulumiType = 'google-hybrid:contactcenterinsights/v1:PhraseMatcher';
 
     /**
      * Returns true if the given object is an instance of PhraseMatcher.  This is designed to work even

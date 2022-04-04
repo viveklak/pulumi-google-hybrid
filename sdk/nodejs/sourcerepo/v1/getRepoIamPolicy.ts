@@ -14,7 +14,7 @@ export function getRepoIamPolicy(args: GetRepoIamPolicyArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:sourcerepo/v1:getRepoIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:sourcerepo/v1:getRepoIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "repoId": args.repoId,

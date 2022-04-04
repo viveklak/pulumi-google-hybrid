@@ -22,7 +22,7 @@ export class Override extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Override';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Override';
 
     /**
      * Returns true if the given object is an instance of Override.  This is designed to work even

@@ -21,7 +21,7 @@ export class Tag extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:artifactregistry/v1beta1:Tag';
+    public static readonly __pulumiType = 'google-hybrid:artifactregistry/v1beta1:Tag';
 
     /**
      * Returns true if the given object is an instance of Tag.  This is designed to work even

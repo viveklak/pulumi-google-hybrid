@@ -14,7 +14,7 @@ export function getRegionClusterIamPolicy(args: GetRegionClusterIamPolicyArgs, o
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1:getRegionClusterIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1:getRegionClusterIamPolicy", {
         "clusterId": args.clusterId,
         "project": args.project,
         "regionId": args.regionId,

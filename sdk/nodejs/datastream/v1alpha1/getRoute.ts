@@ -13,7 +13,7 @@ export function getRoute(args: GetRouteArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datastream/v1alpha1:getRoute", {
+    return pulumi.runtime.invoke("google-hybrid:datastream/v1alpha1:getRoute", {
         "location": args.location,
         "privateConnectionId": args.privateConnectionId,
         "project": args.project,

@@ -14,7 +14,7 @@ export function getDatasetAnnotationStoreIamPolicy(args: GetDatasetAnnotationSto
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1beta1:getDatasetAnnotationStoreIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1beta1:getDatasetAnnotationStoreIamPolicy", {
         "annotationStoreId": args.annotationStoreId,
         "datasetId": args.datasetId,
         "location": args.location,

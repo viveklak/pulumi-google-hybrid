@@ -14,7 +14,7 @@ export function getServicePerimeter(args: GetServicePerimeterArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:accesscontextmanager/v1:getServicePerimeter", {
+    return pulumi.runtime.invoke("google-hybrid:accesscontextmanager/v1:getServicePerimeter", {
         "accessPolicyId": args.accessPolicyId,
         "servicePerimeterId": args.servicePerimeterId,
     }, opts);

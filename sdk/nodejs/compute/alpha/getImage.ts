@@ -14,7 +14,7 @@ export function getImage(args: GetImageArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getImage", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getImage", {
         "image": args.image,
         "project": args.project,
     }, opts);

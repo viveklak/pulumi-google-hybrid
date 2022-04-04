@@ -14,7 +14,7 @@ export function getImportJob(args: GetImportJobArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudkms/v1:getImportJob", {
+    return pulumi.runtime.invoke("google-hybrid:cloudkms/v1:getImportJob", {
         "importJobId": args.importJobId,
         "keyRingId": args.keyRingId,
         "location": args.location,

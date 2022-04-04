@@ -24,7 +24,7 @@ export class InstanceBackupIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:spanner/v1:InstanceBackupIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:spanner/v1:InstanceBackupIamPolicy';
 
     /**
      * Returns true if the given object is an instance of InstanceBackupIamPolicy.  This is designed to work even

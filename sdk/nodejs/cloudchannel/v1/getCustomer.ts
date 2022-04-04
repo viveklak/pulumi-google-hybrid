@@ -14,7 +14,7 @@ export function getCustomer(args: GetCustomerArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudchannel/v1:getCustomer", {
+    return pulumi.runtime.invoke("google-hybrid:cloudchannel/v1:getCustomer", {
         "accountId": args.accountId,
         "channelPartnerLinkId": args.channelPartnerLinkId,
         "customerId": args.customerId,

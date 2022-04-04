@@ -13,7 +13,7 @@ export function getAddress(args: GetAddressArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getAddress", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getAddress", {
         "address": args.address,
         "project": args.project,
         "region": args.region,

@@ -14,7 +14,7 @@ export function getResourceRecordSet(args: GetResourceRecordSetArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dns/v1:getResourceRecordSet", {
+    return pulumi.runtime.invoke("google-hybrid:dns/v1:getResourceRecordSet", {
         "clientOperationId": args.clientOperationId,
         "managedZone": args.managedZone,
         "name": args.name,

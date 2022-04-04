@@ -24,7 +24,7 @@ export class EdgeCacheServiceIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkservices/v1:EdgeCacheServiceIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:networkservices/v1:EdgeCacheServiceIamPolicy';
 
     /**
      * Returns true if the given object is an instance of EdgeCacheServiceIamPolicy.  This is designed to work even

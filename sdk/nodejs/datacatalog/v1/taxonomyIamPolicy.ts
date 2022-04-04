@@ -24,7 +24,7 @@ export class TaxonomyIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datacatalog/v1:TaxonomyIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:datacatalog/v1:TaxonomyIamPolicy';
 
     /**
      * Returns true if the given object is an instance of TaxonomyIamPolicy.  This is designed to work even

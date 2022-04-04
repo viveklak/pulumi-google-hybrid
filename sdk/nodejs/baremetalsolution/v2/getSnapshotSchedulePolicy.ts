@@ -14,7 +14,7 @@ export function getSnapshotSchedulePolicy(args: GetSnapshotSchedulePolicyArgs, o
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:baremetalsolution/v2:getSnapshotSchedulePolicy", {
+    return pulumi.runtime.invoke("google-hybrid:baremetalsolution/v2:getSnapshotSchedulePolicy", {
         "location": args.location,
         "project": args.project,
         "snapshotSchedulePolicyId": args.snapshotSchedulePolicyId,

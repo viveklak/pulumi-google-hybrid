@@ -24,7 +24,7 @@ export class ServiceAccountIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:iam/v1:ServiceAccountIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:iam/v1:ServiceAccountIamPolicy';
 
     /**
      * Returns true if the given object is an instance of ServiceAccountIamPolicy.  This is designed to work even

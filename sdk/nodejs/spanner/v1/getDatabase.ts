@@ -14,7 +14,7 @@ export function getDatabase(args: GetDatabaseArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:spanner/v1:getDatabase", {
+    return pulumi.runtime.invoke("google-hybrid:spanner/v1:getDatabase", {
         "databaseId": args.databaseId,
         "instanceId": args.instanceId,
         "project": args.project,

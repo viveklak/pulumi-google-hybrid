@@ -22,7 +22,7 @@ export class Waiter extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:runtimeconfig/v1beta1:Waiter';
+    public static readonly __pulumiType = 'google-hybrid:runtimeconfig/v1beta1:Waiter';
 
     /**
      * Returns true if the given object is an instance of Waiter.  This is designed to work even

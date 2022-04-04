@@ -14,7 +14,7 @@ export function getInterconnectAttachmentIamPolicy(args: GetInterconnectAttachme
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getInterconnectAttachmentIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getInterconnectAttachmentIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "region": args.region,

@@ -23,7 +23,7 @@ export class Budget extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:billingbudgets/v1beta1:Budget';
+    public static readonly __pulumiType = 'google-hybrid:billingbudgets/v1beta1:Budget';
 
     /**
      * Returns true if the given object is an instance of Budget.  This is designed to work even

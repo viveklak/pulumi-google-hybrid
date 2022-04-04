@@ -14,7 +14,7 @@ export function getBackendServiceIamPolicy(args: GetBackendServiceIamPolicyArgs,
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getBackendServiceIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getBackendServiceIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "resource": args.resource,

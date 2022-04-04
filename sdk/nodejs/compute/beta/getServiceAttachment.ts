@@ -14,7 +14,7 @@ export function getServiceAttachment(args: GetServiceAttachmentArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getServiceAttachment", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getServiceAttachment", {
         "project": args.project,
         "region": args.region,
         "serviceAttachment": args.serviceAttachment,

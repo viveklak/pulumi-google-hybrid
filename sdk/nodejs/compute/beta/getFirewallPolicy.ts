@@ -14,7 +14,7 @@ export function getFirewallPolicy(args: GetFirewallPolicyArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getFirewallPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getFirewallPolicy", {
         "firewallPolicy": args.firewallPolicy,
     }, opts);
 }

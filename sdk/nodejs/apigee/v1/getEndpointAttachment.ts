@@ -13,7 +13,7 @@ export function getEndpointAttachment(args: GetEndpointAttachmentArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getEndpointAttachment", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getEndpointAttachment", {
         "endpointAttachmentId": args.endpointAttachmentId,
         "organizationId": args.organizationId,
     }, opts);

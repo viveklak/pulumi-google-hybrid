@@ -24,7 +24,7 @@ export class ImageIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/v1:ImageIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/v1:ImageIamPolicy';
 
     /**
      * Returns true if the given object is an instance of ImageIamPolicy.  This is designed to work even

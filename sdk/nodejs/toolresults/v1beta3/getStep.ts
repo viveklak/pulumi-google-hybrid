@@ -14,7 +14,7 @@ export function getStep(args: GetStepArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:toolresults/v1beta3:getStep", {
+    return pulumi.runtime.invoke("google-hybrid:toolresults/v1beta3:getStep", {
         "executionId": args.executionId,
         "historyId": args.historyId,
         "project": args.project,

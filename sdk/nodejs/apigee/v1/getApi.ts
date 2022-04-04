@@ -14,7 +14,7 @@ export function getApi(args: GetApiArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getApi", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getApi", {
         "apiId": args.apiId,
         "organizationId": args.organizationId,
     }, opts);

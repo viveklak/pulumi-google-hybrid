@@ -14,7 +14,7 @@ export function getManagedZone(args: GetManagedZoneArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dns/v1:getManagedZone", {
+    return pulumi.runtime.invoke("google-hybrid:dns/v1:getManagedZone", {
         "clientOperationId": args.clientOperationId,
         "managedZone": args.managedZone,
         "project": args.project,

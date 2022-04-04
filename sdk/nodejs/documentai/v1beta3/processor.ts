@@ -22,7 +22,7 @@ export class Processor extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:documentai/v1beta3:Processor';
+    public static readonly __pulumiType = 'google-hybrid:documentai/v1beta3:Processor';
 
     /**
      * Returns true if the given object is an instance of Processor.  This is designed to work even

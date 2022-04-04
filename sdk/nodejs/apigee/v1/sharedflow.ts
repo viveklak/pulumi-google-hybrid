@@ -22,7 +22,7 @@ export class Sharedflow extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Sharedflow';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Sharedflow';
 
     /**
      * Returns true if the given object is an instance of Sharedflow.  This is designed to work even

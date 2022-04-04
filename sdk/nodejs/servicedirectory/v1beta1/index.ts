@@ -27,19 +27,19 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:servicedirectory/v1beta1:Endpoint":
+            case "google-hybrid:servicedirectory/v1beta1:Endpoint":
                 return new Endpoint(name, <any>undefined, { urn })
-            case "google-native:servicedirectory/v1beta1:Namespace":
+            case "google-hybrid:servicedirectory/v1beta1:Namespace":
                 return new Namespace(name, <any>undefined, { urn })
-            case "google-native:servicedirectory/v1beta1:NamespaceIamPolicy":
+            case "google-hybrid:servicedirectory/v1beta1:NamespaceIamPolicy":
                 return new NamespaceIamPolicy(name, <any>undefined, { urn })
-            case "google-native:servicedirectory/v1beta1:NamespaceServiceIamPolicy":
+            case "google-hybrid:servicedirectory/v1beta1:NamespaceServiceIamPolicy":
                 return new NamespaceServiceIamPolicy(name, <any>undefined, { urn })
-            case "google-native:servicedirectory/v1beta1:Service":
+            case "google-hybrid:servicedirectory/v1beta1:Service":
                 return new Service(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "servicedirectory/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "servicedirectory/v1beta1", _module)

@@ -24,7 +24,7 @@ export class SpokeIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkconnectivity/v1alpha1:SpokeIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:networkconnectivity/v1alpha1:SpokeIamPolicy';
 
     /**
      * Returns true if the given object is an instance of SpokeIamPolicy.  This is designed to work even

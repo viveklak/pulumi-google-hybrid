@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:billingbudgets/v1beta1:Budget":
+            case "google-hybrid:billingbudgets/v1beta1:Budget":
                 return new Budget(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "billingbudgets/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "billingbudgets/v1beta1", _module)

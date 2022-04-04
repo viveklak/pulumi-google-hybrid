@@ -22,7 +22,7 @@ export class ManagedZone extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dns/v1beta2:ManagedZone';
+    public static readonly __pulumiType = 'google-hybrid:dns/v1beta2:ManagedZone';
 
     /**
      * Returns true if the given object is an instance of ManagedZone.  This is designed to work even

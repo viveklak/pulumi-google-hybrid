@@ -22,7 +22,7 @@ export class MachineImage extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/v1:MachineImage';
+    public static readonly __pulumiType = 'google-hybrid:compute/v1:MachineImage';
 
     /**
      * Returns true if the given object is an instance of MachineImage.  This is designed to work even

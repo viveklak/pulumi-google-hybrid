@@ -24,7 +24,7 @@ export class CertificateAuthorityCertificateRevocationListIamPolicy extends pulu
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:privateca/v1beta1:CertificateAuthorityCertificateRevocationListIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:privateca/v1beta1:CertificateAuthorityCertificateRevocationListIamPolicy';
 
     /**
      * Returns true if the given object is an instance of CertificateAuthorityCertificateRevocationListIamPolicy.  This is designed to work even

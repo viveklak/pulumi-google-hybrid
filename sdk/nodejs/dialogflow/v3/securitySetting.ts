@@ -22,7 +22,7 @@ export class SecuritySetting extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v3:SecuritySetting';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v3:SecuritySetting';
 
     /**
      * Returns true if the given object is an instance of SecuritySetting.  This is designed to work even

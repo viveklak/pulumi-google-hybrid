@@ -14,7 +14,7 @@ export function getDeploymentIamPolicy(args: GetDeploymentIamPolicyArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:deploymentmanager/alpha:getDeploymentIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:deploymentmanager/alpha:getDeploymentIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "resource": args.resource,

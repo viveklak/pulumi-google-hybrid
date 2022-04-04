@@ -22,7 +22,7 @@ export class MetricDescriptor extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:monitoring/v3:MetricDescriptor';
+    public static readonly __pulumiType = 'google-hybrid:monitoring/v3:MetricDescriptor';
 
     /**
      * Returns true if the given object is an instance of MetricDescriptor.  This is designed to work even

@@ -14,7 +14,7 @@ export function getDomainMapping(args: GetDomainMappingArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:appengine/v1beta:getDomainMapping", {
+    return pulumi.runtime.invoke("google-hybrid:appengine/v1beta:getDomainMapping", {
         "appId": args.appId,
         "domainMappingId": args.domainMappingId,
     }, opts);

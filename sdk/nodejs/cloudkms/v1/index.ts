@@ -42,27 +42,27 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudkms/v1:CryptoKey":
+            case "google-hybrid:cloudkms/v1:CryptoKey":
                 return new CryptoKey(name, <any>undefined, { urn })
-            case "google-native:cloudkms/v1:CryptoKeyVersion":
+            case "google-hybrid:cloudkms/v1:CryptoKeyVersion":
                 return new CryptoKeyVersion(name, <any>undefined, { urn })
-            case "google-native:cloudkms/v1:EkmConnection":
+            case "google-hybrid:cloudkms/v1:EkmConnection":
                 return new EkmConnection(name, <any>undefined, { urn })
-            case "google-native:cloudkms/v1:EkmConnectionIamPolicy":
+            case "google-hybrid:cloudkms/v1:EkmConnectionIamPolicy":
                 return new EkmConnectionIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudkms/v1:ImportJob":
+            case "google-hybrid:cloudkms/v1:ImportJob":
                 return new ImportJob(name, <any>undefined, { urn })
-            case "google-native:cloudkms/v1:KeyRing":
+            case "google-hybrid:cloudkms/v1:KeyRing":
                 return new KeyRing(name, <any>undefined, { urn })
-            case "google-native:cloudkms/v1:KeyRingCryptoKeyIamPolicy":
+            case "google-hybrid:cloudkms/v1:KeyRingCryptoKeyIamPolicy":
                 return new KeyRingCryptoKeyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudkms/v1:KeyRingIamPolicy":
+            case "google-hybrid:cloudkms/v1:KeyRingIamPolicy":
                 return new KeyRingIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudkms/v1:KeyRingImportJobIamPolicy":
+            case "google-hybrid:cloudkms/v1:KeyRingImportJobIamPolicy":
                 return new KeyRingImportJobIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudkms/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudkms/v1", _module)

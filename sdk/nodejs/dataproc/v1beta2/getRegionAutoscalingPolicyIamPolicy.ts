@@ -14,7 +14,7 @@ export function getRegionAutoscalingPolicyIamPolicy(args: GetRegionAutoscalingPo
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1beta2:getRegionAutoscalingPolicyIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1beta2:getRegionAutoscalingPolicyIamPolicy", {
         "autoscalingPolicyId": args.autoscalingPolicyId,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

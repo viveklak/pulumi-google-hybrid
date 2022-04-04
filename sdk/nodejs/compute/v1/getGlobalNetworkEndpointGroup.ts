@@ -14,7 +14,7 @@ export function getGlobalNetworkEndpointGroup(args: GetGlobalNetworkEndpointGrou
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getGlobalNetworkEndpointGroup", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getGlobalNetworkEndpointGroup", {
         "networkEndpointGroup": args.networkEndpointGroup,
         "project": args.project,
     }, opts);

@@ -13,7 +13,7 @@ export function getMuteConfig(args: GetMuteConfigArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:securitycenter/v1:getMuteConfig", {
+    return pulumi.runtime.invoke("google-hybrid:securitycenter/v1:getMuteConfig", {
         "muteConfigId": args.muteConfigId,
         "project": args.project,
     }, opts);

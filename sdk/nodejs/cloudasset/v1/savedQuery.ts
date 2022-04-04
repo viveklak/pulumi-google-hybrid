@@ -23,7 +23,7 @@ export class SavedQuery extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudasset/v1:SavedQuery';
+    public static readonly __pulumiType = 'google-hybrid:cloudasset/v1:SavedQuery';
 
     /**
      * Returns true if the given object is an instance of SavedQuery.  This is designed to work even

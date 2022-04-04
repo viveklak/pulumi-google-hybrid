@@ -23,7 +23,7 @@ export class Index extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datastore/v1:Index';
+    public static readonly __pulumiType = 'google-hybrid:datastore/v1:Index';
 
     /**
      * Returns true if the given object is an instance of Index.  This is designed to work even

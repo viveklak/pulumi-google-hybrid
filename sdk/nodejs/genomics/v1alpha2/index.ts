@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:genomics/v1alpha2:Pipeline":
+            case "google-hybrid:genomics/v1alpha2:Pipeline":
                 return new Pipeline(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "genomics/v1alpha2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "genomics/v1alpha2", _module)

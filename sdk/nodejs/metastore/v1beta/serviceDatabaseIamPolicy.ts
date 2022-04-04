@@ -24,7 +24,7 @@ export class ServiceDatabaseIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:metastore/v1beta:ServiceDatabaseIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:metastore/v1beta:ServiceDatabaseIamPolicy';
 
     /**
      * Returns true if the given object is an instance of ServiceDatabaseIamPolicy.  This is designed to work even

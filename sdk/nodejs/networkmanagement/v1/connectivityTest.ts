@@ -23,7 +23,7 @@ export class ConnectivityTest extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkmanagement/v1:ConnectivityTest';
+    public static readonly __pulumiType = 'google-hybrid:networkmanagement/v1:ConnectivityTest';
 
     /**
      * Returns true if the given object is an instance of ConnectivityTest.  This is designed to work even

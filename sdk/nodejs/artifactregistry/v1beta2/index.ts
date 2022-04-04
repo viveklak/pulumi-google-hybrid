@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:artifactregistry/v1beta2:Repository":
+            case "google-hybrid:artifactregistry/v1beta2:Repository":
                 return new Repository(name, <any>undefined, { urn })
-            case "google-native:artifactregistry/v1beta2:RepositoryIamPolicy":
+            case "google-hybrid:artifactregistry/v1beta2:RepositoryIamPolicy":
                 return new RepositoryIamPolicy(name, <any>undefined, { urn })
-            case "google-native:artifactregistry/v1beta2:Tag":
+            case "google-hybrid:artifactregistry/v1beta2:Tag":
                 return new Tag(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "artifactregistry/v1beta2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "artifactregistry/v1beta2", _module)

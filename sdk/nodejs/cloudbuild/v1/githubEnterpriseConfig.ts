@@ -22,7 +22,7 @@ export class GithubEnterpriseConfig extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudbuild/v1:GithubEnterpriseConfig';
+    public static readonly __pulumiType = 'google-hybrid:cloudbuild/v1:GithubEnterpriseConfig';
 
     /**
      * Returns true if the given object is an instance of GithubEnterpriseConfig.  This is designed to work even

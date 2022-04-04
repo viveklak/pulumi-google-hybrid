@@ -14,7 +14,7 @@ export function getCustomClass(args: GetCustomClassArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:speech/v1:getCustomClass", {
+    return pulumi.runtime.invoke("google-hybrid:speech/v1:getCustomClass", {
         "customClassId": args.customClassId,
         "location": args.location,
         "project": args.project,

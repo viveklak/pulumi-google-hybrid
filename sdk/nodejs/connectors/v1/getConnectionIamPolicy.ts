@@ -14,7 +14,7 @@ export function getConnectionIamPolicy(args: GetConnectionIamPolicyArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:connectors/v1:getConnectionIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:connectors/v1:getConnectionIamPolicy", {
         "connectionId": args.connectionId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

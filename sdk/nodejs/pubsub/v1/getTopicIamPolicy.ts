@@ -14,7 +14,7 @@ export function getTopicIamPolicy(args: GetTopicIamPolicyArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:pubsub/v1:getTopicIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:pubsub/v1:getTopicIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "topicId": args.topicId,

@@ -14,7 +14,7 @@ export function getCutoverJob(args: GetCutoverJobArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:vmmigration/v1:getCutoverJob", {
+    return pulumi.runtime.invoke("google-hybrid:vmmigration/v1:getCutoverJob", {
         "cutoverJobId": args.cutoverJobId,
         "location": args.location,
         "migratingVmId": args.migratingVmId,

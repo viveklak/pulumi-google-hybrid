@@ -14,7 +14,7 @@ export function getForwardingRule(args: GetForwardingRuleArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getForwardingRule", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getForwardingRule", {
         "forwardingRule": args.forwardingRule,
         "project": args.project,
         "region": args.region,

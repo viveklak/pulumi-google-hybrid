@@ -22,7 +22,7 @@ export class Disk extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:Disk';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:Disk';
 
     /**
      * Returns true if the given object is an instance of Disk.  This is designed to work even

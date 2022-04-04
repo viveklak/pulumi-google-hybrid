@@ -13,7 +13,7 @@ export function getNetworkEdgeSecurityService(args: GetNetworkEdgeSecurityServic
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getNetworkEdgeSecurityService", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getNetworkEdgeSecurityService", {
         "networkEdgeSecurityService": args.networkEdgeSecurityService,
         "project": args.project,
         "region": args.region,

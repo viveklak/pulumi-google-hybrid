@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:connectors/v1:Connection":
+            case "google-hybrid:connectors/v1:Connection":
                 return new Connection(name, <any>undefined, { urn })
-            case "google-native:connectors/v1:ConnectionIamPolicy":
+            case "google-hybrid:connectors/v1:ConnectionIamPolicy":
                 return new ConnectionIamPolicy(name, <any>undefined, { urn })
-            case "google-native:connectors/v1:ProviderIamPolicy":
+            case "google-hybrid:connectors/v1:ProviderIamPolicy":
                 return new ProviderIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "connectors/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "connectors/v1", _module)

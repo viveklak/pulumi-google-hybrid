@@ -25,7 +25,7 @@ export class Execution extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:toolresults/v1beta3:Execution';
+    public static readonly __pulumiType = 'google-hybrid:toolresults/v1beta3:Execution';
 
     /**
      * Returns true if the given object is an instance of Execution.  This is designed to work even

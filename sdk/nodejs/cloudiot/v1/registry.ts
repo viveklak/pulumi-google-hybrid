@@ -22,7 +22,7 @@ export class Registry extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudiot/v1:Registry';
+    public static readonly __pulumiType = 'google-hybrid:cloudiot/v1:Registry';
 
     /**
      * Returns true if the given object is an instance of Registry.  This is designed to work even

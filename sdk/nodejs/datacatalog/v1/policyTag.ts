@@ -22,7 +22,7 @@ export class PolicyTag extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datacatalog/v1:PolicyTag';
+    public static readonly __pulumiType = 'google-hybrid:datacatalog/v1:PolicyTag';
 
     /**
      * Returns true if the given object is an instance of PolicyTag.  This is designed to work even

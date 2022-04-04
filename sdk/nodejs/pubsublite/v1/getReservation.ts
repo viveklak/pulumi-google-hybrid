@@ -13,7 +13,7 @@ export function getReservation(args: GetReservationArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:pubsublite/v1:getReservation", {
+    return pulumi.runtime.invoke("google-hybrid:pubsublite/v1:getReservation", {
         "location": args.location,
         "project": args.project,
         "reservationId": args.reservationId,

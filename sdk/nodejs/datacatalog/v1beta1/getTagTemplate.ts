@@ -13,7 +13,7 @@ export function getTagTemplate(args: GetTagTemplateArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datacatalog/v1beta1:getTagTemplate", {
+    return pulumi.runtime.invoke("google-hybrid:datacatalog/v1beta1:getTagTemplate", {
         "location": args.location,
         "project": args.project,
         "tagTemplateId": args.tagTemplateId,

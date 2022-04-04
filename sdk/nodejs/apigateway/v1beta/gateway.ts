@@ -22,7 +22,7 @@ export class Gateway extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigateway/v1beta:Gateway';
+    public static readonly __pulumiType = 'google-hybrid:apigateway/v1beta:Gateway';
 
     /**
      * Returns true if the given object is an instance of Gateway.  This is designed to work even

@@ -22,7 +22,7 @@ export class ReferenceImage extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:vision/v1:ReferenceImage';
+    public static readonly __pulumiType = 'google-hybrid:vision/v1:ReferenceImage';
 
     /**
      * Returns true if the given object is an instance of ReferenceImage.  This is designed to work even

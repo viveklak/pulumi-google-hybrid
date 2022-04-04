@@ -14,7 +14,7 @@ export function getSubnetwork(args: GetSubnetworkArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getSubnetwork", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getSubnetwork", {
         "project": args.project,
         "region": args.region,
         "subnetwork": args.subnetwork,

@@ -14,7 +14,7 @@ export function getRegionNetworkFirewallPolicyIamPolicy(args: GetRegionNetworkFi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getRegionNetworkFirewallPolicyIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getRegionNetworkFirewallPolicyIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "region": args.region,

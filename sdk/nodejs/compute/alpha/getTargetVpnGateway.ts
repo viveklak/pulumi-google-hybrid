@@ -13,7 +13,7 @@ export function getTargetVpnGateway(args: GetTargetVpnGatewayArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getTargetVpnGateway", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getTargetVpnGateway", {
         "project": args.project,
         "region": args.region,
         "targetVpnGateway": args.targetVpnGateway,

@@ -14,7 +14,7 @@ export function getNetwork(args: GetNetworkArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getNetwork", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getNetwork", {
         "network": args.network,
         "project": args.project,
     }, opts);

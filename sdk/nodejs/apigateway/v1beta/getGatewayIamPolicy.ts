@@ -14,7 +14,7 @@ export function getGatewayIamPolicy(args: GetGatewayIamPolicyArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigateway/v1beta:getGatewayIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:apigateway/v1beta:getGatewayIamPolicy", {
         "gatewayId": args.gatewayId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

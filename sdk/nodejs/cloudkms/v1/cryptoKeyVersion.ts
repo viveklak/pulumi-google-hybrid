@@ -24,7 +24,7 @@ export class CryptoKeyVersion extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudkms/v1:CryptoKeyVersion';
+    public static readonly __pulumiType = 'google-hybrid:cloudkms/v1:CryptoKeyVersion';
 
     /**
      * Returns true if the given object is an instance of CryptoKeyVersion.  This is designed to work even

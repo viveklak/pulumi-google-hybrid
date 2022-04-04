@@ -14,7 +14,7 @@ export function getCluster(args: GetClusterArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1beta2:getCluster", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1beta2:getCluster", {
         "clusterName": args.clusterName,
         "project": args.project,
         "region": args.region,

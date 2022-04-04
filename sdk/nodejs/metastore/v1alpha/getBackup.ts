@@ -14,7 +14,7 @@ export function getBackup(args: GetBackupArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:metastore/v1alpha:getBackup", {
+    return pulumi.runtime.invoke("google-hybrid:metastore/v1alpha:getBackup", {
         "backupId": args.backupId,
         "location": args.location,
         "project": args.project,

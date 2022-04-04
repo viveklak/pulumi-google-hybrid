@@ -14,7 +14,7 @@ export function getRegionInstantSnapshotIamPolicy(args: GetRegionInstantSnapshot
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getRegionInstantSnapshotIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getRegionInstantSnapshotIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "region": args.region,

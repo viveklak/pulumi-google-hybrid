@@ -24,7 +24,7 @@ export class PolicyBasedRouteIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkconnectivity/v1:PolicyBasedRouteIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:networkconnectivity/v1:PolicyBasedRouteIamPolicy';
 
     /**
      * Returns true if the given object is an instance of PolicyBasedRouteIamPolicy.  This is designed to work even

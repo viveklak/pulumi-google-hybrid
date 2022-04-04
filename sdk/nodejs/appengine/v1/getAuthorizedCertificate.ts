@@ -14,7 +14,7 @@ export function getAuthorizedCertificate(args: GetAuthorizedCertificateArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:appengine/v1:getAuthorizedCertificate", {
+    return pulumi.runtime.invoke("google-hybrid:appengine/v1:getAuthorizedCertificate", {
         "appId": args.appId,
         "authorizedCertificateId": args.authorizedCertificateId,
         "view": args.view,

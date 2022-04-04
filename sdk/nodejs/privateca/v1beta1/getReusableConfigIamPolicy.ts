@@ -14,7 +14,7 @@ export function getReusableConfigIamPolicy(args: GetReusableConfigIamPolicyArgs,
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:privateca/v1beta1:getReusableConfigIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:privateca/v1beta1:getReusableConfigIamPolicy", {
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

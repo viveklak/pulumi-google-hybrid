@@ -23,7 +23,7 @@ export class NetworkFirewallPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/v1:NetworkFirewallPolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/v1:NetworkFirewallPolicy';
 
     /**
      * Returns true if the given object is an instance of NetworkFirewallPolicy.  This is designed to work even

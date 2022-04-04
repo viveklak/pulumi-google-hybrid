@@ -14,7 +14,7 @@ export function getAgentPool(args: GetAgentPoolArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:storagetransfer/v1:getAgentPool", {
+    return pulumi.runtime.invoke("google-hybrid:storagetransfer/v1:getAgentPool", {
         "agentPoolId": args.agentPoolId,
         "project": args.project,
     }, opts);

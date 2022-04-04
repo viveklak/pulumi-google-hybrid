@@ -22,7 +22,7 @@ export class TransitionRouteGroup extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v3beta1:TransitionRouteGroup';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v3beta1:TransitionRouteGroup';
 
     /**
      * Returns true if the given object is an instance of TransitionRouteGroup.  This is designed to work even

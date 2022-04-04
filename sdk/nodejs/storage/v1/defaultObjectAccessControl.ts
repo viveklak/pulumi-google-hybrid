@@ -23,7 +23,7 @@ export class DefaultObjectAccessControl extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:storage/v1:DefaultObjectAccessControl';
+    public static readonly __pulumiType = 'google-hybrid:storage/v1:DefaultObjectAccessControl';
 
     /**
      * Returns true if the given object is an instance of DefaultObjectAccessControl.  This is designed to work even

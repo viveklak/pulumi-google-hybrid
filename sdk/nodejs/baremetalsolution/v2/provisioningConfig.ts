@@ -25,7 +25,7 @@ export class ProvisioningConfig extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:baremetalsolution/v2:ProvisioningConfig';
+    public static readonly __pulumiType = 'google-hybrid:baremetalsolution/v2:ProvisioningConfig';
 
     /**
      * Returns true if the given object is an instance of ProvisioningConfig.  This is designed to work even

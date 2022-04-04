@@ -23,7 +23,7 @@ export class FhirStore extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:healthcare/v1beta1:FhirStore';
+    public static readonly __pulumiType = 'google-hybrid:healthcare/v1beta1:FhirStore';
 
     /**
      * Returns true if the given object is an instance of FhirStore.  This is designed to work even

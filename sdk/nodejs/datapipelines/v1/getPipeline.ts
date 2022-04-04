@@ -14,7 +14,7 @@ export function getPipeline(args: GetPipelineArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datapipelines/v1:getPipeline", {
+    return pulumi.runtime.invoke("google-hybrid:datapipelines/v1:getPipeline", {
         "location": args.location,
         "pipelineId": args.pipelineId,
         "project": args.project,

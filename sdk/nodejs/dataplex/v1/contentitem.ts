@@ -23,7 +23,7 @@ export class Contentitem extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataplex/v1:Contentitem';
+    public static readonly __pulumiType = 'google-hybrid:dataplex/v1:Contentitem';
 
     /**
      * Returns true if the given object is an instance of Contentitem.  This is designed to work even

@@ -24,7 +24,7 @@ export class MigrationJobIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datamigration/v1:MigrationJobIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:datamigration/v1:MigrationJobIamPolicy';
 
     /**
      * Returns true if the given object is an instance of MigrationJobIamPolicy.  This is designed to work even

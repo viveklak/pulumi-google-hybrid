@@ -23,7 +23,7 @@ export class Intent extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v2:Intent';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v2:Intent';
 
     /**
      * Returns true if the given object is an instance of Intent.  This is designed to work even

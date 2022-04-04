@@ -22,7 +22,7 @@ export class RegionNetwork extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:RegionNetwork';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:RegionNetwork';
 
     /**
      * Returns true if the given object is an instance of RegionNetwork.  This is designed to work even

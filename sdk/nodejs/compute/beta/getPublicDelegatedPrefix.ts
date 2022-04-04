@@ -14,7 +14,7 @@ export function getPublicDelegatedPrefix(args: GetPublicDelegatedPrefixArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getPublicDelegatedPrefix", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getPublicDelegatedPrefix", {
         "project": args.project,
         "publicDelegatedPrefix": args.publicDelegatedPrefix,
         "region": args.region,

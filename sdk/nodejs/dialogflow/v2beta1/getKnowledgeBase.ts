@@ -13,7 +13,7 @@ export function getKnowledgeBase(args: GetKnowledgeBaseArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v2beta1:getKnowledgeBase", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v2beta1:getKnowledgeBase", {
         "knowledgeBaseId": args.knowledgeBaseId,
         "location": args.location,
         "project": args.project,

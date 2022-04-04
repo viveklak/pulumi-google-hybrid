@@ -14,7 +14,7 @@ export function getConfig(args: GetConfigArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:gameservices/v1beta:getConfig", {
+    return pulumi.runtime.invoke("google-hybrid:gameservices/v1beta:getConfig", {
         "configId": args.configId,
         "gameServerDeploymentId": args.gameServerDeploymentId,
         "location": args.location,

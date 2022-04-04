@@ -14,7 +14,7 @@ export function getObjectIamPolicy(args: GetObjectIamPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:storage/v1:getObjectIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:storage/v1:getObjectIamPolicy", {
         "bucket": args.bucket,
         "generation": args.generation,
         "object": args.object,

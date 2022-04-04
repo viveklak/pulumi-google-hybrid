@@ -13,7 +13,7 @@ export function getOrganizationRole(args: GetOrganizationRoleArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:iam/v1:getOrganizationRole", {
+    return pulumi.runtime.invoke("google-hybrid:iam/v1:getOrganizationRole", {
         "organizationId": args.organizationId,
         "roleId": args.roleId,
     }, opts);

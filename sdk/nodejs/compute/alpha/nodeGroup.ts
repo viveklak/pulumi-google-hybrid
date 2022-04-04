@@ -22,7 +22,7 @@ export class NodeGroup extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:NodeGroup';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:NodeGroup';
 
     /**
      * Returns true if the given object is an instance of NodeGroup.  This is designed to work even

@@ -14,7 +14,7 @@ export function getTlsRoute(args: GetTlsRouteArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1beta1:getTlsRoute", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1beta1:getTlsRoute", {
         "location": args.location,
         "project": args.project,
         "tlsRouteId": args.tlsRouteId,

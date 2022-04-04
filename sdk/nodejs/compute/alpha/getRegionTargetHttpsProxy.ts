@@ -13,7 +13,7 @@ export function getRegionTargetHttpsProxy(args: GetRegionTargetHttpsProxyArgs, o
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getRegionTargetHttpsProxy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getRegionTargetHttpsProxy", {
         "project": args.project,
         "region": args.region,
         "targetHttpsProxy": args.targetHttpsProxy,

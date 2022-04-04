@@ -13,7 +13,7 @@ export function getHttpsHealthCheck(args: GetHttpsHealthCheckArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getHttpsHealthCheck", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getHttpsHealthCheck", {
         "httpsHealthCheck": args.httpsHealthCheck,
         "project": args.project,
     }, opts);

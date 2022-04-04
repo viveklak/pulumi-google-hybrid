@@ -13,7 +13,7 @@ export function getInstance(args: GetInstanceArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigtableadmin/v2:getInstance", {
+    return pulumi.runtime.invoke("google-hybrid:bigtableadmin/v2:getInstance", {
         "instanceId": args.instanceId,
         "project": args.project,
     }, opts);

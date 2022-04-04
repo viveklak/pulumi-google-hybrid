@@ -23,7 +23,7 @@ export class Alias extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Alias';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Alias';
 
     /**
      * Returns true if the given object is an instance of Alias.  This is designed to work even

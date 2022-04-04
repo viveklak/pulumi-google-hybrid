@@ -14,7 +14,7 @@ export function getStoredInfoType(args: GetStoredInfoTypeArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dlp/v2:getStoredInfoType", {
+    return pulumi.runtime.invoke("google-hybrid:dlp/v2:getStoredInfoType", {
         "location": args.location,
         "project": args.project,
         "storedInfoTypeId": args.storedInfoTypeId,

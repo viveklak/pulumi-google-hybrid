@@ -22,7 +22,7 @@ export class Function extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudfunctions/v1:Function';
+    public static readonly __pulumiType = 'google-hybrid:cloudfunctions/v1:Function';
 
     /**
      * Returns true if the given object is an instance of Function.  This is designed to work even

@@ -14,7 +14,7 @@ export function getInstantSnapshot(args: GetInstantSnapshotArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getInstantSnapshot", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getInstantSnapshot", {
         "instantSnapshot": args.instantSnapshot,
         "project": args.project,
         "zone": args.zone,

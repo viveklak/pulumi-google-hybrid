@@ -14,7 +14,7 @@ export function getSubnetworkIamPolicy(args: GetSubnetworkIamPolicyArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getSubnetworkIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getSubnetworkIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "region": args.region,

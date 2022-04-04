@@ -24,7 +24,7 @@ export class ReusableConfigIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:privateca/v1beta1:ReusableConfigIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:privateca/v1beta1:ReusableConfigIamPolicy';
 
     /**
      * Returns true if the given object is an instance of ReusableConfigIamPolicy.  This is designed to work even

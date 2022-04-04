@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:retail/v2alpha:Control":
+            case "google-hybrid:retail/v2alpha:Control":
                 return new Control(name, <any>undefined, { urn })
-            case "google-native:retail/v2alpha:Product":
+            case "google-hybrid:retail/v2alpha:Product":
                 return new Product(name, <any>undefined, { urn })
-            case "google-native:retail/v2alpha:ServingConfig":
+            case "google-hybrid:retail/v2alpha:ServingConfig":
                 return new ServingConfig(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "retail/v2alpha", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "retail/v2alpha", _module)

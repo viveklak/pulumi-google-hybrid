@@ -14,7 +14,7 @@ export function getEntryGroup(args: GetEntryGroupArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datacatalog/v1beta1:getEntryGroup", {
+    return pulumi.runtime.invoke("google-hybrid:datacatalog/v1beta1:getEntryGroup", {
         "entryGroupId": args.entryGroupId,
         "location": args.location,
         "project": args.project,

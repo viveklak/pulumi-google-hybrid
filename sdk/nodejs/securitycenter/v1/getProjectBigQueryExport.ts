@@ -13,7 +13,7 @@ export function getProjectBigQueryExport(args: GetProjectBigQueryExportArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:securitycenter/v1:getProjectBigQueryExport", {
+    return pulumi.runtime.invoke("google-hybrid:securitycenter/v1:getProjectBigQueryExport", {
         "bigQueryExportId": args.bigQueryExportId,
         "project": args.project,
     }, opts);

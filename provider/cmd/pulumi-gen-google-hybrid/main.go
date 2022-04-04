@@ -52,7 +52,6 @@ import (
 func main() {
 	languages := os.Args[1]
 
-	tfgen.Main("google-hybrid", version.Version, provider.Provider())
 	diagOpts := diag.FormatOptions{
 		Color: cmdutil.GetGlobalColorization(),
 		Debug: true,
@@ -77,20 +76,22 @@ func main() {
 	f, err := fs.Open("schema.json")
 	contract.AssertNoError(err)
 	defer contract.IgnoreClose(f)
-	pkgSpec := &schema.PackageSpec{}
-	contract.AssertNoError(json.NewDecoder(f).Decode(&pkgSpec))
+	bridgedSpec := &schema.PackageSpec{}
+	contract.AssertNoError(json.NewDecoder(f).Decode(&bridgedSpec))
 
 	version := ""
 	if len(os.Args) == 3 {
 		version = os.Args[2]
 	}
 
-	nativeSpec, meta, err := gen.PulumiSchema()
+	pkgSpec, meta, err := gen.PulumiSchema()
 	if err != nil {
 		panic(err)
 	}
 
-	contract.AssertNoError(mergo.Merge(pkgSpec, nativeSpec, mergo.WithAppendSlice))
+	contract.AssertNoError(mergo.Merge(&pkgSpec.Resources, bridgedSpec.Resources, mergo.WithAppendSlice))
+	contract.AssertNoError(mergo.Merge(&pkgSpec.Functions, bridgedSpec.Functions, mergo.WithAppendSlice))
+	contract.AssertNoError(mergo.Merge(&pkgSpec.Types, bridgedSpec.Types, mergo.WithAppendSlice))
 
 	for _, language := range strings.Split(languages, ",") {
 		switch language {

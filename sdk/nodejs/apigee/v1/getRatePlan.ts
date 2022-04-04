@@ -14,7 +14,7 @@ export function getRatePlan(args: GetRatePlanArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getRatePlan", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getRatePlan", {
         "apiproductId": args.apiproductId,
         "organizationId": args.organizationId,
         "rateplanId": args.rateplanId,

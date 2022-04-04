@@ -14,7 +14,7 @@ export function getRegistry(args: GetRegistryArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudiot/v1:getRegistry", {
+    return pulumi.runtime.invoke("google-hybrid:cloudiot/v1:getRegistry", {
         "location": args.location,
         "project": args.project,
         "registryId": args.registryId,

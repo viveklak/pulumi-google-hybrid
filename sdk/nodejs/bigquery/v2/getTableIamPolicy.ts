@@ -14,7 +14,7 @@ export function getTableIamPolicy(args: GetTableIamPolicyArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigquery/v2:getTableIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:bigquery/v2:getTableIamPolicy", {
         "datasetId": args.datasetId,
         "project": args.project,
         "tableId": args.tableId,

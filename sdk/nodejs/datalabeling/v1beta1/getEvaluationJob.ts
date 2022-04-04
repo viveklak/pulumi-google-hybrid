@@ -14,7 +14,7 @@ export function getEvaluationJob(args: GetEvaluationJobArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datalabeling/v1beta1:getEvaluationJob", {
+    return pulumi.runtime.invoke("google-hybrid:datalabeling/v1beta1:getEvaluationJob", {
         "evaluationJobId": args.evaluationJobId,
         "project": args.project,
     }, opts);

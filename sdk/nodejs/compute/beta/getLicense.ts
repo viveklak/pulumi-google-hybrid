@@ -14,7 +14,7 @@ export function getLicense(args: GetLicenseArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getLicense", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getLicense", {
         "license": args.license,
         "project": args.project,
     }, opts);

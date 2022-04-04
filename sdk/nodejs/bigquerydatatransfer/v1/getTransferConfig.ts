@@ -14,7 +14,7 @@ export function getTransferConfig(args: GetTransferConfigArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigquerydatatransfer/v1:getTransferConfig", {
+    return pulumi.runtime.invoke("google-hybrid:bigquerydatatransfer/v1:getTransferConfig", {
         "location": args.location,
         "project": args.project,
         "transferConfigId": args.transferConfigId,

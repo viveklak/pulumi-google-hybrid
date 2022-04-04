@@ -14,7 +14,7 @@ export function getHttpRoute(args: GetHttpRouteArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1beta1:getHttpRoute", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1beta1:getHttpRoute", {
         "httpRouteId": args.httpRouteId,
         "location": args.location,
         "project": args.project,

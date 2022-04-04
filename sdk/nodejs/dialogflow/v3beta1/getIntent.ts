@@ -14,7 +14,7 @@ export function getIntent(args: GetIntentArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v3beta1:getIntent", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v3beta1:getIntent", {
         "agentId": args.agentId,
         "intentId": args.intentId,
         "languageCode": args.languageCode,

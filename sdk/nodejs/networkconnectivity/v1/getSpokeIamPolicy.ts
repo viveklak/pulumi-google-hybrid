@@ -14,7 +14,7 @@ export function getSpokeIamPolicy(args: GetSpokeIamPolicyArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkconnectivity/v1:getSpokeIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networkconnectivity/v1:getSpokeIamPolicy", {
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

@@ -21,7 +21,7 @@ export class ServiceBinding extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkservices/v1beta1:ServiceBinding';
+    public static readonly __pulumiType = 'google-hybrid:networkservices/v1beta1:ServiceBinding';
 
     /**
      * Returns true if the given object is an instance of ServiceBinding.  This is designed to work even

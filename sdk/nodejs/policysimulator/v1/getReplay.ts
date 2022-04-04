@@ -14,7 +14,7 @@ export function getReplay(args: GetReplayArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:policysimulator/v1:getReplay", {
+    return pulumi.runtime.invoke("google-hybrid:policysimulator/v1:getReplay", {
         "location": args.location,
         "project": args.project,
         "replayId": args.replayId,

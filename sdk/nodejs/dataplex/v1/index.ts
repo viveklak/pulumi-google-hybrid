@@ -57,37 +57,37 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:dataplex/v1:Asset":
+            case "google-hybrid:dataplex/v1:Asset":
                 return new Asset(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:Contentitem":
+            case "google-hybrid:dataplex/v1:Contentitem":
                 return new Contentitem(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:Entity":
+            case "google-hybrid:dataplex/v1:Entity":
                 return new Entity(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:Environment":
+            case "google-hybrid:dataplex/v1:Environment":
                 return new Environment(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:Lake":
+            case "google-hybrid:dataplex/v1:Lake":
                 return new Lake(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:LakeAssetIamPolicy":
+            case "google-hybrid:dataplex/v1:LakeAssetIamPolicy":
                 return new LakeAssetIamPolicy(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:LakeContentIamPolicy":
+            case "google-hybrid:dataplex/v1:LakeContentIamPolicy":
                 return new LakeContentIamPolicy(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:LakeEnvironmentIamPolicy":
+            case "google-hybrid:dataplex/v1:LakeEnvironmentIamPolicy":
                 return new LakeEnvironmentIamPolicy(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:LakeIamPolicy":
+            case "google-hybrid:dataplex/v1:LakeIamPolicy":
                 return new LakeIamPolicy(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:LakeTaskIamPolicy":
+            case "google-hybrid:dataplex/v1:LakeTaskIamPolicy":
                 return new LakeTaskIamPolicy(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:LakeZoneIamPolicy":
+            case "google-hybrid:dataplex/v1:LakeZoneIamPolicy":
                 return new LakeZoneIamPolicy(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:Partition":
+            case "google-hybrid:dataplex/v1:Partition":
                 return new Partition(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:Task":
+            case "google-hybrid:dataplex/v1:Task":
                 return new Task(name, <any>undefined, { urn })
-            case "google-native:dataplex/v1:Zone":
+            case "google-hybrid:dataplex/v1:Zone":
                 return new Zone(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "dataplex/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "dataplex/v1", _module)

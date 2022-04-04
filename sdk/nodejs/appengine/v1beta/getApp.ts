@@ -14,7 +14,7 @@ export function getApp(args: GetAppArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:appengine/v1beta:getApp", {
+    return pulumi.runtime.invoke("google-hybrid:appengine/v1beta:getApp", {
         "appId": args.appId,
     }, opts);
 }

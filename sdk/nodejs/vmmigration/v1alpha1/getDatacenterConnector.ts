@@ -14,7 +14,7 @@ export function getDatacenterConnector(args: GetDatacenterConnectorArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:vmmigration/v1alpha1:getDatacenterConnector", {
+    return pulumi.runtime.invoke("google-hybrid:vmmigration/v1alpha1:getDatacenterConnector", {
         "datacenterConnectorId": args.datacenterConnectorId,
         "location": args.location,
         "project": args.project,

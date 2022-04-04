@@ -22,7 +22,7 @@ export class InstanceGroupManager extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:InstanceGroupManager';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:InstanceGroupManager';
 
     /**
      * Returns true if the given object is an instance of InstanceGroupManager.  This is designed to work even

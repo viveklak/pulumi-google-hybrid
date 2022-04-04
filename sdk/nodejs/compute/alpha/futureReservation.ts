@@ -22,7 +22,7 @@ export class FutureReservation extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:FutureReservation';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:FutureReservation';
 
     /**
      * Returns true if the given object is an instance of FutureReservation.  This is designed to work even

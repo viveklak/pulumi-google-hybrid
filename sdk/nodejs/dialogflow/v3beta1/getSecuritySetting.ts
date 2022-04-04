@@ -14,7 +14,7 @@ export function getSecuritySetting(args: GetSecuritySettingArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v3beta1:getSecuritySetting", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v3beta1:getSecuritySetting", {
         "location": args.location,
         "project": args.project,
         "securitySettingId": args.securitySettingId,

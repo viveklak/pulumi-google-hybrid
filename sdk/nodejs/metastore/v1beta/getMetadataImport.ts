@@ -14,7 +14,7 @@ export function getMetadataImport(args: GetMetadataImportArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:metastore/v1beta:getMetadataImport", {
+    return pulumi.runtime.invoke("google-hybrid:metastore/v1beta:getMetadataImport", {
         "location": args.location,
         "metadataImportId": args.metadataImportId,
         "project": args.project,

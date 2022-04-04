@@ -14,7 +14,7 @@ export function getConnection(args: GetConnectionArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigqueryconnection/v1beta1:getConnection", {
+    return pulumi.runtime.invoke("google-hybrid:bigqueryconnection/v1beta1:getConnection", {
         "connectionId": args.connectionId,
         "location": args.location,
         "project": args.project,

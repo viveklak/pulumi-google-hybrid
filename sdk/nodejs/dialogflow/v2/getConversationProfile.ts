@@ -14,7 +14,7 @@ export function getConversationProfile(args: GetConversationProfileArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v2:getConversationProfile", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v2:getConversationProfile", {
         "conversationProfileId": args.conversationProfileId,
         "location": args.location,
         "project": args.project,

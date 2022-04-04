@@ -14,7 +14,7 @@ export function getDeveloper(args: GetDeveloperArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getDeveloper", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getDeveloper", {
         "action": args.action,
         "developerId": args.developerId,
         "organizationId": args.organizationId,

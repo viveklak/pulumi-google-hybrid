@@ -21,7 +21,7 @@ export class OrganizationBigQueryExport extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:securitycenter/v1:OrganizationBigQueryExport';
+    public static readonly __pulumiType = 'google-hybrid:securitycenter/v1:OrganizationBigQueryExport';
 
     /**
      * Returns true if the given object is an instance of OrganizationBigQueryExport.  This is designed to work even

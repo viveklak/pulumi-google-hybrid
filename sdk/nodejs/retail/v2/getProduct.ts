@@ -14,7 +14,7 @@ export function getProduct(args: GetProductArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:retail/v2:getProduct", {
+    return pulumi.runtime.invoke("google-hybrid:retail/v2:getProduct", {
         "branchId": args.branchId,
         "catalogId": args.catalogId,
         "location": args.location,

@@ -14,7 +14,7 @@ export function getOccurrence(args: GetOccurrenceArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:containeranalysis/v1alpha1:getOccurrence", {
+    return pulumi.runtime.invoke("google-hybrid:containeranalysis/v1alpha1:getOccurrence", {
         "occurrenceId": args.occurrenceId,
         "project": args.project,
     }, opts);

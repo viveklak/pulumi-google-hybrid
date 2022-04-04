@@ -22,7 +22,7 @@ export class TlsRoute extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkservices/v1beta1:TlsRoute';
+    public static readonly __pulumiType = 'google-hybrid:networkservices/v1beta1:TlsRoute';
 
     /**
      * Returns true if the given object is an instance of TlsRoute.  This is designed to work even

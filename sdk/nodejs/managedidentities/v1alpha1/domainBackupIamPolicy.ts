@@ -24,7 +24,7 @@ export class DomainBackupIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:managedidentities/v1alpha1:DomainBackupIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:managedidentities/v1alpha1:DomainBackupIamPolicy';
 
     /**
      * Returns true if the given object is an instance of DomainBackupIamPolicy.  This is designed to work even

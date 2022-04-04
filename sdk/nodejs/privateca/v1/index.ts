@@ -36,23 +36,23 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:privateca/v1:CaPool":
+            case "google-hybrid:privateca/v1:CaPool":
                 return new CaPool(name, <any>undefined, { urn })
-            case "google-native:privateca/v1:CaPoolCertificateAuthorityCertificateRevocationListIamPolicy":
+            case "google-hybrid:privateca/v1:CaPoolCertificateAuthorityCertificateRevocationListIamPolicy":
                 return new CaPoolCertificateAuthorityCertificateRevocationListIamPolicy(name, <any>undefined, { urn })
-            case "google-native:privateca/v1:CaPoolIamPolicy":
+            case "google-hybrid:privateca/v1:CaPoolIamPolicy":
                 return new CaPoolIamPolicy(name, <any>undefined, { urn })
-            case "google-native:privateca/v1:Certificate":
+            case "google-hybrid:privateca/v1:Certificate":
                 return new Certificate(name, <any>undefined, { urn })
-            case "google-native:privateca/v1:CertificateAuthority":
+            case "google-hybrid:privateca/v1:CertificateAuthority":
                 return new CertificateAuthority(name, <any>undefined, { urn })
-            case "google-native:privateca/v1:CertificateTemplate":
+            case "google-hybrid:privateca/v1:CertificateTemplate":
                 return new CertificateTemplate(name, <any>undefined, { urn })
-            case "google-native:privateca/v1:CertificateTemplateIamPolicy":
+            case "google-hybrid:privateca/v1:CertificateTemplateIamPolicy":
                 return new CertificateTemplateIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "privateca/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "privateca/v1", _module)

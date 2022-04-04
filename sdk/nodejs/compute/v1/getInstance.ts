@@ -14,7 +14,7 @@ export function getInstance(args: GetInstanceArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getInstance", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getInstance", {
         "instance": args.instance,
         "project": args.project,
         "zone": args.zone,

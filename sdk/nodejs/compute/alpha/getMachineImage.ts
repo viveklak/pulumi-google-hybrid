@@ -14,7 +14,7 @@ export function getMachineImage(args: GetMachineImageArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getMachineImage", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getMachineImage", {
         "machineImage": args.machineImage,
         "project": args.project,
     }, opts);

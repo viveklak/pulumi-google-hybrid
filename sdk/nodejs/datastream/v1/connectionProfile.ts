@@ -23,7 +23,7 @@ export class ConnectionProfile extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datastream/v1:ConnectionProfile';
+    public static readonly __pulumiType = 'google-hybrid:datastream/v1:ConnectionProfile';
 
     /**
      * Returns true if the given object is an instance of ConnectionProfile.  This is designed to work even

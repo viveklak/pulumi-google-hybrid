@@ -27,17 +27,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:run/v1:DomainMapping":
+            case "google-hybrid:run/v1:DomainMapping":
                 return new DomainMapping(name, <any>undefined, { urn })
-            case "google-native:run/v1:JobIamPolicy":
+            case "google-hybrid:run/v1:JobIamPolicy":
                 return new JobIamPolicy(name, <any>undefined, { urn })
-            case "google-native:run/v1:Service":
+            case "google-hybrid:run/v1:Service":
                 return new Service(name, <any>undefined, { urn })
-            case "google-native:run/v1:ServiceIamPolicy":
+            case "google-hybrid:run/v1:ServiceIamPolicy":
                 return new ServiceIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "run/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "run/v1", _module)

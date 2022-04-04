@@ -24,7 +24,7 @@ export class AuthorizationPolicyIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networksecurity/v1:AuthorizationPolicyIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:networksecurity/v1:AuthorizationPolicyIamPolicy';
 
     /**
      * Returns true if the given object is an instance of AuthorizationPolicyIamPolicy.  This is designed to work even

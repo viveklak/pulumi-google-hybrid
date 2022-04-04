@@ -14,7 +14,7 @@ export function getWorkflowTemplate(args: GetWorkflowTemplateArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1beta2:getWorkflowTemplate", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1beta2:getWorkflowTemplate", {
         "location": args.location,
         "project": args.project,
         "version": args.version,

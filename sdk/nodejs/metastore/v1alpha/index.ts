@@ -36,23 +36,23 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:metastore/v1alpha:Backup":
+            case "google-hybrid:metastore/v1alpha:Backup":
                 return new Backup(name, <any>undefined, { urn })
-            case "google-native:metastore/v1alpha:MetadataImport":
+            case "google-hybrid:metastore/v1alpha:MetadataImport":
                 return new MetadataImport(name, <any>undefined, { urn })
-            case "google-native:metastore/v1alpha:Service":
+            case "google-hybrid:metastore/v1alpha:Service":
                 return new Service(name, <any>undefined, { urn })
-            case "google-native:metastore/v1alpha:ServiceBackupIamPolicy":
+            case "google-hybrid:metastore/v1alpha:ServiceBackupIamPolicy":
                 return new ServiceBackupIamPolicy(name, <any>undefined, { urn })
-            case "google-native:metastore/v1alpha:ServiceDatabaseIamPolicy":
+            case "google-hybrid:metastore/v1alpha:ServiceDatabaseIamPolicy":
                 return new ServiceDatabaseIamPolicy(name, <any>undefined, { urn })
-            case "google-native:metastore/v1alpha:ServiceDatabaseTableIamPolicy":
+            case "google-hybrid:metastore/v1alpha:ServiceDatabaseTableIamPolicy":
                 return new ServiceDatabaseTableIamPolicy(name, <any>undefined, { urn })
-            case "google-native:metastore/v1alpha:ServiceIamPolicy":
+            case "google-hybrid:metastore/v1alpha:ServiceIamPolicy":
                 return new ServiceIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "metastore/v1alpha", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "metastore/v1alpha", _module)

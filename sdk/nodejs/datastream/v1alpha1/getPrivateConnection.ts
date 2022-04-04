@@ -14,7 +14,7 @@ export function getPrivateConnection(args: GetPrivateConnectionArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datastream/v1alpha1:getPrivateConnection", {
+    return pulumi.runtime.invoke("google-hybrid:datastream/v1alpha1:getPrivateConnection", {
         "location": args.location,
         "privateConnectionId": args.privateConnectionId,
         "project": args.project,

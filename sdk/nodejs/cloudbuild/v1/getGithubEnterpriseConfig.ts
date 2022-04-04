@@ -14,7 +14,7 @@ export function getGithubEnterpriseConfig(args: GetGithubEnterpriseConfigArgs, o
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudbuild/v1:getGithubEnterpriseConfig", {
+    return pulumi.runtime.invoke("google-hybrid:cloudbuild/v1:getGithubEnterpriseConfig", {
         "configId": args.configId,
         "githubEnterpriseConfigId": args.githubEnterpriseConfigId,
         "location": args.location,

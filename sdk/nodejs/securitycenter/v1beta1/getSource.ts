@@ -13,7 +13,7 @@ export function getSource(args: GetSourceArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:securitycenter/v1beta1:getSource", {
+    return pulumi.runtime.invoke("google-hybrid:securitycenter/v1beta1:getSource", {
         "organizationId": args.organizationId,
         "sourceId": args.sourceId,
     }, opts);

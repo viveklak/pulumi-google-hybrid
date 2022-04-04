@@ -14,7 +14,7 @@ export function getRegionSslPolicy(args: GetRegionSslPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getRegionSslPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getRegionSslPolicy", {
         "project": args.project,
         "region": args.region,
         "sslPolicy": args.sslPolicy,

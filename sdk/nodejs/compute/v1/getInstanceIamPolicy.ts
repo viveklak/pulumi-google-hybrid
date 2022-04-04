@@ -14,7 +14,7 @@ export function getInstanceIamPolicy(args: GetInstanceIamPolicyArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getInstanceIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getInstanceIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "resource": args.resource,

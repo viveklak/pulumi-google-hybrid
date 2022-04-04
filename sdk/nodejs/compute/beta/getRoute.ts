@@ -14,7 +14,7 @@ export function getRoute(args: GetRouteArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getRoute", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getRoute", {
         "project": args.project,
         "route": args.route,
     }, opts);

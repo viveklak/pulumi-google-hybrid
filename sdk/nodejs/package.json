@@ -1,5 +1,5 @@
 {
-    "name": "@pulumi/google-native",
+    "name": "@pulumi/google-hybrid",
     "version": "${VERSION}",
     "keywords": [
         "pulumi",
@@ -12,7 +12,7 @@
     "license": "Apache-2.0",
     "scripts": {
         "build": "tsc",
-        "install": "node scripts/install-pulumi-plugin.js resource google-native ${VERSION}"
+        "install": "node scripts/install-pulumi-plugin.js resource google-hybrid ${VERSION}"
     },
     "dependencies": {
         "@pulumi/pulumi": "^3.0.0"

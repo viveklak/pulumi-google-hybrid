@@ -23,7 +23,7 @@ export class Source extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:securitycenter/v1beta1:Source';
+    public static readonly __pulumiType = 'google-hybrid:securitycenter/v1beta1:Source';
 
     /**
      * Returns true if the given object is an instance of Source.  This is designed to work even

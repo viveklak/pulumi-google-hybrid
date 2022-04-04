@@ -22,7 +22,7 @@ export class Channel extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:firebasehosting/v1beta1:Channel';
+    public static readonly __pulumiType = 'google-hybrid:firebasehosting/v1beta1:Channel';
 
     /**
      * Returns true if the given object is an instance of Channel.  This is designed to work even

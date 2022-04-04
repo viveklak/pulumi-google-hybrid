@@ -22,7 +22,7 @@ export class Context extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v2beta1:Context';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v2beta1:Context';
 
     /**
      * Returns true if the given object is an instance of Context.  This is designed to work even

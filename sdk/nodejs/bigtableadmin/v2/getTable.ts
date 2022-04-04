@@ -14,7 +14,7 @@ export function getTable(args: GetTableArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigtableadmin/v2:getTable", {
+    return pulumi.runtime.invoke("google-hybrid:bigtableadmin/v2:getTable", {
         "instanceId": args.instanceId,
         "project": args.project,
         "tableId": args.tableId,

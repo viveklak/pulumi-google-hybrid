@@ -24,7 +24,7 @@ export class FolderIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudresourcemanager/v3:FolderIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:cloudresourcemanager/v3:FolderIamPolicy';
 
     /**
      * Returns true if the given object is an instance of FolderIamPolicy.  This is designed to work even

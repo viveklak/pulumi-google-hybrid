@@ -14,7 +14,7 @@ export function getPipeline(args: GetPipelineArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:genomics/v1alpha2:getPipeline", {
+    return pulumi.runtime.invoke("google-hybrid:genomics/v1alpha2:getPipeline", {
         "pipelineId": args.pipelineId,
     }, opts);
 }

@@ -14,7 +14,7 @@ export function getContentitem(args: GetContentitemArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataplex/v1:getContentitem", {
+    return pulumi.runtime.invoke("google-hybrid:dataplex/v1:getContentitem", {
         "contentitemId": args.contentitemId,
         "lakeId": args.lakeId,
         "location": args.location,

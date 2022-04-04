@@ -24,7 +24,7 @@ export class AccessPolicyIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:accesscontextmanager/v1:AccessPolicyIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:accesscontextmanager/v1:AccessPolicyIamPolicy';
 
     /**
      * Returns true if the given object is an instance of AccessPolicyIamPolicy.  This is designed to work even

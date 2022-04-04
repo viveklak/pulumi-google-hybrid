@@ -24,7 +24,7 @@ export class DatasetHl7V2StoreIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:healthcare/v1beta1:DatasetHl7V2StoreIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:healthcare/v1beta1:DatasetHl7V2StoreIamPolicy';
 
     /**
      * Returns true if the given object is an instance of DatasetHl7V2StoreIamPolicy.  This is designed to work even

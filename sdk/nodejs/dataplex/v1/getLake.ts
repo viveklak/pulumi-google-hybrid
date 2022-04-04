@@ -14,7 +14,7 @@ export function getLake(args: GetLakeArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataplex/v1:getLake", {
+    return pulumi.runtime.invoke("google-hybrid:dataplex/v1:getLake", {
         "lakeId": args.lakeId,
         "location": args.location,
         "project": args.project,

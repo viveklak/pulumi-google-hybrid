@@ -23,7 +23,7 @@ export class Asset extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataplex/v1:Asset';
+    public static readonly __pulumiType = 'google-hybrid:dataplex/v1:Asset';
 
     /**
      * Returns true if the given object is an instance of Asset.  This is designed to work even

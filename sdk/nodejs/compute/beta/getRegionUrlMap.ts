@@ -14,7 +14,7 @@ export function getRegionUrlMap(args: GetRegionUrlMapArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getRegionUrlMap", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getRegionUrlMap", {
         "project": args.project,
         "region": args.region,
         "urlMap": args.urlMap,

@@ -14,7 +14,7 @@ export function getSource(args: GetSourceArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:vmmigration/v1:getSource", {
+    return pulumi.runtime.invoke("google-hybrid:vmmigration/v1:getSource", {
         "location": args.location,
         "project": args.project,
         "sourceId": args.sourceId,

@@ -13,7 +13,7 @@ export function getInstance(args: GetInstanceArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:spanner/v1:getInstance", {
+    return pulumi.runtime.invoke("google-hybrid:spanner/v1:getInstance", {
         "fieldMask": args.fieldMask,
         "instanceId": args.instanceId,
         "project": args.project,

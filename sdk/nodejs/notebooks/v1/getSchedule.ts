@@ -14,7 +14,7 @@ export function getSchedule(args: GetScheduleArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:notebooks/v1:getSchedule", {
+    return pulumi.runtime.invoke("google-hybrid:notebooks/v1:getSchedule", {
         "location": args.location,
         "project": args.project,
         "scheduleId": args.scheduleId,

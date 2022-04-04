@@ -14,7 +14,7 @@ export function getGrpcRoute(args: GetGrpcRouteArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1beta1:getGrpcRoute", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1beta1:getGrpcRoute", {
         "grpcRouteId": args.grpcRouteId,
         "location": args.location,
         "project": args.project,

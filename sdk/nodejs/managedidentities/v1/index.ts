@@ -30,21 +30,21 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:managedidentities/v1:Backup":
+            case "google-hybrid:managedidentities/v1:Backup":
                 return new Backup(name, <any>undefined, { urn })
-            case "google-native:managedidentities/v1:Domain":
+            case "google-hybrid:managedidentities/v1:Domain":
                 return new Domain(name, <any>undefined, { urn })
-            case "google-native:managedidentities/v1:DomainBackupIamPolicy":
+            case "google-hybrid:managedidentities/v1:DomainBackupIamPolicy":
                 return new DomainBackupIamPolicy(name, <any>undefined, { urn })
-            case "google-native:managedidentities/v1:DomainIamPolicy":
+            case "google-hybrid:managedidentities/v1:DomainIamPolicy":
                 return new DomainIamPolicy(name, <any>undefined, { urn })
-            case "google-native:managedidentities/v1:Peering":
+            case "google-hybrid:managedidentities/v1:Peering":
                 return new Peering(name, <any>undefined, { urn })
-            case "google-native:managedidentities/v1:PeeringIamPolicy":
+            case "google-hybrid:managedidentities/v1:PeeringIamPolicy":
                 return new PeeringIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "managedidentities/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "managedidentities/v1", _module)

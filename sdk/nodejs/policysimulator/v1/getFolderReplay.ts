@@ -14,7 +14,7 @@ export function getFolderReplay(args: GetFolderReplayArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:policysimulator/v1:getFolderReplay", {
+    return pulumi.runtime.invoke("google-hybrid:policysimulator/v1:getFolderReplay", {
         "folderId": args.folderId,
         "location": args.location,
         "replayId": args.replayId,

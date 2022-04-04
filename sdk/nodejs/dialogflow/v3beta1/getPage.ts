@@ -14,7 +14,7 @@ export function getPage(args: GetPageArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v3beta1:getPage", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v3beta1:getPage", {
         "agentId": args.agentId,
         "flowId": args.flowId,
         "languageCode": args.languageCode,

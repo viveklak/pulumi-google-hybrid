@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudbilling/v1:BillingAccount":
+            case "google-hybrid:cloudbilling/v1:BillingAccount":
                 return new BillingAccount(name, <any>undefined, { urn })
-            case "google-native:cloudbilling/v1:BillingAccountIamPolicy":
+            case "google-hybrid:cloudbilling/v1:BillingAccountIamPolicy":
                 return new BillingAccountIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudbilling/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudbilling/v1", _module)

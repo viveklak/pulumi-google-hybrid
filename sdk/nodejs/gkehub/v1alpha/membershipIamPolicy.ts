@@ -24,7 +24,7 @@ export class MembershipIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:gkehub/v1alpha:MembershipIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:gkehub/v1alpha:MembershipIamPolicy';
 
     /**
      * Returns true if the given object is an instance of MembershipIamPolicy.  This is designed to work even

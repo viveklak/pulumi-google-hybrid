@@ -23,7 +23,7 @@ export class DlpJob extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dlp/v2:DlpJob';
+    public static readonly __pulumiType = 'google-hybrid:dlp/v2:DlpJob';
 
     /**
      * Returns true if the given object is an instance of DlpJob.  This is designed to work even

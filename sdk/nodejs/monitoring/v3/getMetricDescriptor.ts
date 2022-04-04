@@ -14,7 +14,7 @@ export function getMetricDescriptor(args: GetMetricDescriptorArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:monitoring/v3:getMetricDescriptor", {
+    return pulumi.runtime.invoke("google-hybrid:monitoring/v3:getMetricDescriptor", {
         "metricDescriptorId": args.metricDescriptorId,
         "project": args.project,
     }, opts);

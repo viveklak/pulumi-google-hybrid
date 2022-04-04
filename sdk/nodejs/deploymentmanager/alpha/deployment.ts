@@ -22,7 +22,7 @@ export class Deployment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:deploymentmanager/alpha:Deployment';
+    public static readonly __pulumiType = 'google-hybrid:deploymentmanager/alpha:Deployment';
 
     /**
      * Returns true if the given object is an instance of Deployment.  This is designed to work even

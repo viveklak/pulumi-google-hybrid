@@ -23,7 +23,7 @@ export class Registration extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:domains/v1:Registration';
+    public static readonly __pulumiType = 'google-hybrid:domains/v1:Registration';
 
     /**
      * Returns true if the given object is an instance of Registration.  This is designed to work even

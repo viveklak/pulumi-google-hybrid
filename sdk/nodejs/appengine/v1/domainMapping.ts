@@ -23,7 +23,7 @@ export class DomainMapping extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:appengine/v1:DomainMapping';
+    public static readonly __pulumiType = 'google-hybrid:appengine/v1:DomainMapping';
 
     /**
      * Returns true if the given object is an instance of DomainMapping.  This is designed to work even

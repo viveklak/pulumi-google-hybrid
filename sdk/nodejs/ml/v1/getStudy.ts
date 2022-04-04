@@ -14,7 +14,7 @@ export function getStudy(args: GetStudyArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:ml/v1:getStudy", {
+    return pulumi.runtime.invoke("google-hybrid:ml/v1:getStudy", {
         "location": args.location,
         "project": args.project,
         "studyId": args.studyId,

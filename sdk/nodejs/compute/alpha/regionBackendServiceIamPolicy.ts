@@ -24,7 +24,7 @@ export class RegionBackendServiceIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:RegionBackendServiceIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:RegionBackendServiceIamPolicy';
 
     /**
      * Returns true if the given object is an instance of RegionBackendServiceIamPolicy.  This is designed to work even

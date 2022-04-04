@@ -14,7 +14,7 @@ export function getRegionSslCertificate(args: GetRegionSslCertificateArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getRegionSslCertificate", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getRegionSslCertificate", {
         "project": args.project,
         "region": args.region,
         "sslCertificate": args.sslCertificate,

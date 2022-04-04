@@ -25,7 +25,7 @@ export class PerfSampleSeries extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:toolresults/v1beta3:PerfSampleSeries';
+    public static readonly __pulumiType = 'google-hybrid:toolresults/v1beta3:PerfSampleSeries';
 
     /**
      * Returns true if the given object is an instance of PerfSampleSeries.  This is designed to work even

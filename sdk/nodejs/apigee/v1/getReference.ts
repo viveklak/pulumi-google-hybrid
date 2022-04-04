@@ -13,7 +13,7 @@ export function getReference(args: GetReferenceArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getReference", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getReference", {
         "environmentId": args.environmentId,
         "organizationId": args.organizationId,
         "referenceId": args.referenceId,

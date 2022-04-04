@@ -14,7 +14,7 @@ export function getReservationIamPolicy(args: GetReservationIamPolicyArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getReservationIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getReservationIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "resource": args.resource,

@@ -22,7 +22,7 @@ export class ResourceRecordSet extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dns/v2:ResourceRecordSet';
+    public static readonly __pulumiType = 'google-hybrid:dns/v2:ResourceRecordSet';
 
     /**
      * Returns true if the given object is an instance of ResourceRecordSet.  This is designed to work even

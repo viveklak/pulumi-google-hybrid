@@ -14,7 +14,7 @@ export function getEdgeCacheOriginIamPolicy(args: GetEdgeCacheOriginIamPolicyArg
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1:getEdgeCacheOriginIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1:getEdgeCacheOriginIamPolicy", {
         "edgeCacheOriginId": args.edgeCacheOriginId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

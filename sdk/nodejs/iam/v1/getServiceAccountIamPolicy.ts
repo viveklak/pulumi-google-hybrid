@@ -14,7 +14,7 @@ export function getServiceAccountIamPolicy(args: GetServiceAccountIamPolicyArgs,
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:iam/v1:getServiceAccountIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:iam/v1:getServiceAccountIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "serviceAccountId": args.serviceAccountId,

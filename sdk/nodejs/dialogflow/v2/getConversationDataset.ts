@@ -14,7 +14,7 @@ export function getConversationDataset(args: GetConversationDatasetArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v2:getConversationDataset", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v2:getConversationDataset", {
         "conversationDatasetId": args.conversationDatasetId,
         "location": args.location,
         "project": args.project,

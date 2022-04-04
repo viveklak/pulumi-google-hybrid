@@ -14,7 +14,7 @@ export function getDatasetDicomStoreIamPolicy(args: GetDatasetDicomStoreIamPolic
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1:getDatasetDicomStoreIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1:getDatasetDicomStoreIamPolicy", {
         "datasetId": args.datasetId,
         "dicomStoreId": args.dicomStoreId,
         "location": args.location,

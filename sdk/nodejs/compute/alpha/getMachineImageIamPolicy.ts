@@ -14,7 +14,7 @@ export function getMachineImageIamPolicy(args: GetMachineImageIamPolicyArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getMachineImageIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getMachineImageIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "resource": args.resource,

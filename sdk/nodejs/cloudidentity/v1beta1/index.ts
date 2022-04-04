@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudidentity/v1beta1:Device":
+            case "google-hybrid:cloudidentity/v1beta1:Device":
                 return new Device(name, <any>undefined, { urn })
-            case "google-native:cloudidentity/v1beta1:Group":
+            case "google-hybrid:cloudidentity/v1beta1:Group":
                 return new Group(name, <any>undefined, { urn })
-            case "google-native:cloudidentity/v1beta1:Membership":
+            case "google-hybrid:cloudidentity/v1beta1:Membership":
                 return new Membership(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudidentity/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudidentity/v1beta1", _module)

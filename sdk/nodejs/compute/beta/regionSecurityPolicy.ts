@@ -22,7 +22,7 @@ export class RegionSecurityPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/beta:RegionSecurityPolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/beta:RegionSecurityPolicy';
 
     /**
      * Returns true if the given object is an instance of RegionSecurityPolicy.  This is designed to work even

@@ -14,7 +14,7 @@ export function getJob(args: GetJobArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1beta2:getJob", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1beta2:getJob", {
         "jobId": args.jobId,
         "project": args.project,
         "region": args.region,

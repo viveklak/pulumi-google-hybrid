@@ -22,7 +22,7 @@ export class Peering extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:managedidentities/v1alpha1:Peering';
+    public static readonly __pulumiType = 'google-hybrid:managedidentities/v1alpha1:Peering';
 
     /**
      * Returns true if the given object is an instance of Peering.  This is designed to work even

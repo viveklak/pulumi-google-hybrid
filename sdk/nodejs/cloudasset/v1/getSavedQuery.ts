@@ -14,7 +14,7 @@ export function getSavedQuery(args: GetSavedQueryArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudasset/v1:getSavedQuery", {
+    return pulumi.runtime.invoke("google-hybrid:cloudasset/v1:getSavedQuery", {
         "savedQueryId": args.savedQueryId,
         "v1Id": args.v1Id,
         "v1Id1": args.v1Id1,

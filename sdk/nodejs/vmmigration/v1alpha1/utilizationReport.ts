@@ -23,7 +23,7 @@ export class UtilizationReport extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:vmmigration/v1alpha1:UtilizationReport';
+    public static readonly __pulumiType = 'google-hybrid:vmmigration/v1alpha1:UtilizationReport';
 
     /**
      * Returns true if the given object is an instance of UtilizationReport.  This is designed to work even

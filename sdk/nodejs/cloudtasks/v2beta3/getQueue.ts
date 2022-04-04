@@ -14,7 +14,7 @@ export function getQueue(args: GetQueueArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudtasks/v2beta3:getQueue", {
+    return pulumi.runtime.invoke("google-hybrid:cloudtasks/v2beta3:getQueue", {
         "location": args.location,
         "project": args.project,
         "queueId": args.queueId,

@@ -23,7 +23,7 @@ export class SessionEntityType extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v2:SessionEntityType';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v2:SessionEntityType';
 
     /**
      * Returns true if the given object is an instance of SessionEntityType.  This is designed to work even

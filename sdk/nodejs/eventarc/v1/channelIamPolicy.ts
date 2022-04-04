@@ -24,7 +24,7 @@ export class ChannelIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:eventarc/v1:ChannelIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:eventarc/v1:ChannelIamPolicy';
 
     /**
      * Returns true if the given object is an instance of ChannelIamPolicy.  This is designed to work even

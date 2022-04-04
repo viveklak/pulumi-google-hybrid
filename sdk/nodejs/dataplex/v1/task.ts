@@ -23,7 +23,7 @@ export class Task extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataplex/v1:Task';
+    public static readonly __pulumiType = 'google-hybrid:dataplex/v1:Task';
 
     /**
      * Returns true if the given object is an instance of Task.  This is designed to work even

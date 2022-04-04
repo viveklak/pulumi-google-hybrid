@@ -14,7 +14,7 @@ export function getAlias(args: GetAliasArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getAlias", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getAlias", {
         "aliasId": args.aliasId,
         "environmentId": args.environmentId,
         "keystoreId": args.keystoreId,

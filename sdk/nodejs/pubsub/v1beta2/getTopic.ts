@@ -13,7 +13,7 @@ export function getTopic(args: GetTopicArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:pubsub/v1beta2:getTopic", {
+    return pulumi.runtime.invoke("google-hybrid:pubsub/v1beta2:getTopic", {
         "project": args.project,
         "topicId": args.topicId,
     }, opts);

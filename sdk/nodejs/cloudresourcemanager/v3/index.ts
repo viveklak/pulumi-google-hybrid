@@ -45,29 +45,29 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudresourcemanager/v3:Folder":
+            case "google-hybrid:cloudresourcemanager/v3:Folder":
                 return new Folder(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:FolderIamPolicy":
+            case "google-hybrid:cloudresourcemanager/v3:FolderIamPolicy":
                 return new FolderIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:Lien":
+            case "google-hybrid:cloudresourcemanager/v3:Lien":
                 return new Lien(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:OrganizationIamPolicy":
+            case "google-hybrid:cloudresourcemanager/v3:OrganizationIamPolicy":
                 return new OrganizationIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:Project":
+            case "google-hybrid:cloudresourcemanager/v3:Project":
                 return new Project(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:ProjectIamPolicy":
+            case "google-hybrid:cloudresourcemanager/v3:ProjectIamPolicy":
                 return new ProjectIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:TagKey":
+            case "google-hybrid:cloudresourcemanager/v3:TagKey":
                 return new TagKey(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:TagKeyIamPolicy":
+            case "google-hybrid:cloudresourcemanager/v3:TagKeyIamPolicy":
                 return new TagKeyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:TagValue":
+            case "google-hybrid:cloudresourcemanager/v3:TagValue":
                 return new TagValue(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v3:TagValueIamPolicy":
+            case "google-hybrid:cloudresourcemanager/v3:TagValueIamPolicy":
                 return new TagValueIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudresourcemanager/v3", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudresourcemanager/v3", _module)

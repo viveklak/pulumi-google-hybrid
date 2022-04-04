@@ -27,17 +27,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudiot/v1:Device":
+            case "google-hybrid:cloudiot/v1:Device":
                 return new Device(name, <any>undefined, { urn })
-            case "google-native:cloudiot/v1:Registry":
+            case "google-hybrid:cloudiot/v1:Registry":
                 return new Registry(name, <any>undefined, { urn })
-            case "google-native:cloudiot/v1:RegistryGroupIamPolicy":
+            case "google-hybrid:cloudiot/v1:RegistryGroupIamPolicy":
                 return new RegistryGroupIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudiot/v1:RegistryIamPolicy":
+            case "google-hybrid:cloudiot/v1:RegistryIamPolicy":
                 return new RegistryIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudiot/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudiot/v1", _module)

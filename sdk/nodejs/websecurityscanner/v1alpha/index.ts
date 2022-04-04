@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:websecurityscanner/v1alpha:ScanConfig":
+            case "google-hybrid:websecurityscanner/v1alpha:ScanConfig":
                 return new ScanConfig(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "websecurityscanner/v1alpha", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "websecurityscanner/v1alpha", _module)

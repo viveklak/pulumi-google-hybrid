@@ -13,7 +13,7 @@ export function getSnapshot(args: GetSnapshotArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:baremetalsolution/v2:getSnapshot", {
+    return pulumi.runtime.invoke("google-hybrid:baremetalsolution/v2:getSnapshot", {
         "location": args.location,
         "project": args.project,
         "snapshotId": args.snapshotId,

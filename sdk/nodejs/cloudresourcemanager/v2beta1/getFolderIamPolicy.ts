@@ -14,7 +14,7 @@ export function getFolderIamPolicy(args: GetFolderIamPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudresourcemanager/v2beta1:getFolderIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:cloudresourcemanager/v2beta1:getFolderIamPolicy", {
         "folderId": args.folderId,
     }, opts);
 }

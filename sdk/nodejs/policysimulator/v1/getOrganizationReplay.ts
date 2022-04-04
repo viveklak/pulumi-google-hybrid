@@ -14,7 +14,7 @@ export function getOrganizationReplay(args: GetOrganizationReplayArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:policysimulator/v1:getOrganizationReplay", {
+    return pulumi.runtime.invoke("google-hybrid:policysimulator/v1:getOrganizationReplay", {
         "location": args.location,
         "organizationId": args.organizationId,
         "replayId": args.replayId,

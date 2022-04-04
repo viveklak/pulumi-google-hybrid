@@ -27,17 +27,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:datastream/v1:ConnectionProfile":
+            case "google-hybrid:datastream/v1:ConnectionProfile":
                 return new ConnectionProfile(name, <any>undefined, { urn })
-            case "google-native:datastream/v1:PrivateConnection":
+            case "google-hybrid:datastream/v1:PrivateConnection":
                 return new PrivateConnection(name, <any>undefined, { urn })
-            case "google-native:datastream/v1:Route":
+            case "google-hybrid:datastream/v1:Route":
                 return new Route(name, <any>undefined, { urn })
-            case "google-native:datastream/v1:Stream":
+            case "google-hybrid:datastream/v1:Stream":
                 return new Stream(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "datastream/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "datastream/v1", _module)

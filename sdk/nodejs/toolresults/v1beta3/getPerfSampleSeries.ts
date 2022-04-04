@@ -14,7 +14,7 @@ export function getPerfSampleSeries(args: GetPerfSampleSeriesArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:toolresults/v1beta3:getPerfSampleSeries", {
+    return pulumi.runtime.invoke("google-hybrid:toolresults/v1beta3:getPerfSampleSeries", {
         "executionId": args.executionId,
         "historyId": args.historyId,
         "project": args.project,

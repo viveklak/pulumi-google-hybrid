@@ -14,7 +14,7 @@ export function getDefaultObjectAccessControl(args: GetDefaultObjectAccessContro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:storage/v1:getDefaultObjectAccessControl", {
+    return pulumi.runtime.invoke("google-hybrid:storage/v1:getDefaultObjectAccessControl", {
         "bucket": args.bucket,
         "entity": args.entity,
         "provisionalUserProject": args.provisionalUserProject,

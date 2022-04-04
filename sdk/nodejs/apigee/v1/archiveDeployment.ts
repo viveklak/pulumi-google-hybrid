@@ -21,7 +21,7 @@ export class ArchiveDeployment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:ArchiveDeployment';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:ArchiveDeployment';
 
     /**
      * Returns true if the given object is an instance of ArchiveDeployment.  This is designed to work even

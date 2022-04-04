@@ -14,7 +14,7 @@ export function getPatchDeployment(args: GetPatchDeploymentArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:osconfig/v1:getPatchDeployment", {
+    return pulumi.runtime.invoke("google-hybrid:osconfig/v1:getPatchDeployment", {
         "patchDeploymentId": args.patchDeploymentId,
         "project": args.project,
     }, opts);

@@ -22,7 +22,7 @@ export class ForwardingRule extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/beta:ForwardingRule';
+    public static readonly __pulumiType = 'google-hybrid:compute/beta:ForwardingRule';
 
     /**
      * Returns true if the given object is an instance of ForwardingRule.  This is designed to work even

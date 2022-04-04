@@ -23,7 +23,7 @@ export class Entry extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datacatalog/v1beta1:Entry';
+    public static readonly __pulumiType = 'google-hybrid:datacatalog/v1beta1:Entry';
 
     /**
      * Returns true if the given object is an instance of Entry.  This is designed to work even

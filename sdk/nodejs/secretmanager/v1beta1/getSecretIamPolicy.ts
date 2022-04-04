@@ -14,7 +14,7 @@ export function getSecretIamPolicy(args: GetSecretIamPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:secretmanager/v1beta1:getSecretIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:secretmanager/v1beta1:getSecretIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "secretId": args.secretId,

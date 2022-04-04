@@ -24,7 +24,7 @@ export class RegistryGroupIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudiot/v1:RegistryGroupIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:cloudiot/v1:RegistryGroupIamPolicy';
 
     /**
      * Returns true if the given object is an instance of RegistryGroupIamPolicy.  This is designed to work even

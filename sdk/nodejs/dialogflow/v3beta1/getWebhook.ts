@@ -14,7 +14,7 @@ export function getWebhook(args: GetWebhookArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v3beta1:getWebhook", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v3beta1:getWebhook", {
         "agentId": args.agentId,
         "location": args.location,
         "project": args.project,

@@ -14,7 +14,7 @@ export function getHubIamPolicy(args: GetHubIamPolicyArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkconnectivity/v1alpha1:getHubIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networkconnectivity/v1alpha1:getHubIamPolicy", {
         "hubId": args.hubId,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

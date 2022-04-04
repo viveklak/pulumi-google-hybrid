@@ -14,7 +14,7 @@ export function getFhirStore(args: GetFhirStoreArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1beta1:getFhirStore", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1beta1:getFhirStore", {
         "datasetId": args.datasetId,
         "fhirStoreId": args.fhirStoreId,
         "location": args.location,

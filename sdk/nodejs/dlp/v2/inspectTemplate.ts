@@ -23,7 +23,7 @@ export class InspectTemplate extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dlp/v2:InspectTemplate';
+    public static readonly __pulumiType = 'google-hybrid:dlp/v2:InspectTemplate';
 
     /**
      * Returns true if the given object is an instance of InspectTemplate.  This is designed to work even

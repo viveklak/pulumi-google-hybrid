@@ -14,7 +14,7 @@ export function getSubscription(args: GetSubscriptionArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:pubsub/v1beta1a:getSubscription", {
+    return pulumi.runtime.invoke("google-hybrid:pubsub/v1beta1a:getSubscription", {
         "subscriptionId": args.subscriptionId,
     }, opts);
 }

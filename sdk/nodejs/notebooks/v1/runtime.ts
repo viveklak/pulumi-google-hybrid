@@ -23,7 +23,7 @@ export class Runtime extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:notebooks/v1:Runtime';
+    public static readonly __pulumiType = 'google-hybrid:notebooks/v1:Runtime';
 
     /**
      * Returns true if the given object is an instance of Runtime.  This is designed to work even

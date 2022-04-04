@@ -14,7 +14,7 @@ export function getLicenseIamPolicy(args: GetLicenseIamPolicyArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getLicenseIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getLicenseIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "resource": args.resource,

@@ -25,7 +25,7 @@ export class Entitlement extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudchannel/v1:Entitlement';
+    public static readonly __pulumiType = 'google-hybrid:cloudchannel/v1:Entitlement';
 
     /**
      * Returns true if the given object is an instance of Entitlement.  This is designed to work even

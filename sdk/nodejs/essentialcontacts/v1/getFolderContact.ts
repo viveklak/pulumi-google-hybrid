@@ -13,7 +13,7 @@ export function getFolderContact(args: GetFolderContactArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:essentialcontacts/v1:getFolderContact", {
+    return pulumi.runtime.invoke("google-hybrid:essentialcontacts/v1:getFolderContact", {
         "contactId": args.contactId,
         "folderId": args.folderId,
     }, opts);

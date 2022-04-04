@@ -14,7 +14,7 @@ export function getUrlMap(args: GetUrlMapArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getUrlMap", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getUrlMap", {
         "project": args.project,
         "urlMap": args.urlMap,
     }, opts);

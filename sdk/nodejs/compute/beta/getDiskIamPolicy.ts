@@ -14,7 +14,7 @@ export function getDiskIamPolicy(args: GetDiskIamPolicyArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getDiskIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getDiskIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "resource": args.resource,

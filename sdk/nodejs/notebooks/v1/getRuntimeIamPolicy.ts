@@ -14,7 +14,7 @@ export function getRuntimeIamPolicy(args: GetRuntimeIamPolicyArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:notebooks/v1:getRuntimeIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:notebooks/v1:getRuntimeIamPolicy", {
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

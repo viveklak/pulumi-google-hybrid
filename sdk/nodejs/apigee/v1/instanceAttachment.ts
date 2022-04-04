@@ -22,7 +22,7 @@ export class InstanceAttachment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:InstanceAttachment';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:InstanceAttachment';
 
     /**
      * Returns true if the given object is an instance of InstanceAttachment.  This is designed to work even

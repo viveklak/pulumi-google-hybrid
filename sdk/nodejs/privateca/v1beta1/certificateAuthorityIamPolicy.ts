@@ -24,7 +24,7 @@ export class CertificateAuthorityIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:privateca/v1beta1:CertificateAuthorityIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:privateca/v1beta1:CertificateAuthorityIamPolicy';
 
     /**
      * Returns true if the given object is an instance of CertificateAuthorityIamPolicy.  This is designed to work even

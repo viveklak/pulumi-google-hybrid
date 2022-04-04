@@ -13,7 +13,7 @@ export function getPartition(args: GetPartitionArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataplex/v1:getPartition", {
+    return pulumi.runtime.invoke("google-hybrid:dataplex/v1:getPartition", {
         "entityId": args.entityId,
         "lakeId": args.lakeId,
         "location": args.location,

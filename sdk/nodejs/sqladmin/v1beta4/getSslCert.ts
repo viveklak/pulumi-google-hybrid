@@ -13,7 +13,7 @@ export function getSslCert(args: GetSslCertArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:sqladmin/v1beta4:getSslCert", {
+    return pulumi.runtime.invoke("google-hybrid:sqladmin/v1beta4:getSslCert", {
         "instance": args.instance,
         "project": args.project,
         "sha1Fingerprint": args.sha1Fingerprint,

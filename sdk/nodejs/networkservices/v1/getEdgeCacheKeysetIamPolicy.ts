@@ -14,7 +14,7 @@ export function getEdgeCacheKeysetIamPolicy(args: GetEdgeCacheKeysetIamPolicyArg
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1:getEdgeCacheKeysetIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1:getEdgeCacheKeysetIamPolicy", {
         "edgeCacheKeysetId": args.edgeCacheKeysetId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

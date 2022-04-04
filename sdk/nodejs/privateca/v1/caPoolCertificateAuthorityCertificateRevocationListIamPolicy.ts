@@ -24,7 +24,7 @@ export class CaPoolCertificateAuthorityCertificateRevocationListIamPolicy extend
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:privateca/v1:CaPoolCertificateAuthorityCertificateRevocationListIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:privateca/v1:CaPoolCertificateAuthorityCertificateRevocationListIamPolicy';
 
     /**
      * Returns true if the given object is an instance of CaPoolCertificateAuthorityCertificateRevocationListIamPolicy.  This is designed to work even

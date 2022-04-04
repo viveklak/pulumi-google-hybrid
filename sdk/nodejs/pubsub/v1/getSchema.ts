@@ -13,7 +13,7 @@ export function getSchema(args: GetSchemaArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:pubsub/v1:getSchema", {
+    return pulumi.runtime.invoke("google-hybrid:pubsub/v1:getSchema", {
         "project": args.project,
         "schemaId": args.schemaId,
         "view": args.view,

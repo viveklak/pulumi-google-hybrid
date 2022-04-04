@@ -22,7 +22,7 @@ export class Service extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:servicedirectory/v1beta1:Service';
+    public static readonly __pulumiType = 'google-hybrid:servicedirectory/v1beta1:Service';
 
     /**
      * Returns true if the given object is an instance of Service.  This is designed to work even

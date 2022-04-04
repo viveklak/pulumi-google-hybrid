@@ -14,7 +14,7 @@ export function getRuleset(args: GetRulesetArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:firebaserules/v1:getRuleset", {
+    return pulumi.runtime.invoke("google-hybrid:firebaserules/v1:getRuleset", {
         "project": args.project,
         "rulesetId": args.rulesetId,
     }, opts);

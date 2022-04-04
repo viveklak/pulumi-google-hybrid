@@ -23,7 +23,7 @@ export class DeidentifyTemplate extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dlp/v2:DeidentifyTemplate';
+    public static readonly __pulumiType = 'google-hybrid:dlp/v2:DeidentifyTemplate';
 
     /**
      * Returns true if the given object is an instance of DeidentifyTemplate.  This is designed to work even

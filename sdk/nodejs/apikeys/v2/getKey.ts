@@ -14,7 +14,7 @@ export function getKey(args: GetKeyArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apikeys/v2:getKey", {
+    return pulumi.runtime.invoke("google-hybrid:apikeys/v2:getKey", {
         "keyId": args.keyId,
         "location": args.location,
         "project": args.project,

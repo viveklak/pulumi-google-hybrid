@@ -14,7 +14,7 @@ export function getResourcePolicy(args: GetResourcePolicyArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getResourcePolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getResourcePolicy", {
         "project": args.project,
         "region": args.region,
         "resourcePolicy": args.resourcePolicy,

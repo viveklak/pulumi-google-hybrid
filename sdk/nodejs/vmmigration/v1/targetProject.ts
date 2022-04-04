@@ -22,7 +22,7 @@ export class TargetProject extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:vmmigration/v1:TargetProject';
+    public static readonly __pulumiType = 'google-hybrid:vmmigration/v1:TargetProject';
 
     /**
      * Returns true if the given object is an instance of TargetProject.  This is designed to work even

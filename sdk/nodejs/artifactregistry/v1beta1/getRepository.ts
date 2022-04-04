@@ -13,7 +13,7 @@ export function getRepository(args: GetRepositoryArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:artifactregistry/v1beta1:getRepository", {
+    return pulumi.runtime.invoke("google-hybrid:artifactregistry/v1beta1:getRepository", {
         "location": args.location,
         "project": args.project,
         "repositoryId": args.repositoryId,

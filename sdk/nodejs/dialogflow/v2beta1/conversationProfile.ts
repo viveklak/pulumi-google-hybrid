@@ -22,7 +22,7 @@ export class ConversationProfile extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v2beta1:ConversationProfile';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v2beta1:ConversationProfile';
 
     /**
      * Returns true if the given object is an instance of ConversationProfile.  This is designed to work even

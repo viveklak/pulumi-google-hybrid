@@ -13,7 +13,7 @@ export function getNotification(args: GetNotificationArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:storage/v1:getNotification", {
+    return pulumi.runtime.invoke("google-hybrid:storage/v1:getNotification", {
         "bucket": args.bucket,
         "notification": args.notification,
         "provisionalUserProject": args.provisionalUserProject,

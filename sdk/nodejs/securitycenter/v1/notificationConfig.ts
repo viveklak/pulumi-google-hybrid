@@ -22,7 +22,7 @@ export class NotificationConfig extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:securitycenter/v1:NotificationConfig';
+    public static readonly __pulumiType = 'google-hybrid:securitycenter/v1:NotificationConfig';
 
     /**
      * Returns true if the given object is an instance of NotificationConfig.  This is designed to work even

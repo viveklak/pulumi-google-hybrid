@@ -14,7 +14,7 @@ export function getInstanceGroup(args: GetInstanceGroupArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getInstanceGroup", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getInstanceGroup", {
         "instanceGroup": args.instanceGroup,
         "project": args.project,
         "zone": args.zone,

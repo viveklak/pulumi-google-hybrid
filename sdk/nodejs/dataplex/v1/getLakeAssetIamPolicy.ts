@@ -14,7 +14,7 @@ export function getLakeAssetIamPolicy(args: GetLakeAssetIamPolicyArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataplex/v1:getLakeAssetIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:dataplex/v1:getLakeAssetIamPolicy", {
         "assetId": args.assetId,
         "lakeId": args.lakeId,
         "location": args.location,

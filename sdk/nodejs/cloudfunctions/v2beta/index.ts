@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudfunctions/v2beta:Function":
+            case "google-hybrid:cloudfunctions/v2beta:Function":
                 return new Function(name, <any>undefined, { urn })
-            case "google-native:cloudfunctions/v2beta:FunctionIamPolicy":
+            case "google-hybrid:cloudfunctions/v2beta:FunctionIamPolicy":
                 return new FunctionIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudfunctions/v2beta", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudfunctions/v2beta", _module)

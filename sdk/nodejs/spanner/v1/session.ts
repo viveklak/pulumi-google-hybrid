@@ -22,7 +22,7 @@ export class Session extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:spanner/v1:Session';
+    public static readonly __pulumiType = 'google-hybrid:spanner/v1:Session';
 
     /**
      * Returns true if the given object is an instance of Session.  This is designed to work even

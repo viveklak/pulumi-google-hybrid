@@ -27,17 +27,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:sqladmin/v1:BackupRun":
+            case "google-hybrid:sqladmin/v1:BackupRun":
                 return new BackupRun(name, <any>undefined, { urn })
-            case "google-native:sqladmin/v1:Database":
+            case "google-hybrid:sqladmin/v1:Database":
                 return new Database(name, <any>undefined, { urn })
-            case "google-native:sqladmin/v1:Instance":
+            case "google-hybrid:sqladmin/v1:Instance":
                 return new Instance(name, <any>undefined, { urn })
-            case "google-native:sqladmin/v1:SslCert":
+            case "google-hybrid:sqladmin/v1:SslCert":
                 return new SslCert(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "sqladmin/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "sqladmin/v1", _module)

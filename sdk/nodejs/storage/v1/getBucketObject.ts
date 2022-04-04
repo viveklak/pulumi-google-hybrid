@@ -14,7 +14,7 @@ export function getBucketObject(args: GetBucketObjectArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:storage/v1:getBucketObject", {
+    return pulumi.runtime.invoke("google-hybrid:storage/v1:getBucketObject", {
         "bucket": args.bucket,
         "generation": args.generation,
         "ifGenerationMatch": args.ifGenerationMatch,

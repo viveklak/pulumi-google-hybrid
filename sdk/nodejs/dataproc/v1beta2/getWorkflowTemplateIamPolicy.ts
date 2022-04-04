@@ -14,7 +14,7 @@ export function getWorkflowTemplateIamPolicy(args: GetWorkflowTemplateIamPolicyA
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1beta2:getWorkflowTemplateIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1beta2:getWorkflowTemplateIamPolicy", {
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

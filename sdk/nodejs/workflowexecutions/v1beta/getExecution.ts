@@ -14,7 +14,7 @@ export function getExecution(args: GetExecutionArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:workflowexecutions/v1beta:getExecution", {
+    return pulumi.runtime.invoke("google-hybrid:workflowexecutions/v1beta:getExecution", {
         "executionId": args.executionId,
         "location": args.location,
         "project": args.project,

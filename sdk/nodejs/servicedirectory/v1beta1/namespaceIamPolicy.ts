@@ -24,7 +24,7 @@ export class NamespaceIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:servicedirectory/v1beta1:NamespaceIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:servicedirectory/v1beta1:NamespaceIamPolicy';
 
     /**
      * Returns true if the given object is an instance of NamespaceIamPolicy.  This is designed to work even

@@ -14,7 +14,7 @@ export function getInstanceIamPolicy(args: GetInstanceIamPolicyArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigtableadmin/v2:getInstanceIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:bigtableadmin/v2:getInstanceIamPolicy", {
         "instanceId": args.instanceId,
         "project": args.project,
     }, opts);

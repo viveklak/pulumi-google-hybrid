@@ -14,7 +14,7 @@ export function getRollout(args: GetRolloutArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:servicemanagement/v1:getRollout", {
+    return pulumi.runtime.invoke("google-hybrid:servicemanagement/v1:getRollout", {
         "rolloutId": args.rolloutId,
         "serviceName": args.serviceName,
     }, opts);

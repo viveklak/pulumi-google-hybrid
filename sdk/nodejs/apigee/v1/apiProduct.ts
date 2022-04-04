@@ -22,7 +22,7 @@ export class ApiProduct extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:ApiProduct';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:ApiProduct';
 
     /**
      * Returns true if the given object is an instance of ApiProduct.  This is designed to work even

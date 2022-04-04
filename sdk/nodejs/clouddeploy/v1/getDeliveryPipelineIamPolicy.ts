@@ -14,7 +14,7 @@ export function getDeliveryPipelineIamPolicy(args: GetDeliveryPipelineIamPolicyA
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:clouddeploy/v1:getDeliveryPipelineIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:clouddeploy/v1:getDeliveryPipelineIamPolicy", {
         "deliveryPipelineId": args.deliveryPipelineId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

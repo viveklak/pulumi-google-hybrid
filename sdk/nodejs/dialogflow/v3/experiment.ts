@@ -22,7 +22,7 @@ export class Experiment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v3:Experiment';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v3:Experiment';
 
     /**
      * Returns true if the given object is an instance of Experiment.  This is designed to work even

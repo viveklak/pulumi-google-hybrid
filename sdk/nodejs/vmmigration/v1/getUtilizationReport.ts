@@ -14,7 +14,7 @@ export function getUtilizationReport(args: GetUtilizationReportArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:vmmigration/v1:getUtilizationReport", {
+    return pulumi.runtime.invoke("google-hybrid:vmmigration/v1:getUtilizationReport", {
         "location": args.location,
         "project": args.project,
         "sourceId": args.sourceId,

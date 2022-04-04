@@ -22,7 +22,7 @@ export class WorkerPool extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:remotebuildexecution/v1alpha:WorkerPool';
+    public static readonly __pulumiType = 'google-hybrid:remotebuildexecution/v1alpha:WorkerPool';
 
     /**
      * Returns true if the given object is an instance of WorkerPool.  This is designed to work even

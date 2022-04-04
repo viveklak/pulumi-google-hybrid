@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:remotebuildexecution/v1alpha:Instance":
+            case "google-hybrid:remotebuildexecution/v1alpha:Instance":
                 return new Instance(name, <any>undefined, { urn })
-            case "google-native:remotebuildexecution/v1alpha:WorkerPool":
+            case "google-hybrid:remotebuildexecution/v1alpha:WorkerPool":
                 return new WorkerPool(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "remotebuildexecution/v1alpha", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "remotebuildexecution/v1alpha", _module)

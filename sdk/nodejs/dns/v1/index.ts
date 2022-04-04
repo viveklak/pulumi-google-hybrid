@@ -29,17 +29,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:dns/v1:Change":
+            case "google-hybrid:dns/v1:Change":
                 return new Change(name, <any>undefined, { urn })
-            case "google-native:dns/v1:ManagedZone":
+            case "google-hybrid:dns/v1:ManagedZone":
                 return new ManagedZone(name, <any>undefined, { urn })
-            case "google-native:dns/v1:Policy":
+            case "google-hybrid:dns/v1:Policy":
                 return new Policy(name, <any>undefined, { urn })
-            case "google-native:dns/v1:ResourceRecordSet":
+            case "google-hybrid:dns/v1:ResourceRecordSet":
                 return new ResourceRecordSet(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "dns/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "dns/v1", _module)

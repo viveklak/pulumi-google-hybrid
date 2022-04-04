@@ -14,7 +14,7 @@ export function getCase(args: GetCaseArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudsupport/v2beta:getCase", {
+    return pulumi.runtime.invoke("google-hybrid:cloudsupport/v2beta:getCase", {
         "caseId": args.caseId,
         "v2betaId1": args.v2betaId1,
         "v2betumId": args.v2betumId,

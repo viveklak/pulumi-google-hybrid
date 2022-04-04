@@ -22,7 +22,7 @@ export class PatchDeployment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:osconfig/v1:PatchDeployment';
+    public static readonly __pulumiType = 'google-hybrid:osconfig/v1:PatchDeployment';
 
     /**
      * Returns true if the given object is an instance of PatchDeployment.  This is designed to work even

@@ -39,25 +39,25 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:vmmigration/v1alpha1:CloneJob":
+            case "google-hybrid:vmmigration/v1alpha1:CloneJob":
                 return new CloneJob(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1alpha1:CutoverJob":
+            case "google-hybrid:vmmigration/v1alpha1:CutoverJob":
                 return new CutoverJob(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1alpha1:DatacenterConnector":
+            case "google-hybrid:vmmigration/v1alpha1:DatacenterConnector":
                 return new DatacenterConnector(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1alpha1:Group":
+            case "google-hybrid:vmmigration/v1alpha1:Group":
                 return new Group(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1alpha1:MigratingVm":
+            case "google-hybrid:vmmigration/v1alpha1:MigratingVm":
                 return new MigratingVm(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1alpha1:Source":
+            case "google-hybrid:vmmigration/v1alpha1:Source":
                 return new Source(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1alpha1:TargetProject":
+            case "google-hybrid:vmmigration/v1alpha1:TargetProject":
                 return new TargetProject(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1alpha1:UtilizationReport":
+            case "google-hybrid:vmmigration/v1alpha1:UtilizationReport":
                 return new UtilizationReport(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "vmmigration/v1alpha1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "vmmigration/v1alpha1", _module)

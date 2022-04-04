@@ -14,7 +14,7 @@ export function getJobTrigger(args: GetJobTriggerArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dlp/v2:getJobTrigger", {
+    return pulumi.runtime.invoke("google-hybrid:dlp/v2:getJobTrigger", {
         "jobTriggerId": args.jobTriggerId,
         "location": args.location,
         "project": args.project,

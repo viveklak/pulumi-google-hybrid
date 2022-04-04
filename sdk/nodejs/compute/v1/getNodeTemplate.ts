@@ -14,7 +14,7 @@ export function getNodeTemplate(args: GetNodeTemplateArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getNodeTemplate", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getNodeTemplate", {
         "nodeTemplate": args.nodeTemplate,
         "project": args.project,
         "region": args.region,

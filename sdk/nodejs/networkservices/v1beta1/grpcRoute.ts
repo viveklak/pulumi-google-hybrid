@@ -22,7 +22,7 @@ export class GrpcRoute extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkservices/v1beta1:GrpcRoute';
+    public static readonly __pulumiType = 'google-hybrid:networkservices/v1beta1:GrpcRoute';
 
     /**
      * Returns true if the given object is an instance of GrpcRoute.  This is designed to work even

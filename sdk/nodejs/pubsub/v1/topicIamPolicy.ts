@@ -24,7 +24,7 @@ export class TopicIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:pubsub/v1:TopicIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:pubsub/v1:TopicIamPolicy';
 
     /**
      * Returns true if the given object is an instance of TopicIamPolicy.  This is designed to work even

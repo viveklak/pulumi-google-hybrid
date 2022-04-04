@@ -14,7 +14,7 @@ export function getCluster(args: GetClusterArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigtableadmin/v2:getCluster", {
+    return pulumi.runtime.invoke("google-hybrid:bigtableadmin/v2:getCluster", {
         "clusterId": args.clusterId,
         "instanceId": args.instanceId,
         "project": args.project,

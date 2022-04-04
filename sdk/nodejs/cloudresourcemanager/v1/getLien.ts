@@ -13,7 +13,7 @@ export function getLien(args: GetLienArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudresourcemanager/v1:getLien", {
+    return pulumi.runtime.invoke("google-hybrid:cloudresourcemanager/v1:getLien", {
         "lienId": args.lienId,
     }, opts);
 }

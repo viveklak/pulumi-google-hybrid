@@ -14,7 +14,7 @@ export function getProvider(args: GetProviderArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:iam/v1:getProvider", {
+    return pulumi.runtime.invoke("google-hybrid:iam/v1:getProvider", {
         "location": args.location,
         "project": args.project,
         "providerId": args.providerId,

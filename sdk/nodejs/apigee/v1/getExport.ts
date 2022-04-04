@@ -13,7 +13,7 @@ export function getExport(args: GetExportArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getExport", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getExport", {
         "environmentId": args.environmentId,
         "exportId": args.exportId,
         "organizationId": args.organizationId,

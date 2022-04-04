@@ -23,7 +23,7 @@ export class Environment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v2:Environment';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v2:Environment';
 
     /**
      * Returns true if the given object is an instance of Environment.  This is designed to work even

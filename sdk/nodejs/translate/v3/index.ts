@@ -15,11 +15,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:translate/v3:Glossary":
+            case "google-hybrid:translate/v3:Glossary":
                 return new Glossary(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "translate/v3", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "translate/v3", _module)

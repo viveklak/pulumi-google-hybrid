@@ -27,17 +27,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:certificatemanager/v1:Certificate":
+            case "google-hybrid:certificatemanager/v1:Certificate":
                 return new Certificate(name, <any>undefined, { urn })
-            case "google-native:certificatemanager/v1:CertificateMap":
+            case "google-hybrid:certificatemanager/v1:CertificateMap":
                 return new CertificateMap(name, <any>undefined, { urn })
-            case "google-native:certificatemanager/v1:CertificateMapEntry":
+            case "google-hybrid:certificatemanager/v1:CertificateMapEntry":
                 return new CertificateMapEntry(name, <any>undefined, { urn })
-            case "google-native:certificatemanager/v1:DnsAuthorization":
+            case "google-hybrid:certificatemanager/v1:DnsAuthorization":
                 return new DnsAuthorization(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "certificatemanager/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "certificatemanager/v1", _module)

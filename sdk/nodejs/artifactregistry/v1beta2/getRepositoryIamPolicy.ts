@@ -14,7 +14,7 @@ export function getRepositoryIamPolicy(args: GetRepositoryIamPolicyArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:artifactregistry/v1beta2:getRepositoryIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:artifactregistry/v1beta2:getRepositoryIamPolicy", {
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

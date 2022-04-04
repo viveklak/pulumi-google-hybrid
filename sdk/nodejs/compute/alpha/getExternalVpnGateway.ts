@@ -14,7 +14,7 @@ export function getExternalVpnGateway(args: GetExternalVpnGatewayArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getExternalVpnGateway", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getExternalVpnGateway", {
         "externalVpnGateway": args.externalVpnGateway,
         "project": args.project,
     }, opts);

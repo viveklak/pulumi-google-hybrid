@@ -14,7 +14,7 @@ export function getService(args: GetServiceArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:monitoring/v3:getService", {
+    return pulumi.runtime.invoke("google-hybrid:monitoring/v3:getService", {
         "serviceId": args.serviceId,
         "v3Id": args.v3Id,
         "v3Id1": args.v3Id1,

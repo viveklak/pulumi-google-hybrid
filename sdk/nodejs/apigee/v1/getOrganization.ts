@@ -14,7 +14,7 @@ export function getOrganization(args: GetOrganizationArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getOrganization", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getOrganization", {
         "organizationId": args.organizationId,
     }, opts);
 }

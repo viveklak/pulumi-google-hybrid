@@ -22,7 +22,7 @@ export class CompositeType extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:deploymentmanager/alpha:CompositeType';
+    public static readonly __pulumiType = 'google-hybrid:deploymentmanager/alpha:CompositeType';
 
     /**
      * Returns true if the given object is an instance of CompositeType.  This is designed to work even

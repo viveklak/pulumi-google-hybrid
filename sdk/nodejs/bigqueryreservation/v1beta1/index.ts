@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:bigqueryreservation/v1beta1:CapacityCommitment":
+            case "google-hybrid:bigqueryreservation/v1beta1:CapacityCommitment":
                 return new CapacityCommitment(name, <any>undefined, { urn })
-            case "google-native:bigqueryreservation/v1beta1:Reservation":
+            case "google-hybrid:bigqueryreservation/v1beta1:Reservation":
                 return new Reservation(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "bigqueryreservation/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "bigqueryreservation/v1beta1", _module)

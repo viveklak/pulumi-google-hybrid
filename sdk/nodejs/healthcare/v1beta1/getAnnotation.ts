@@ -14,7 +14,7 @@ export function getAnnotation(args: GetAnnotationArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1beta1:getAnnotation", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1beta1:getAnnotation", {
         "annotationId": args.annotationId,
         "annotationStoreId": args.annotationStoreId,
         "datasetId": args.datasetId,

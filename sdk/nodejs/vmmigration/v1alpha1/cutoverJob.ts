@@ -25,7 +25,7 @@ export class CutoverJob extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:vmmigration/v1alpha1:CutoverJob';
+    public static readonly __pulumiType = 'google-hybrid:vmmigration/v1alpha1:CutoverJob';
 
     /**
      * Returns true if the given object is an instance of CutoverJob.  This is designed to work even

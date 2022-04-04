@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:firestore/v1beta2:Index":
+            case "google-hybrid:firestore/v1beta2:Index":
                 return new Index(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "firestore/v1beta2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "firestore/v1beta2", _module)

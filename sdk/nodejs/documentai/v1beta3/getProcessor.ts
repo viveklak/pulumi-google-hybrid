@@ -13,7 +13,7 @@ export function getProcessor(args: GetProcessorArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:documentai/v1beta3:getProcessor", {
+    return pulumi.runtime.invoke("google-hybrid:documentai/v1beta3:getProcessor", {
         "location": args.location,
         "processorId": args.processorId,
         "project": args.project,

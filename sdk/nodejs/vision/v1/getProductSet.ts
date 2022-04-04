@@ -14,7 +14,7 @@ export function getProductSet(args: GetProductSetArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:vision/v1:getProductSet", {
+    return pulumi.runtime.invoke("google-hybrid:vision/v1:getProductSet", {
         "location": args.location,
         "productSetId": args.productSetId,
         "project": args.project,

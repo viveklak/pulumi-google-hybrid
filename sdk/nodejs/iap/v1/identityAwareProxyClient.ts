@@ -22,7 +22,7 @@ export class IdentityAwareProxyClient extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:iap/v1:IdentityAwareProxyClient';
+    public static readonly __pulumiType = 'google-hybrid:iap/v1:IdentityAwareProxyClient';
 
     /**
      * Returns true if the given object is an instance of IdentityAwareProxyClient.  This is designed to work even

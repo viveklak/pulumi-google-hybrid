@@ -14,7 +14,7 @@ export function getRegionNetworkIamPolicy(args: GetRegionNetworkIamPolicyArgs, o
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getRegionNetworkIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getRegionNetworkIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "region": args.region,

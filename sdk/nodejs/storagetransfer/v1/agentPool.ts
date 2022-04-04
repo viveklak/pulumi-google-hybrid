@@ -22,7 +22,7 @@ export class AgentPool extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:storagetransfer/v1:AgentPool';
+    public static readonly __pulumiType = 'google-hybrid:storagetransfer/v1:AgentPool';
 
     /**
      * Returns true if the given object is an instance of AgentPool.  This is designed to work even

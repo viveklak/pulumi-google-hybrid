@@ -14,7 +14,7 @@ export function getExperiment(args: GetExperimentArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v3:getExperiment", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v3:getExperiment", {
         "agentId": args.agentId,
         "environmentId": args.environmentId,
         "experimentId": args.experimentId,

@@ -14,7 +14,7 @@ export function getInstance(args: GetInstanceArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:remotebuildexecution/v1alpha:getInstance", {
+    return pulumi.runtime.invoke("google-hybrid:remotebuildexecution/v1alpha:getInstance", {
         "instanceId": args.instanceId,
         "project": args.project,
     }, opts);

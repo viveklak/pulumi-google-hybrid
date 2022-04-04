@@ -23,7 +23,7 @@ export class Study extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:ml/v1:Study';
+    public static readonly __pulumiType = 'google-hybrid:ml/v1:Study';
 
     /**
      * Returns true if the given object is an instance of Study.  This is designed to work even

@@ -24,7 +24,7 @@ export class Rollout extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:clouddeploy/v1:Rollout';
+    public static readonly __pulumiType = 'google-hybrid:clouddeploy/v1:Rollout';
 
     /**
      * Returns true if the given object is an instance of Rollout.  This is designed to work even

@@ -14,7 +14,7 @@ export function getChannelIamPolicy(args: GetChannelIamPolicyArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:eventarc/v1:getChannelIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:eventarc/v1:getChannelIamPolicy", {
         "channelId": args.channelId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

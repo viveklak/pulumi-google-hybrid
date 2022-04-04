@@ -22,7 +22,7 @@ export class GameServerCluster extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:gameservices/v1:GameServerCluster';
+    public static readonly __pulumiType = 'google-hybrid:gameservices/v1:GameServerCluster';
 
     /**
      * Returns true if the given object is an instance of GameServerCluster.  This is designed to work even

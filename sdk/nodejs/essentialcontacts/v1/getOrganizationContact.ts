@@ -13,7 +13,7 @@ export function getOrganizationContact(args: GetOrganizationContactArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:essentialcontacts/v1:getOrganizationContact", {
+    return pulumi.runtime.invoke("google-hybrid:essentialcontacts/v1:getOrganizationContact", {
         "contactId": args.contactId,
         "organizationId": args.organizationId,
     }, opts);

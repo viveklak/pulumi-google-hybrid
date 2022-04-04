@@ -14,7 +14,7 @@ export function getRelease(args: GetReleaseArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:clouddeploy/v1:getRelease", {
+    return pulumi.runtime.invoke("google-hybrid:clouddeploy/v1:getRelease", {
         "deliveryPipelineId": args.deliveryPipelineId,
         "location": args.location,
         "project": args.project,

@@ -22,7 +22,7 @@ export class DnsAuthorization extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:certificatemanager/v1:DnsAuthorization';
+    public static readonly __pulumiType = 'google-hybrid:certificatemanager/v1:DnsAuthorization';
 
     /**
      * Returns true if the given object is an instance of DnsAuthorization.  This is designed to work even

@@ -14,7 +14,7 @@ export function getChannelPartnerLink(args: GetChannelPartnerLinkArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudchannel/v1:getChannelPartnerLink", {
+    return pulumi.runtime.invoke("google-hybrid:cloudchannel/v1:getChannelPartnerLink", {
         "accountId": args.accountId,
         "channelPartnerLinkId": args.channelPartnerLinkId,
         "view": args.view,

@@ -13,7 +13,7 @@ export function getNamespace(args: GetNamespaceArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:servicedirectory/v1:getNamespace", {
+    return pulumi.runtime.invoke("google-hybrid:servicedirectory/v1:getNamespace", {
         "location": args.location,
         "namespaceId": args.namespaceId,
         "project": args.project,

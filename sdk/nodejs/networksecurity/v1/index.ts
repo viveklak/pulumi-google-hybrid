@@ -33,21 +33,21 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:networksecurity/v1:AuthorizationPolicy":
+            case "google-hybrid:networksecurity/v1:AuthorizationPolicy":
                 return new AuthorizationPolicy(name, <any>undefined, { urn })
-            case "google-native:networksecurity/v1:AuthorizationPolicyIamPolicy":
+            case "google-hybrid:networksecurity/v1:AuthorizationPolicyIamPolicy":
                 return new AuthorizationPolicyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networksecurity/v1:ClientTlsPolicy":
+            case "google-hybrid:networksecurity/v1:ClientTlsPolicy":
                 return new ClientTlsPolicy(name, <any>undefined, { urn })
-            case "google-native:networksecurity/v1:ClientTlsPolicyIamPolicy":
+            case "google-hybrid:networksecurity/v1:ClientTlsPolicyIamPolicy":
                 return new ClientTlsPolicyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networksecurity/v1:ServerTlsPolicy":
+            case "google-hybrid:networksecurity/v1:ServerTlsPolicy":
                 return new ServerTlsPolicy(name, <any>undefined, { urn })
-            case "google-native:networksecurity/v1:ServerTlsPolicyIamPolicy":
+            case "google-hybrid:networksecurity/v1:ServerTlsPolicyIamPolicy":
                 return new ServerTlsPolicyIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "networksecurity/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "networksecurity/v1", _module)

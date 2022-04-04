@@ -23,7 +23,7 @@ export class PrivateConnection extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datastream/v1alpha1:PrivateConnection';
+    public static readonly __pulumiType = 'google-hybrid:datastream/v1alpha1:PrivateConnection';
 
     /**
      * Returns true if the given object is an instance of PrivateConnection.  This is designed to work even

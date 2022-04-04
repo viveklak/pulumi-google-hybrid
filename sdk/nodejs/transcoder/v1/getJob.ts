@@ -14,7 +14,7 @@ export function getJob(args: GetJobArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:transcoder/v1:getJob", {
+    return pulumi.runtime.invoke("google-hybrid:transcoder/v1:getJob", {
         "jobId": args.jobId,
         "location": args.location,
         "project": args.project,

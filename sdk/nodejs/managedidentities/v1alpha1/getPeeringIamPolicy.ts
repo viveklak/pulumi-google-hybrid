@@ -14,7 +14,7 @@ export function getPeeringIamPolicy(args: GetPeeringIamPolicyArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:managedidentities/v1alpha1:getPeeringIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:managedidentities/v1alpha1:getPeeringIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "peeringId": args.peeringId,
         "project": args.project,

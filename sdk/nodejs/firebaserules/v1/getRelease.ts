@@ -13,7 +13,7 @@ export function getRelease(args: GetReleaseArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:firebaserules/v1:getRelease", {
+    return pulumi.runtime.invoke("google-hybrid:firebaserules/v1:getRelease", {
         "project": args.project,
         "releaseId": args.releaseId,
     }, opts);

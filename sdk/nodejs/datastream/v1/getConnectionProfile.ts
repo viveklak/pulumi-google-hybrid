@@ -14,7 +14,7 @@ export function getConnectionProfile(args: GetConnectionProfileArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datastream/v1:getConnectionProfile", {
+    return pulumi.runtime.invoke("google-hybrid:datastream/v1:getConnectionProfile", {
         "connectionProfileId": args.connectionProfileId,
         "location": args.location,
         "project": args.project,

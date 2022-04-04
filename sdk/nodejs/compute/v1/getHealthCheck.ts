@@ -14,7 +14,7 @@ export function getHealthCheck(args: GetHealthCheckArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getHealthCheck", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getHealthCheck", {
         "healthCheck": args.healthCheck,
         "project": args.project,
     }, opts);

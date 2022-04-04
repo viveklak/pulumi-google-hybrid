@@ -14,7 +14,7 @@ export function getInstruction(args: GetInstructionArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datalabeling/v1beta1:getInstruction", {
+    return pulumi.runtime.invoke("google-hybrid:datalabeling/v1beta1:getInstruction", {
         "instructionId": args.instructionId,
         "project": args.project,
     }, opts);

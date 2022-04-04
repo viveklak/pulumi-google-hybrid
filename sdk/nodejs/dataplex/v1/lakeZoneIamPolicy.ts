@@ -24,7 +24,7 @@ export class LakeZoneIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataplex/v1:LakeZoneIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:dataplex/v1:LakeZoneIamPolicy';
 
     /**
      * Returns true if the given object is an instance of LakeZoneIamPolicy.  This is designed to work even

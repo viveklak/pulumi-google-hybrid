@@ -14,7 +14,7 @@ export function getDnsAuthorization(args: GetDnsAuthorizationArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:certificatemanager/v1:getDnsAuthorization", {
+    return pulumi.runtime.invoke("google-hybrid:certificatemanager/v1:getDnsAuthorization", {
         "dnsAuthorizationId": args.dnsAuthorizationId,
         "location": args.location,
         "project": args.project,

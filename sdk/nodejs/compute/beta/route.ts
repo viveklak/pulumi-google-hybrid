@@ -22,7 +22,7 @@ export class Route extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/beta:Route';
+    public static readonly __pulumiType = 'google-hybrid:compute/beta:Route';
 
     /**
      * Returns true if the given object is an instance of Route.  This is designed to work even

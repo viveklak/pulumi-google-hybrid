@@ -24,17 +24,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:iap/v1:Brand":
+            case "google-hybrid:iap/v1:Brand":
                 return new Brand(name, <any>undefined, { urn })
-            case "google-native:iap/v1:DestGroup":
+            case "google-hybrid:iap/v1:DestGroup":
                 return new DestGroup(name, <any>undefined, { urn })
-            case "google-native:iap/v1:IdentityAwareProxyClient":
+            case "google-hybrid:iap/v1:IdentityAwareProxyClient":
                 return new IdentityAwareProxyClient(name, <any>undefined, { urn })
-            case "google-native:iap/v1:V1IamPolicy":
+            case "google-hybrid:iap/v1:V1IamPolicy":
                 return new V1IamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "iap/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "iap/v1", _module)

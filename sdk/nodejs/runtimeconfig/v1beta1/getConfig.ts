@@ -13,7 +13,7 @@ export function getConfig(args: GetConfigArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:runtimeconfig/v1beta1:getConfig", {
+    return pulumi.runtime.invoke("google-hybrid:runtimeconfig/v1beta1:getConfig", {
         "configId": args.configId,
         "project": args.project,
     }, opts);

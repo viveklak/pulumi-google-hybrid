@@ -22,7 +22,7 @@ export class Fleet extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:gkehub/v1alpha:Fleet';
+    public static readonly __pulumiType = 'google-hybrid:gkehub/v1alpha:Fleet';
 
     /**
      * Returns true if the given object is an instance of Fleet.  This is designed to work even

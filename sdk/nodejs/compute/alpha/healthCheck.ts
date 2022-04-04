@@ -22,7 +22,7 @@ export class HealthCheck extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:HealthCheck';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:HealthCheck';
 
     /**
      * Returns true if the given object is an instance of HealthCheck.  This is designed to work even

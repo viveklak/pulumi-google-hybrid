@@ -14,7 +14,7 @@ export function getSpoke(args: GetSpokeArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkconnectivity/v1:getSpoke", {
+    return pulumi.runtime.invoke("google-hybrid:networkconnectivity/v1:getSpoke", {
         "location": args.location,
         "project": args.project,
         "spokeId": args.spokeId,

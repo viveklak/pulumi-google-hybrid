@@ -21,7 +21,7 @@ export class Endpoint extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:servicedirectory/v1beta1:Endpoint';
+    public static readonly __pulumiType = 'google-hybrid:servicedirectory/v1beta1:Endpoint';
 
     /**
      * Returns true if the given object is an instance of Endpoint.  This is designed to work even

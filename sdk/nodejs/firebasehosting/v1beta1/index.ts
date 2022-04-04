@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:firebasehosting/v1beta1:Channel":
+            case "google-hybrid:firebasehosting/v1beta1:Channel":
                 return new Channel(name, <any>undefined, { urn })
-            case "google-native:firebasehosting/v1beta1:Domain":
+            case "google-hybrid:firebasehosting/v1beta1:Domain":
                 return new Domain(name, <any>undefined, { urn })
-            case "google-native:firebasehosting/v1beta1:Site":
+            case "google-hybrid:firebasehosting/v1beta1:Site":
                 return new Site(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "firebasehosting/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "firebasehosting/v1beta1", _module)

@@ -13,7 +13,7 @@ export function getFolderBigQueryExport(args: GetFolderBigQueryExportArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:securitycenter/v1:getFolderBigQueryExport", {
+    return pulumi.runtime.invoke("google-hybrid:securitycenter/v1:getFolderBigQueryExport", {
         "bigQueryExportId": args.bigQueryExportId,
         "folderId": args.folderId,
     }, opts);

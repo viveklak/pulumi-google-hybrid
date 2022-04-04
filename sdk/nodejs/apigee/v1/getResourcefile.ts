@@ -13,7 +13,7 @@ export function getResourcefile(args: GetResourcefileArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getResourcefile", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getResourcefile", {
         "environmentId": args.environmentId,
         "name": args.name,
         "organizationId": args.organizationId,

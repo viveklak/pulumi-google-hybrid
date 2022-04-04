@@ -13,7 +13,7 @@ export function getRollout(args: GetRolloutArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:clouddeploy/v1:getRollout", {
+    return pulumi.runtime.invoke("google-hybrid:clouddeploy/v1:getRollout", {
         "deliveryPipelineId": args.deliveryPipelineId,
         "location": args.location,
         "project": args.project,

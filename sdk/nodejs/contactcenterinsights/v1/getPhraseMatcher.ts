@@ -14,7 +14,7 @@ export function getPhraseMatcher(args: GetPhraseMatcherArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:contactcenterinsights/v1:getPhraseMatcher", {
+    return pulumi.runtime.invoke("google-hybrid:contactcenterinsights/v1:getPhraseMatcher", {
         "location": args.location,
         "phraseMatcherId": args.phraseMatcherId,
         "project": args.project,

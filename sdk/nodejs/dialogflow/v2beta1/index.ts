@@ -48,31 +48,31 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:dialogflow/v2beta1:Context":
+            case "google-hybrid:dialogflow/v2beta1:Context":
                 return new Context(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:Conversation":
+            case "google-hybrid:dialogflow/v2beta1:Conversation":
                 return new Conversation(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:ConversationProfile":
+            case "google-hybrid:dialogflow/v2beta1:ConversationProfile":
                 return new ConversationProfile(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:Document":
+            case "google-hybrid:dialogflow/v2beta1:Document":
                 return new Document(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:EntityType":
+            case "google-hybrid:dialogflow/v2beta1:EntityType":
                 return new EntityType(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:Environment":
+            case "google-hybrid:dialogflow/v2beta1:Environment":
                 return new Environment(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:Intent":
+            case "google-hybrid:dialogflow/v2beta1:Intent":
                 return new Intent(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:KnowledgeBase":
+            case "google-hybrid:dialogflow/v2beta1:KnowledgeBase":
                 return new KnowledgeBase(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:Participant":
+            case "google-hybrid:dialogflow/v2beta1:Participant":
                 return new Participant(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:SessionEntityType":
+            case "google-hybrid:dialogflow/v2beta1:SessionEntityType":
                 return new SessionEntityType(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2beta1:Version":
+            case "google-hybrid:dialogflow/v2beta1:Version":
                 return new Version(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "dialogflow/v2beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "dialogflow/v2beta1", _module)

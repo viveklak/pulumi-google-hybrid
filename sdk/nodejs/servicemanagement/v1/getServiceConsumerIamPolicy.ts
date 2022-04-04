@@ -14,7 +14,7 @@ export function getServiceConsumerIamPolicy(args: GetServiceConsumerIamPolicyArg
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:servicemanagement/v1:getServiceConsumerIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:servicemanagement/v1:getServiceConsumerIamPolicy", {
         "consumerId": args.consumerId,
         "serviceId": args.serviceId,
     }, opts);

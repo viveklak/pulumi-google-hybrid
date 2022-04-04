@@ -27,17 +27,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:toolresults/v1beta3:Execution":
+            case "google-hybrid:toolresults/v1beta3:Execution":
                 return new Execution(name, <any>undefined, { urn })
-            case "google-native:toolresults/v1beta3:History":
+            case "google-hybrid:toolresults/v1beta3:History":
                 return new History(name, <any>undefined, { urn })
-            case "google-native:toolresults/v1beta3:PerfSampleSeries":
+            case "google-hybrid:toolresults/v1beta3:PerfSampleSeries":
                 return new PerfSampleSeries(name, <any>undefined, { urn })
-            case "google-native:toolresults/v1beta3:Step":
+            case "google-hybrid:toolresults/v1beta3:Step":
                 return new Step(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "toolresults/v1beta3", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "toolresults/v1beta3", _module)

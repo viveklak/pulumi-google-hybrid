@@ -14,7 +14,7 @@ export function getZone(args: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataplex/v1:getZone", {
+    return pulumi.runtime.invoke("google-hybrid:dataplex/v1:getZone", {
         "lakeId": args.lakeId,
         "location": args.location,
         "project": args.project,

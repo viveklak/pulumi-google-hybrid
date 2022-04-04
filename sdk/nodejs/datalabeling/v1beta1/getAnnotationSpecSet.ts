@@ -14,7 +14,7 @@ export function getAnnotationSpecSet(args: GetAnnotationSpecSetArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datalabeling/v1beta1:getAnnotationSpecSet", {
+    return pulumi.runtime.invoke("google-hybrid:datalabeling/v1beta1:getAnnotationSpecSet", {
         "annotationSpecSetId": args.annotationSpecSetId,
         "project": args.project,
     }, opts);

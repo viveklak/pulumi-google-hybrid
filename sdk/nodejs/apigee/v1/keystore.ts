@@ -21,7 +21,7 @@ export class Keystore extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Keystore';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Keystore';
 
     /**
      * Returns true if the given object is an instance of Keystore.  This is designed to work even

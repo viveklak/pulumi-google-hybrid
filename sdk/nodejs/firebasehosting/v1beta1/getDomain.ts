@@ -14,7 +14,7 @@ export function getDomain(args: GetDomainArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:firebasehosting/v1beta1:getDomain", {
+    return pulumi.runtime.invoke("google-hybrid:firebasehosting/v1beta1:getDomain", {
         "domainId": args.domainId,
         "project": args.project,
         "siteId": args.siteId,

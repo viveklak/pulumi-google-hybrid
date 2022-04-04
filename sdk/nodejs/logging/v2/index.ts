@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:logging/v2:BillingAccountExclusion":
+            case "google-hybrid:logging/v2:BillingAccountExclusion":
                 return new BillingAccountExclusion(name, <any>undefined, { urn })
-            case "google-native:logging/v2:BillingAccountSink":
+            case "google-hybrid:logging/v2:BillingAccountSink":
                 return new BillingAccountSink(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "logging/v2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "logging/v2", _module)

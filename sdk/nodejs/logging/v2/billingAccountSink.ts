@@ -22,7 +22,7 @@ export class BillingAccountSink extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:logging/v2:BillingAccountSink';
+    public static readonly __pulumiType = 'google-hybrid:logging/v2:BillingAccountSink';
 
     /**
      * Returns true if the given object is an instance of BillingAccountSink.  This is designed to work even

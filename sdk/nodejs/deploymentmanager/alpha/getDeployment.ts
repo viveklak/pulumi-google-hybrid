@@ -14,7 +14,7 @@ export function getDeployment(args: GetDeploymentArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:deploymentmanager/alpha:getDeployment", {
+    return pulumi.runtime.invoke("google-hybrid:deploymentmanager/alpha:getDeployment", {
         "deployment": args.deployment,
         "project": args.project,
     }, opts);

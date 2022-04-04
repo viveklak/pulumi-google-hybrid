@@ -24,7 +24,7 @@ export class Subscription extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Subscription';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Subscription';
 
     /**
      * Returns true if the given object is an instance of Subscription.  This is designed to work even

@@ -13,7 +13,7 @@ export function getInstance(args: GetInstanceArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getInstance", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getInstance", {
         "instanceId": args.instanceId,
         "organizationId": args.organizationId,
     }, opts);

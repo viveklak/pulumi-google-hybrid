@@ -22,7 +22,7 @@ export class Config extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:gameservices/v1beta:Config';
+    public static readonly __pulumiType = 'google-hybrid:gameservices/v1beta:Config';
 
     /**
      * Returns true if the given object is an instance of Config.  This is designed to work even

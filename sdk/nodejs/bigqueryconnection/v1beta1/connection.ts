@@ -22,7 +22,7 @@ export class Connection extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:bigqueryconnection/v1beta1:Connection';
+    public static readonly __pulumiType = 'google-hybrid:bigqueryconnection/v1beta1:Connection';
 
     /**
      * Returns true if the given object is an instance of Connection.  This is designed to work even

@@ -23,7 +23,7 @@ export class Organization extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Organization';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Organization';
 
     /**
      * Returns true if the given object is an instance of Organization.  This is designed to work even

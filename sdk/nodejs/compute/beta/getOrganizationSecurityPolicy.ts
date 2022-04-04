@@ -14,7 +14,7 @@ export function getOrganizationSecurityPolicy(args: GetOrganizationSecurityPolic
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getOrganizationSecurityPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getOrganizationSecurityPolicy", {
         "securityPolicy": args.securityPolicy,
     }, opts);
 }

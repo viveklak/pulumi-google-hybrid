@@ -23,7 +23,7 @@ export class Domain extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:firebasehosting/v1beta1:Domain';
+    public static readonly __pulumiType = 'google-hybrid:firebasehosting/v1beta1:Domain';
 
     /**
      * Returns true if the given object is an instance of Domain.  This is designed to work even

@@ -24,7 +24,7 @@ export class Evaluation extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v2:Evaluation';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v2:Evaluation';
 
     /**
      * Returns true if the given object is an instance of Evaluation.  This is designed to work even

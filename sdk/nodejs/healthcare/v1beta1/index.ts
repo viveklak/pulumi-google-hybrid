@@ -70,45 +70,45 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:healthcare/v1beta1:Annotation":
+            case "google-hybrid:healthcare/v1beta1:Annotation":
                 return new Annotation(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:AnnotationStore":
+            case "google-hybrid:healthcare/v1beta1:AnnotationStore":
                 return new AnnotationStore(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:AttributeDefinition":
+            case "google-hybrid:healthcare/v1beta1:AttributeDefinition":
                 return new AttributeDefinition(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:Consent":
+            case "google-hybrid:healthcare/v1beta1:Consent":
                 return new Consent(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:ConsentArtifact":
+            case "google-hybrid:healthcare/v1beta1:ConsentArtifact":
                 return new ConsentArtifact(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:ConsentStore":
+            case "google-hybrid:healthcare/v1beta1:ConsentStore":
                 return new ConsentStore(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:Dataset":
+            case "google-hybrid:healthcare/v1beta1:Dataset":
                 return new Dataset(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:DatasetAnnotationStoreIamPolicy":
+            case "google-hybrid:healthcare/v1beta1:DatasetAnnotationStoreIamPolicy":
                 return new DatasetAnnotationStoreIamPolicy(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:DatasetConsentStoreIamPolicy":
+            case "google-hybrid:healthcare/v1beta1:DatasetConsentStoreIamPolicy":
                 return new DatasetConsentStoreIamPolicy(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:DatasetDicomStoreIamPolicy":
+            case "google-hybrid:healthcare/v1beta1:DatasetDicomStoreIamPolicy":
                 return new DatasetDicomStoreIamPolicy(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:DatasetFhirStoreIamPolicy":
+            case "google-hybrid:healthcare/v1beta1:DatasetFhirStoreIamPolicy":
                 return new DatasetFhirStoreIamPolicy(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:DatasetHl7V2StoreIamPolicy":
+            case "google-hybrid:healthcare/v1beta1:DatasetHl7V2StoreIamPolicy":
                 return new DatasetHl7V2StoreIamPolicy(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:DatasetIamPolicy":
+            case "google-hybrid:healthcare/v1beta1:DatasetIamPolicy":
                 return new DatasetIamPolicy(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:DicomStore":
+            case "google-hybrid:healthcare/v1beta1:DicomStore":
                 return new DicomStore(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:FhirStore":
+            case "google-hybrid:healthcare/v1beta1:FhirStore":
                 return new FhirStore(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:Hl7V2Store":
+            case "google-hybrid:healthcare/v1beta1:Hl7V2Store":
                 return new Hl7V2Store(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:Message":
+            case "google-hybrid:healthcare/v1beta1:Message":
                 return new Message(name, <any>undefined, { urn })
-            case "google-native:healthcare/v1beta1:UserDataMapping":
+            case "google-hybrid:healthcare/v1beta1:UserDataMapping":
                 return new UserDataMapping(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "healthcare/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "healthcare/v1beta1", _module)

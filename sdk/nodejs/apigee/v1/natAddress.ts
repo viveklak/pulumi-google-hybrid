@@ -21,7 +21,7 @@ export class NatAddress extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:NatAddress';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:NatAddress';
 
     /**
      * Returns true if the given object is an instance of NatAddress.  This is designed to work even

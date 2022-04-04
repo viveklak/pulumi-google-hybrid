@@ -24,7 +24,7 @@ export class CaPoolIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:privateca/v1:CaPoolIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:privateca/v1:CaPoolIamPolicy';
 
     /**
      * Returns true if the given object is an instance of CaPoolIamPolicy.  This is designed to work even

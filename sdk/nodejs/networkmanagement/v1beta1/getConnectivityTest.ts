@@ -14,7 +14,7 @@ export function getConnectivityTest(args: GetConnectivityTestArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkmanagement/v1beta1:getConnectivityTest", {
+    return pulumi.runtime.invoke("google-hybrid:networkmanagement/v1beta1:getConnectivityTest", {
         "connectivityTestId": args.connectivityTestId,
         "project": args.project,
     }, opts);

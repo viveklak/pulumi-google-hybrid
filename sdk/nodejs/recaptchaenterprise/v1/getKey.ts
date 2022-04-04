@@ -14,7 +14,7 @@ export function getKey(args: GetKeyArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:recaptchaenterprise/v1:getKey", {
+    return pulumi.runtime.invoke("google-hybrid:recaptchaenterprise/v1:getKey", {
         "keyId": args.keyId,
         "project": args.project,
     }, opts);

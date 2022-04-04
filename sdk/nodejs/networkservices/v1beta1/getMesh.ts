@@ -13,7 +13,7 @@ export function getMesh(args: GetMeshArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1beta1:getMesh", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1beta1:getMesh", {
         "location": args.location,
         "meshId": args.meshId,
         "project": args.project,

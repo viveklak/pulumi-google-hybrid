@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:essentialcontacts/v1:Contact":
+            case "google-hybrid:essentialcontacts/v1:Contact":
                 return new Contact(name, <any>undefined, { urn })
-            case "google-native:essentialcontacts/v1:FolderContact":
+            case "google-hybrid:essentialcontacts/v1:FolderContact":
                 return new FolderContact(name, <any>undefined, { urn })
-            case "google-native:essentialcontacts/v1:OrganizationContact":
+            case "google-hybrid:essentialcontacts/v1:OrganizationContact":
                 return new OrganizationContact(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "essentialcontacts/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "essentialcontacts/v1", _module)

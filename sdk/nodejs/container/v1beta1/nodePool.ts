@@ -22,7 +22,7 @@ export class NodePool extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:container/v1beta1:NodePool';
+    public static readonly __pulumiType = 'google-hybrid:container/v1beta1:NodePool';
 
     /**
      * Returns true if the given object is an instance of NodePool.  This is designed to work even

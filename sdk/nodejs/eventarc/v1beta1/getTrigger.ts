@@ -14,7 +14,7 @@ export function getTrigger(args: GetTriggerArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:eventarc/v1beta1:getTrigger", {
+    return pulumi.runtime.invoke("google-hybrid:eventarc/v1beta1:getTrigger", {
         "location": args.location,
         "project": args.project,
         "triggerId": args.triggerId,

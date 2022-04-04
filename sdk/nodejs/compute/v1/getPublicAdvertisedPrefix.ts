@@ -14,7 +14,7 @@ export function getPublicAdvertisedPrefix(args: GetPublicAdvertisedPrefixArgs, o
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getPublicAdvertisedPrefix", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getPublicAdvertisedPrefix", {
         "project": args.project,
         "publicAdvertisedPrefix": args.publicAdvertisedPrefix,
     }, opts);

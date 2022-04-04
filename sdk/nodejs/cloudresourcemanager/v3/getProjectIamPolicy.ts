@@ -15,7 +15,7 @@ export function getProjectIamPolicy(args?: GetProjectIamPolicyArgs, opts?: pulum
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudresourcemanager/v3:getProjectIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:cloudresourcemanager/v3:getProjectIamPolicy", {
         "project": args.project,
     }, opts);
 }

@@ -24,7 +24,7 @@ export class DeliveryPipelineIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:clouddeploy/v1:DeliveryPipelineIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:clouddeploy/v1:DeliveryPipelineIamPolicy';
 
     /**
      * Returns true if the given object is an instance of DeliveryPipelineIamPolicy.  This is designed to work even

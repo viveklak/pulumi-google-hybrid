@@ -13,7 +13,7 @@ export function getSite(args: GetSiteArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:firebasehosting/v1beta1:getSite", {
+    return pulumi.runtime.invoke("google-hybrid:firebasehosting/v1beta1:getSite", {
         "project": args.project,
         "siteId": args.siteId,
     }, opts);

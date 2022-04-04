@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:workflowexecutions/v1beta:Execution":
+            case "google-hybrid:workflowexecutions/v1beta:Execution":
                 return new Execution(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "workflowexecutions/v1beta", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "workflowexecutions/v1beta", _module)

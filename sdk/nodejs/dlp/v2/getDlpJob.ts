@@ -14,7 +14,7 @@ export function getDlpJob(args: GetDlpJobArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dlp/v2:getDlpJob", {
+    return pulumi.runtime.invoke("google-hybrid:dlp/v2:getDlpJob", {
         "dlpJobId": args.dlpJobId,
         "location": args.location,
         "project": args.project,

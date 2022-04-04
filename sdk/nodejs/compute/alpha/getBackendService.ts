@@ -14,7 +14,7 @@ export function getBackendService(args: GetBackendServiceArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getBackendService", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getBackendService", {
         "backendService": args.backendService,
         "project": args.project,
     }, opts);

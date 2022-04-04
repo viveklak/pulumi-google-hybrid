@@ -22,7 +22,7 @@ export class RegionAutoscaler extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:RegionAutoscaler';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:RegionAutoscaler';
 
     /**
      * Returns true if the given object is an instance of RegionAutoscaler.  This is designed to work even

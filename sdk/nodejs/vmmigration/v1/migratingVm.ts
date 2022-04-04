@@ -23,7 +23,7 @@ export class MigratingVm extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:vmmigration/v1:MigratingVm';
+    public static readonly __pulumiType = 'google-hybrid:vmmigration/v1:MigratingVm';
 
     /**
      * Returns true if the given object is an instance of MigratingVm.  This is designed to work even

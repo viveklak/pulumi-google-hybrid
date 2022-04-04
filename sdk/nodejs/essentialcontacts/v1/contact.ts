@@ -23,7 +23,7 @@ export class Contact extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:essentialcontacts/v1:Contact';
+    public static readonly __pulumiType = 'google-hybrid:essentialcontacts/v1:Contact';
 
     /**
      * Returns true if the given object is an instance of Contact.  This is designed to work even

@@ -14,7 +14,7 @@ export function getRegionHealthCheck(args: GetRegionHealthCheckArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getRegionHealthCheck", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getRegionHealthCheck", {
         "healthCheck": args.healthCheck,
         "project": args.project,
         "region": args.region,

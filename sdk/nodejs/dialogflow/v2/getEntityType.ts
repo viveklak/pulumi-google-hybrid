@@ -14,7 +14,7 @@ export function getEntityType(args: GetEntityTypeArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v2:getEntityType", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v2:getEntityType", {
         "entityTypeId": args.entityTypeId,
         "languageCode": args.languageCode,
         "location": args.location,

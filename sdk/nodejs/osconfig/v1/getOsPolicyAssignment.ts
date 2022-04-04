@@ -14,7 +14,7 @@ export function getOsPolicyAssignment(args: GetOsPolicyAssignmentArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:osconfig/v1:getOsPolicyAssignment", {
+    return pulumi.runtime.invoke("google-hybrid:osconfig/v1:getOsPolicyAssignment", {
         "location": args.location,
         "osPolicyAssignmentId": args.osPolicyAssignmentId,
         "project": args.project,

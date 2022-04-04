@@ -39,25 +39,25 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:vmmigration/v1:CloneJob":
+            case "google-hybrid:vmmigration/v1:CloneJob":
                 return new CloneJob(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1:CutoverJob":
+            case "google-hybrid:vmmigration/v1:CutoverJob":
                 return new CutoverJob(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1:DatacenterConnector":
+            case "google-hybrid:vmmigration/v1:DatacenterConnector":
                 return new DatacenterConnector(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1:Group":
+            case "google-hybrid:vmmigration/v1:Group":
                 return new Group(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1:MigratingVm":
+            case "google-hybrid:vmmigration/v1:MigratingVm":
                 return new MigratingVm(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1:Source":
+            case "google-hybrid:vmmigration/v1:Source":
                 return new Source(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1:TargetProject":
+            case "google-hybrid:vmmigration/v1:TargetProject":
                 return new TargetProject(name, <any>undefined, { urn })
-            case "google-native:vmmigration/v1:UtilizationReport":
+            case "google-hybrid:vmmigration/v1:UtilizationReport":
                 return new UtilizationReport(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "vmmigration/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "vmmigration/v1", _module)

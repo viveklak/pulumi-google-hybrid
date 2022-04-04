@@ -24,7 +24,7 @@ export class RuntimeIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:notebooks/v1:RuntimeIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:notebooks/v1:RuntimeIamPolicy';
 
     /**
      * Returns true if the given object is an instance of RuntimeIamPolicy.  This is designed to work even

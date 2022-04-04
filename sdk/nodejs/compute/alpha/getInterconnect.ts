@@ -14,7 +14,7 @@ export function getInterconnect(args: GetInterconnectArgs, opts?: pulumi.InvokeO
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getInterconnect", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getInterconnect", {
         "interconnect": args.interconnect,
         "project": args.project,
     }, opts);

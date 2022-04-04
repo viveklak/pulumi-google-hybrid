@@ -27,17 +27,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudresourcemanager/v1:Lien":
+            case "google-hybrid:cloudresourcemanager/v1:Lien":
                 return new Lien(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v1:OrganizationIamPolicy":
+            case "google-hybrid:cloudresourcemanager/v1:OrganizationIamPolicy":
                 return new OrganizationIamPolicy(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v1:Project":
+            case "google-hybrid:cloudresourcemanager/v1:Project":
                 return new Project(name, <any>undefined, { urn })
-            case "google-native:cloudresourcemanager/v1:ProjectIamPolicy":
+            case "google-hybrid:cloudresourcemanager/v1:ProjectIamPolicy":
                 return new ProjectIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudresourcemanager/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudresourcemanager/v1", _module)

@@ -14,7 +14,7 @@ export function getNodePool(args: GetNodePoolArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:container/v1beta1:getNodePool", {
+    return pulumi.runtime.invoke("google-hybrid:container/v1beta1:getNodePool", {
         "clusterId": args.clusterId,
         "location": args.location,
         "nodePoolId": args.nodePoolId,

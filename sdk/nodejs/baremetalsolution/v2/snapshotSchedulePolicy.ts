@@ -23,7 +23,7 @@ export class SnapshotSchedulePolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:baremetalsolution/v2:SnapshotSchedulePolicy';
+    public static readonly __pulumiType = 'google-hybrid:baremetalsolution/v2:SnapshotSchedulePolicy';
 
     /**
      * Returns true if the given object is an instance of SnapshotSchedulePolicy.  This is designed to work even

@@ -22,7 +22,7 @@ export class Agent extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v3:Agent';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v3:Agent';
 
     /**
      * Returns true if the given object is an instance of Agent.  This is designed to work even

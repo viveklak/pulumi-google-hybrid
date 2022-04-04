@@ -13,7 +13,7 @@ export function getFleet(args: GetFleetArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:gkehub/v1alpha:getFleet", {
+    return pulumi.runtime.invoke("google-hybrid:gkehub/v1alpha:getFleet", {
         "fleetId": args.fleetId,
         "location": args.location,
         "project": args.project,

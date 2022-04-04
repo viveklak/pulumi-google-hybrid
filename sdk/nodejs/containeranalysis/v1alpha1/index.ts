@@ -30,19 +30,19 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:containeranalysis/v1alpha1:Note":
+            case "google-hybrid:containeranalysis/v1alpha1:Note":
                 return new Note(name, <any>undefined, { urn })
-            case "google-native:containeranalysis/v1alpha1:NoteIamPolicy":
+            case "google-hybrid:containeranalysis/v1alpha1:NoteIamPolicy":
                 return new NoteIamPolicy(name, <any>undefined, { urn })
-            case "google-native:containeranalysis/v1alpha1:Occurrence":
+            case "google-hybrid:containeranalysis/v1alpha1:Occurrence":
                 return new Occurrence(name, <any>undefined, { urn })
-            case "google-native:containeranalysis/v1alpha1:OccurrenceIamPolicy":
+            case "google-hybrid:containeranalysis/v1alpha1:OccurrenceIamPolicy":
                 return new OccurrenceIamPolicy(name, <any>undefined, { urn })
-            case "google-native:containeranalysis/v1alpha1:ProviderNoteIamPolicy":
+            case "google-hybrid:containeranalysis/v1alpha1:ProviderNoteIamPolicy":
                 return new ProviderNoteIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "containeranalysis/v1alpha1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "containeranalysis/v1alpha1", _module)

@@ -42,27 +42,27 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:datacatalog/v1:Entry":
+            case "google-hybrid:datacatalog/v1:Entry":
                 return new Entry(name, <any>undefined, { urn })
-            case "google-native:datacatalog/v1:EntryGroup":
+            case "google-hybrid:datacatalog/v1:EntryGroup":
                 return new EntryGroup(name, <any>undefined, { urn })
-            case "google-native:datacatalog/v1:EntryGroupIamPolicy":
+            case "google-hybrid:datacatalog/v1:EntryGroupIamPolicy":
                 return new EntryGroupIamPolicy(name, <any>undefined, { urn })
-            case "google-native:datacatalog/v1:PolicyTag":
+            case "google-hybrid:datacatalog/v1:PolicyTag":
                 return new PolicyTag(name, <any>undefined, { urn })
-            case "google-native:datacatalog/v1:TagTemplate":
+            case "google-hybrid:datacatalog/v1:TagTemplate":
                 return new TagTemplate(name, <any>undefined, { urn })
-            case "google-native:datacatalog/v1:TagTemplateIamPolicy":
+            case "google-hybrid:datacatalog/v1:TagTemplateIamPolicy":
                 return new TagTemplateIamPolicy(name, <any>undefined, { urn })
-            case "google-native:datacatalog/v1:Taxonomy":
+            case "google-hybrid:datacatalog/v1:Taxonomy":
                 return new Taxonomy(name, <any>undefined, { urn })
-            case "google-native:datacatalog/v1:TaxonomyIamPolicy":
+            case "google-hybrid:datacatalog/v1:TaxonomyIamPolicy":
                 return new TaxonomyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:datacatalog/v1:TaxonomyPolicyTagIamPolicy":
+            case "google-hybrid:datacatalog/v1:TaxonomyPolicyTagIamPolicy":
                 return new TaxonomyPolicyTagIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "datacatalog/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "datacatalog/v1", _module)

@@ -23,7 +23,7 @@ export class Datastore extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Datastore';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Datastore';
 
     /**
      * Returns true if the given object is an instance of Datastore.  This is designed to work even

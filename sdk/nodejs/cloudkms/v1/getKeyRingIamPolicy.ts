@@ -14,7 +14,7 @@ export function getKeyRingIamPolicy(args: GetKeyRingIamPolicyArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudkms/v1:getKeyRingIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:cloudkms/v1:getKeyRingIamPolicy", {
         "keyRingId": args.keyRingId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

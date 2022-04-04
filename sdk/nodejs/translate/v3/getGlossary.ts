@@ -14,7 +14,7 @@ export function getGlossary(args: GetGlossaryArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:translate/v3:getGlossary", {
+    return pulumi.runtime.invoke("google-hybrid:translate/v3:getGlossary", {
         "glossaryId": args.glossaryId,
         "location": args.location,
         "project": args.project,

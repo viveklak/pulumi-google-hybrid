@@ -14,7 +14,7 @@ export function getCertificateAuthority(args: GetCertificateAuthorityArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:privateca/v1:getCertificateAuthority", {
+    return pulumi.runtime.invoke("google-hybrid:privateca/v1:getCertificateAuthority", {
         "caPoolId": args.caPoolId,
         "certificateAuthorityId": args.certificateAuthorityId,
         "location": args.location,

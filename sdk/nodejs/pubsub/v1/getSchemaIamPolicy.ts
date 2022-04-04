@@ -14,7 +14,7 @@ export function getSchemaIamPolicy(args: GetSchemaIamPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:pubsub/v1:getSchemaIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:pubsub/v1:getSchemaIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "schemaId": args.schemaId,

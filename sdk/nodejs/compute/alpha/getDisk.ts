@@ -14,7 +14,7 @@ export function getDisk(args: GetDiskArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getDisk", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getDisk", {
         "disk": args.disk,
         "project": args.project,
         "zone": args.zone,

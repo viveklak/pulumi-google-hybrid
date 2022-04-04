@@ -14,7 +14,7 @@ export function getConversationModel(args: GetConversationModelArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v2:getConversationModel", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v2:getConversationModel", {
         "conversationModelId": args.conversationModelId,
         "location": args.location,
         "project": args.project,

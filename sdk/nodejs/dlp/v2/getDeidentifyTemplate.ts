@@ -14,7 +14,7 @@ export function getDeidentifyTemplate(args: GetDeidentifyTemplateArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dlp/v2:getDeidentifyTemplate", {
+    return pulumi.runtime.invoke("google-hybrid:dlp/v2:getDeidentifyTemplate", {
         "deidentifyTemplateId": args.deidentifyTemplateId,
         "location": args.location,
         "project": args.project,

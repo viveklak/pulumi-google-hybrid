@@ -14,7 +14,7 @@ export function getRoutine(args: GetRoutineArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigquery/v2:getRoutine", {
+    return pulumi.runtime.invoke("google-hybrid:bigquery/v2:getRoutine", {
         "datasetId": args.datasetId,
         "project": args.project,
         "readMask": args.readMask,

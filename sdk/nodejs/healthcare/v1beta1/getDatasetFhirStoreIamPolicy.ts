@@ -14,7 +14,7 @@ export function getDatasetFhirStoreIamPolicy(args: GetDatasetFhirStoreIamPolicyA
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1beta1:getDatasetFhirStoreIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1beta1:getDatasetFhirStoreIamPolicy", {
         "datasetId": args.datasetId,
         "fhirStoreId": args.fhirStoreId,
         "location": args.location,

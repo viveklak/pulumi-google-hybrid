@@ -22,7 +22,7 @@ export class Company extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:jobs/v4:Company';
+    public static readonly __pulumiType = 'google-hybrid:jobs/v4:Company';
 
     /**
      * Returns true if the given object is an instance of Company.  This is designed to work even

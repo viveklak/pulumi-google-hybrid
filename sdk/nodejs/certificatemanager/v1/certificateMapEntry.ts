@@ -22,7 +22,7 @@ export class CertificateMapEntry extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:certificatemanager/v1:CertificateMapEntry';
+    public static readonly __pulumiType = 'google-hybrid:certificatemanager/v1:CertificateMapEntry';
 
     /**
      * Returns true if the given object is an instance of CertificateMapEntry.  This is designed to work even

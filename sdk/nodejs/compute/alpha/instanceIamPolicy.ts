@@ -24,7 +24,7 @@ export class InstanceIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:InstanceIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:InstanceIamPolicy';
 
     /**
      * Returns true if the given object is an instance of InstanceIamPolicy.  This is designed to work even

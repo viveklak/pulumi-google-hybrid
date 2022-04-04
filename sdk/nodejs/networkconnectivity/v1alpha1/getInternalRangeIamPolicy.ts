@@ -14,7 +14,7 @@ export function getInternalRangeIamPolicy(args: GetInternalRangeIamPolicyArgs, o
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkconnectivity/v1alpha1:getInternalRangeIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networkconnectivity/v1alpha1:getInternalRangeIamPolicy", {
         "internalRangeId": args.internalRangeId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

@@ -24,7 +24,7 @@ export class TableIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:bigquery/v2:TableIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:bigquery/v2:TableIamPolicy';
 
     /**
      * Returns true if the given object is an instance of TableIamPolicy.  This is designed to work even

@@ -23,7 +23,7 @@ export class FolderContact extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:essentialcontacts/v1:FolderContact';
+    public static readonly __pulumiType = 'google-hybrid:essentialcontacts/v1:FolderContact';
 
     /**
      * Returns true if the given object is an instance of FolderContact.  This is designed to work even

@@ -15,11 +15,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:firebaseappcheck/v1beta:DebugToken":
+            case "google-hybrid:firebaseappcheck/v1beta:DebugToken":
                 return new DebugToken(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "firebaseappcheck/v1beta", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "firebaseappcheck/v1beta", _module)

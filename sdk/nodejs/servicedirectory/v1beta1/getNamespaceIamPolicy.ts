@@ -14,7 +14,7 @@ export function getNamespaceIamPolicy(args: GetNamespaceIamPolicyArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:servicedirectory/v1beta1:getNamespaceIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:servicedirectory/v1beta1:getNamespaceIamPolicy", {
         "location": args.location,
         "namespaceId": args.namespaceId,
         "project": args.project,

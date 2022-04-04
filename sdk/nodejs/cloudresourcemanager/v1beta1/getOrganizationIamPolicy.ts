@@ -14,7 +14,7 @@ export function getOrganizationIamPolicy(args: GetOrganizationIamPolicyArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudresourcemanager/v1beta1:getOrganizationIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:cloudresourcemanager/v1beta1:getOrganizationIamPolicy", {
         "organizationId": args.organizationId,
     }, opts);
 }

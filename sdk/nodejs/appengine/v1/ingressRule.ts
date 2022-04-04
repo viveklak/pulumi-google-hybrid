@@ -23,7 +23,7 @@ export class IngressRule extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:appengine/v1:IngressRule';
+    public static readonly __pulumiType = 'google-hybrid:appengine/v1:IngressRule';
 
     /**
      * Returns true if the given object is an instance of IngressRule.  This is designed to work even

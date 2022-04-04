@@ -13,7 +13,7 @@ export function getApi(args: GetApiArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigateway/v1beta:getApi", {
+    return pulumi.runtime.invoke("google-hybrid:apigateway/v1beta:getApi", {
         "apiId": args.apiId,
         "location": args.location,
         "project": args.project,

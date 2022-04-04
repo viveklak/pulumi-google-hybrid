@@ -14,7 +14,7 @@ export function getGroup(args: GetGroupArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudidentity/v1:getGroup", {
+    return pulumi.runtime.invoke("google-hybrid:cloudidentity/v1:getGroup", {
         "groupId": args.groupId,
     }, opts);
 }

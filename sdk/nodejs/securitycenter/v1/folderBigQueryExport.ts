@@ -22,7 +22,7 @@ export class FolderBigQueryExport extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:securitycenter/v1:FolderBigQueryExport';
+    public static readonly __pulumiType = 'google-hybrid:securitycenter/v1:FolderBigQueryExport';
 
     /**
      * Returns true if the given object is an instance of FolderBigQueryExport.  This is designed to work even

@@ -24,7 +24,7 @@ export class Query extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Query';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Query';
 
     /**
      * Returns true if the given object is an instance of Query.  This is designed to work even

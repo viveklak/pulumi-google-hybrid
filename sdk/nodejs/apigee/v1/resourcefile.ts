@@ -22,7 +22,7 @@ export class Resourcefile extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Resourcefile';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Resourcefile';
 
     /**
      * Returns true if the given object is an instance of Resourcefile.  This is designed to work even

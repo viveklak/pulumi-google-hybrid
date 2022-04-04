@@ -14,7 +14,7 @@ export function getSubscriptionIamPolicy(args: GetSubscriptionIamPolicyArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:pubsub/v1beta2:getSubscriptionIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:pubsub/v1beta2:getSubscriptionIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "subscriptionId": args.subscriptionId,

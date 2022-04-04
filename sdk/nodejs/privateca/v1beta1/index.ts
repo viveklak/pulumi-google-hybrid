@@ -30,19 +30,19 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:privateca/v1beta1:Certificate":
+            case "google-hybrid:privateca/v1beta1:Certificate":
                 return new Certificate(name, <any>undefined, { urn })
-            case "google-native:privateca/v1beta1:CertificateAuthority":
+            case "google-hybrid:privateca/v1beta1:CertificateAuthority":
                 return new CertificateAuthority(name, <any>undefined, { urn })
-            case "google-native:privateca/v1beta1:CertificateAuthorityCertificateRevocationListIamPolicy":
+            case "google-hybrid:privateca/v1beta1:CertificateAuthorityCertificateRevocationListIamPolicy":
                 return new CertificateAuthorityCertificateRevocationListIamPolicy(name, <any>undefined, { urn })
-            case "google-native:privateca/v1beta1:CertificateAuthorityIamPolicy":
+            case "google-hybrid:privateca/v1beta1:CertificateAuthorityIamPolicy":
                 return new CertificateAuthorityIamPolicy(name, <any>undefined, { urn })
-            case "google-native:privateca/v1beta1:ReusableConfigIamPolicy":
+            case "google-hybrid:privateca/v1beta1:ReusableConfigIamPolicy":
                 return new ReusableConfigIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "privateca/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "privateca/v1beta1", _module)

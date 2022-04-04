@@ -14,7 +14,7 @@ export function getEndpointPolicy(args: GetEndpointPolicyArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1beta1:getEndpointPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1beta1:getEndpointPolicy", {
         "endpointPolicyId": args.endpointPolicyId,
         "location": args.location,
         "project": args.project,

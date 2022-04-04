@@ -14,7 +14,7 @@ export function getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy(
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:privateca/v1:getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:privateca/v1:getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy", {
         "caPoolId": args.caPoolId,
         "certificateAuthorityId": args.certificateAuthorityId,
         "certificateRevocationListId": args.certificateRevocationListId,

@@ -14,7 +14,7 @@ export function getAttestorIamPolicy(args: GetAttestorIamPolicyArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:binaryauthorization/v1:getAttestorIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:binaryauthorization/v1:getAttestorIamPolicy", {
         "attestorId": args.attestorId,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

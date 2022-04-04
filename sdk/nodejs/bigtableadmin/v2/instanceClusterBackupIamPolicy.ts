@@ -24,7 +24,7 @@ export class InstanceClusterBackupIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:bigtableadmin/v2:InstanceClusterBackupIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:bigtableadmin/v2:InstanceClusterBackupIamPolicy';
 
     /**
      * Returns true if the given object is an instance of InstanceClusterBackupIamPolicy.  This is designed to work even

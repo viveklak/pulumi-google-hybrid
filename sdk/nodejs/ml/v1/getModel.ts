@@ -14,7 +14,7 @@ export function getModel(args: GetModelArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:ml/v1:getModel", {
+    return pulumi.runtime.invoke("google-hybrid:ml/v1:getModel", {
         "modelId": args.modelId,
         "project": args.project,
     }, opts);

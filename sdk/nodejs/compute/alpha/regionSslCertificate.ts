@@ -22,7 +22,7 @@ export class RegionSslCertificate extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:RegionSslCertificate';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:RegionSslCertificate';
 
     /**
      * Returns true if the given object is an instance of RegionSslCertificate.  This is designed to work even

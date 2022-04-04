@@ -22,7 +22,7 @@ export class DicomStore extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:healthcare/v1:DicomStore';
+    public static readonly __pulumiType = 'google-hybrid:healthcare/v1:DicomStore';
 
     /**
      * Returns true if the given object is an instance of DicomStore.  This is designed to work even

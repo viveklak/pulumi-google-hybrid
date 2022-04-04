@@ -14,7 +14,7 @@ export function getTaxonomyPolicyTagIamPolicy(args: GetTaxonomyPolicyTagIamPolic
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datacatalog/v1:getTaxonomyPolicyTagIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:datacatalog/v1:getTaxonomyPolicyTagIamPolicy", {
         "location": args.location,
         "policyTagId": args.policyTagId,
         "project": args.project,

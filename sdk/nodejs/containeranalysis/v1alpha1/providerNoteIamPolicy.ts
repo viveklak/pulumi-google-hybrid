@@ -24,7 +24,7 @@ export class ProviderNoteIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:containeranalysis/v1alpha1:ProviderNoteIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:containeranalysis/v1alpha1:ProviderNoteIamPolicy';
 
     /**
      * Returns true if the given object is an instance of ProviderNoteIamPolicy.  This is designed to work even

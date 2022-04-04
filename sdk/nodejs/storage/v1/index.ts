@@ -39,27 +39,27 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:storage/v1:Bucket":
+            case "google-hybrid:storage/v1:Bucket":
                 return new Bucket(name, <any>undefined, { urn })
-            case "google-native:storage/v1:BucketAccessControl":
+            case "google-hybrid:storage/v1:BucketAccessControl":
                 return new BucketAccessControl(name, <any>undefined, { urn })
-            case "google-native:storage/v1:BucketIamPolicy":
+            case "google-hybrid:storage/v1:BucketIamPolicy":
                 return new BucketIamPolicy(name, <any>undefined, { urn })
-            case "google-native:storage/v1:BucketObject":
+            case "google-hybrid:storage/v1:BucketObject":
                 return new BucketObject(name, <any>undefined, { urn })
-            case "google-native:storage/v1:DefaultObjectAccessControl":
+            case "google-hybrid:storage/v1:DefaultObjectAccessControl":
                 return new DefaultObjectAccessControl(name, <any>undefined, { urn })
-            case "google-native:storage/v1:HmacKey":
+            case "google-hybrid:storage/v1:HmacKey":
                 return new HmacKey(name, <any>undefined, { urn })
-            case "google-native:storage/v1:Notification":
+            case "google-hybrid:storage/v1:Notification":
                 return new Notification(name, <any>undefined, { urn })
-            case "google-native:storage/v1:ObjectAccessControl":
+            case "google-hybrid:storage/v1:ObjectAccessControl":
                 return new ObjectAccessControl(name, <any>undefined, { urn })
-            case "google-native:storage/v1:ObjectIamPolicy":
+            case "google-hybrid:storage/v1:ObjectIamPolicy":
                 return new ObjectIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "storage/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "storage/v1", _module)

@@ -24,7 +24,7 @@ export class NodeGroupIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/beta:NodeGroupIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/beta:NodeGroupIamPolicy';
 
     /**
      * Returns true if the given object is an instance of NodeGroupIamPolicy.  This is designed to work even

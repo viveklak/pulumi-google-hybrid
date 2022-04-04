@@ -22,7 +22,7 @@ export class NetworkEndpointGroup extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/beta:NetworkEndpointGroup';
+    public static readonly __pulumiType = 'google-hybrid:compute/beta:NetworkEndpointGroup';
 
     /**
      * Returns true if the given object is an instance of NetworkEndpointGroup.  This is designed to work even

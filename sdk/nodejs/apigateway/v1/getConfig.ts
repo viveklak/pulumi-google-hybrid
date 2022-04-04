@@ -14,7 +14,7 @@ export function getConfig(args: GetConfigArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigateway/v1:getConfig", {
+    return pulumi.runtime.invoke("google-hybrid:apigateway/v1:getConfig", {
         "apiId": args.apiId,
         "configId": args.configId,
         "location": args.location,

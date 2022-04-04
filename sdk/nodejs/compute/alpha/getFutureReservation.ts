@@ -14,7 +14,7 @@ export function getFutureReservation(args: GetFutureReservationArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getFutureReservation", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getFutureReservation", {
         "futureReservation": args.futureReservation,
         "project": args.project,
         "zone": args.zone,

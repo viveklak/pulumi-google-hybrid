@@ -14,7 +14,7 @@ export function getDatabase(args: GetDatabaseArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:sqladmin/v1beta4:getDatabase", {
+    return pulumi.runtime.invoke("google-hybrid:sqladmin/v1beta4:getDatabase", {
         "database": args.database,
         "instance": args.instance,
         "project": args.project,

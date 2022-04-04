@@ -22,7 +22,7 @@ export class ResourcePolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/v1:ResourcePolicy';
+    public static readonly __pulumiType = 'google-hybrid:compute/v1:ResourcePolicy';
 
     /**
      * Returns true if the given object is an instance of ResourcePolicy.  This is designed to work even

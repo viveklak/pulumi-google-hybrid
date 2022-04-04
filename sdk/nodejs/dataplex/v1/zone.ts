@@ -23,7 +23,7 @@ export class Zone extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataplex/v1:Zone';
+    public static readonly __pulumiType = 'google-hybrid:dataplex/v1:Zone';
 
     /**
      * Returns true if the given object is an instance of Zone.  This is designed to work even

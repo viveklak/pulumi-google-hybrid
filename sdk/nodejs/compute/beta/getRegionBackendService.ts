@@ -14,7 +14,7 @@ export function getRegionBackendService(args: GetRegionBackendServiceArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getRegionBackendService", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getRegionBackendService", {
         "backendService": args.backendService,
         "project": args.project,
         "region": args.region,

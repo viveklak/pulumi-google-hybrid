@@ -14,7 +14,7 @@ export function getCertificateTemplateIamPolicy(args: GetCertificateTemplateIamP
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:privateca/v1:getCertificateTemplateIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:privateca/v1:getCertificateTemplateIamPolicy", {
         "certificateTemplateId": args.certificateTemplateId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

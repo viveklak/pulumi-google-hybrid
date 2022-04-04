@@ -14,7 +14,7 @@ export function getRegionWorkflowTemplateIamPolicy(args: GetRegionWorkflowTempla
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1beta2:getRegionWorkflowTemplateIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1beta2:getRegionWorkflowTemplateIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "regionId": args.regionId,

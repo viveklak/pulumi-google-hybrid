@@ -14,7 +14,7 @@ export function getAutoscaler(args: GetAutoscalerArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getAutoscaler", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getAutoscaler", {
         "autoscaler": args.autoscaler,
         "project": args.project,
         "zone": args.zone,

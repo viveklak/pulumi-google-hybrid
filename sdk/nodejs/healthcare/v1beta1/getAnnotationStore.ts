@@ -13,7 +13,7 @@ export function getAnnotationStore(args: GetAnnotationStoreArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1beta1:getAnnotationStore", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1beta1:getAnnotationStore", {
         "annotationStoreId": args.annotationStoreId,
         "datasetId": args.datasetId,
         "location": args.location,

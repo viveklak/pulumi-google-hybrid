@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:transcoder/v1:Job":
+            case "google-hybrid:transcoder/v1:Job":
                 return new Job(name, <any>undefined, { urn })
-            case "google-native:transcoder/v1:JobTemplate":
+            case "google-hybrid:transcoder/v1:JobTemplate":
                 return new JobTemplate(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "transcoder/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "transcoder/v1", _module)

@@ -36,23 +36,23 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:notebooks/v1:Environment":
+            case "google-hybrid:notebooks/v1:Environment":
                 return new Environment(name, <any>undefined, { urn })
-            case "google-native:notebooks/v1:Execution":
+            case "google-hybrid:notebooks/v1:Execution":
                 return new Execution(name, <any>undefined, { urn })
-            case "google-native:notebooks/v1:Instance":
+            case "google-hybrid:notebooks/v1:Instance":
                 return new Instance(name, <any>undefined, { urn })
-            case "google-native:notebooks/v1:InstanceIamPolicy":
+            case "google-hybrid:notebooks/v1:InstanceIamPolicy":
                 return new InstanceIamPolicy(name, <any>undefined, { urn })
-            case "google-native:notebooks/v1:Runtime":
+            case "google-hybrid:notebooks/v1:Runtime":
                 return new Runtime(name, <any>undefined, { urn })
-            case "google-native:notebooks/v1:RuntimeIamPolicy":
+            case "google-hybrid:notebooks/v1:RuntimeIamPolicy":
                 return new RuntimeIamPolicy(name, <any>undefined, { urn })
-            case "google-native:notebooks/v1:Schedule":
+            case "google-hybrid:notebooks/v1:Schedule":
                 return new Schedule(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "notebooks/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "notebooks/v1", _module)

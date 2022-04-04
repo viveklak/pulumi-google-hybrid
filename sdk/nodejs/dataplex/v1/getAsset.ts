@@ -14,7 +14,7 @@ export function getAsset(args: GetAssetArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataplex/v1:getAsset", {
+    return pulumi.runtime.invoke("google-hybrid:dataplex/v1:getAsset", {
         "assetId": args.assetId,
         "lakeId": args.lakeId,
         "location": args.location,

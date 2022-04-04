@@ -22,7 +22,7 @@ export class Message extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:healthcare/v1:Message';
+    public static readonly __pulumiType = 'google-hybrid:healthcare/v1:Message';
 
     /**
      * Returns true if the given object is an instance of Message.  This is designed to work even

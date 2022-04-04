@@ -30,19 +30,19 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:networkservices/v1:EdgeCacheKeysetIamPolicy":
+            case "google-hybrid:networkservices/v1:EdgeCacheKeysetIamPolicy":
                 return new EdgeCacheKeysetIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1:EdgeCacheOriginIamPolicy":
+            case "google-hybrid:networkservices/v1:EdgeCacheOriginIamPolicy":
                 return new EdgeCacheOriginIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1:EdgeCacheServiceIamPolicy":
+            case "google-hybrid:networkservices/v1:EdgeCacheServiceIamPolicy":
                 return new EdgeCacheServiceIamPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1:EndpointPolicy":
+            case "google-hybrid:networkservices/v1:EndpointPolicy":
                 return new EndpointPolicy(name, <any>undefined, { urn })
-            case "google-native:networkservices/v1:EndpointPolicyIamPolicy":
+            case "google-hybrid:networkservices/v1:EndpointPolicyIamPolicy":
                 return new EndpointPolicyIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "networkservices/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "networkservices/v1", _module)

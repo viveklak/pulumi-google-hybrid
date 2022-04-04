@@ -14,7 +14,7 @@ export function getPolicy(args: GetPolicyArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:orgpolicy/v2:getPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:orgpolicy/v2:getPolicy", {
         "policyId": args.policyId,
         "project": args.project,
     }, opts);

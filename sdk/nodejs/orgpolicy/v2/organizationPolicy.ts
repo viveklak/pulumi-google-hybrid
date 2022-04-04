@@ -23,7 +23,7 @@ export class OrganizationPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:orgpolicy/v2:OrganizationPolicy';
+    public static readonly __pulumiType = 'google-hybrid:orgpolicy/v2:OrganizationPolicy';
 
     /**
      * Returns true if the given object is an instance of OrganizationPolicy.  This is designed to work even

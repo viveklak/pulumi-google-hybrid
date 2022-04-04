@@ -13,7 +13,7 @@ export function getWorkflow(args: GetWorkflowArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:workflows/v1beta:getWorkflow", {
+    return pulumi.runtime.invoke("google-hybrid:workflows/v1beta:getWorkflow", {
         "location": args.location,
         "project": args.project,
         "workflowId": args.workflowId,

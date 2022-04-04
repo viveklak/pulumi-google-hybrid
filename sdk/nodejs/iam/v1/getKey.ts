@@ -13,7 +13,7 @@ export function getKey(args: GetKeyArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:iam/v1:getKey", {
+    return pulumi.runtime.invoke("google-hybrid:iam/v1:getKey", {
         "keyId": args.keyId,
         "project": args.project,
         "publicKeyType": args.publicKeyType,

@@ -18,13 +18,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:speech/v1:CustomClass":
+            case "google-hybrid:speech/v1:CustomClass":
                 return new CustomClass(name, <any>undefined, { urn })
-            case "google-native:speech/v1:PhraseSet":
+            case "google-hybrid:speech/v1:PhraseSet":
                 return new PhraseSet(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "speech/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "speech/v1", _module)

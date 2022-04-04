@@ -14,7 +14,7 @@ export function getWorkerPool(args: GetWorkerPoolArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudbuild/v1alpha2:getWorkerPool", {
+    return pulumi.runtime.invoke("google-hybrid:cloudbuild/v1alpha2:getWorkerPool", {
         "project": args.project,
         "workerPoolId": args.workerPoolId,
     }, opts);

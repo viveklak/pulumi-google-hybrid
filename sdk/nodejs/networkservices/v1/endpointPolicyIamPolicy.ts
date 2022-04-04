@@ -24,7 +24,7 @@ export class EndpointPolicyIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkservices/v1:EndpointPolicyIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:networkservices/v1:EndpointPolicyIamPolicy';
 
     /**
      * Returns true if the given object is an instance of EndpointPolicyIamPolicy.  This is designed to work even

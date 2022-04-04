@@ -13,7 +13,7 @@ export function getFolder(args: GetFolderArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudresourcemanager/v2:getFolder", {
+    return pulumi.runtime.invoke("google-hybrid:cloudresourcemanager/v2:getFolder", {
         "folderId": args.folderId,
     }, opts);
 }

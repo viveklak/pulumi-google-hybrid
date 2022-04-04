@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudasset/v1:Feed":
+            case "google-hybrid:cloudasset/v1:Feed":
                 return new Feed(name, <any>undefined, { urn })
-            case "google-native:cloudasset/v1:SavedQuery":
+            case "google-hybrid:cloudasset/v1:SavedQuery":
                 return new SavedQuery(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudasset/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudasset/v1", _module)

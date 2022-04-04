@@ -13,7 +13,7 @@ export function getDebugToken(args: GetDebugTokenArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:firebaseappcheck/v1beta:getDebugToken", {
+    return pulumi.runtime.invoke("google-hybrid:firebaseappcheck/v1beta:getDebugToken", {
         "appId": args.appId,
         "debugTokenId": args.debugTokenId,
         "project": args.project,

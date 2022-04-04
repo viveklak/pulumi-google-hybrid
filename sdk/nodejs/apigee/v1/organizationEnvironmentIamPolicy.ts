@@ -24,7 +24,7 @@ export class OrganizationEnvironmentIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:OrganizationEnvironmentIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:OrganizationEnvironmentIamPolicy';
 
     /**
      * Returns true if the given object is an instance of OrganizationEnvironmentIamPolicy.  This is designed to work even

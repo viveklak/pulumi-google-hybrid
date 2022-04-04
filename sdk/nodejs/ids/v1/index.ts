@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:ids/v1:Endpoint":
+            case "google-hybrid:ids/v1:Endpoint":
                 return new Endpoint(name, <any>undefined, { urn })
-            case "google-native:ids/v1:EndpointIamPolicy":
+            case "google-hybrid:ids/v1:EndpointIamPolicy":
                 return new EndpointIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "ids/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "ids/v1", _module)

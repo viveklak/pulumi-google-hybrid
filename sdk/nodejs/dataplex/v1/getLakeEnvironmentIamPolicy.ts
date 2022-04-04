@@ -14,7 +14,7 @@ export function getLakeEnvironmentIamPolicy(args: GetLakeEnvironmentIamPolicyArg
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataplex/v1:getLakeEnvironmentIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:dataplex/v1:getLakeEnvironmentIamPolicy", {
         "environmentId": args.environmentId,
         "lakeId": args.lakeId,
         "location": args.location,

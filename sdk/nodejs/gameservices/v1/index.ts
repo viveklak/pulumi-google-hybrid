@@ -30,19 +30,19 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:gameservices/v1:Config":
+            case "google-hybrid:gameservices/v1:Config":
                 return new Config(name, <any>undefined, { urn })
-            case "google-native:gameservices/v1:GameServerCluster":
+            case "google-hybrid:gameservices/v1:GameServerCluster":
                 return new GameServerCluster(name, <any>undefined, { urn })
-            case "google-native:gameservices/v1:GameServerDeployment":
+            case "google-hybrid:gameservices/v1:GameServerDeployment":
                 return new GameServerDeployment(name, <any>undefined, { urn })
-            case "google-native:gameservices/v1:GameServerDeploymentIamPolicy":
+            case "google-hybrid:gameservices/v1:GameServerDeploymentIamPolicy":
                 return new GameServerDeploymentIamPolicy(name, <any>undefined, { urn })
-            case "google-native:gameservices/v1:Realm":
+            case "google-hybrid:gameservices/v1:Realm":
                 return new Realm(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "gameservices/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "gameservices/v1", _module)

@@ -14,7 +14,7 @@ export function getAlertPolicy(args: GetAlertPolicyArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:monitoring/v3:getAlertPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:monitoring/v3:getAlertPolicy", {
         "alertPolicyId": args.alertPolicyId,
         "project": args.project,
     }, opts);

@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:monitoring/v1:Dashboard":
+            case "google-hybrid:monitoring/v1:Dashboard":
                 return new Dashboard(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "monitoring/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "monitoring/v1", _module)

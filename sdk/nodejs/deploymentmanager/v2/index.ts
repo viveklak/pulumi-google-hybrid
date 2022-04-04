@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:deploymentmanager/v2:Deployment":
+            case "google-hybrid:deploymentmanager/v2:Deployment":
                 return new Deployment(name, <any>undefined, { urn })
-            case "google-native:deploymentmanager/v2:DeploymentIamPolicy":
+            case "google-hybrid:deploymentmanager/v2:DeploymentIamPolicy":
                 return new DeploymentIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "deploymentmanager/v2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "deploymentmanager/v2", _module)

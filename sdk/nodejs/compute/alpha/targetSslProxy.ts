@@ -22,7 +22,7 @@ export class TargetSslProxy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:TargetSslProxy';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:TargetSslProxy';
 
     /**
      * Returns true if the given object is an instance of TargetSslProxy.  This is designed to work even

@@ -14,7 +14,7 @@ export function getJobTemplate(args: GetJobTemplateArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:transcoder/v1:getJobTemplate", {
+    return pulumi.runtime.invoke("google-hybrid:transcoder/v1:getJobTemplate", {
         "jobTemplateId": args.jobTemplateId,
         "location": args.location,
         "project": args.project,

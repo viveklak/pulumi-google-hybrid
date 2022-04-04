@@ -13,7 +13,7 @@ export function getTargetGrpcProxy(args: GetTargetGrpcProxyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getTargetGrpcProxy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getTargetGrpcProxy", {
         "project": args.project,
         "targetGrpcProxy": args.targetGrpcProxy,
     }, opts);

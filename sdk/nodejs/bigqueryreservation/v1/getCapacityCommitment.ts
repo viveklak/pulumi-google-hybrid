@@ -14,7 +14,7 @@ export function getCapacityCommitment(args: GetCapacityCommitmentArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigqueryreservation/v1:getCapacityCommitment", {
+    return pulumi.runtime.invoke("google-hybrid:bigqueryreservation/v1:getCapacityCommitment", {
         "capacityCommitmentId": args.capacityCommitmentId,
         "location": args.location,
         "project": args.project,

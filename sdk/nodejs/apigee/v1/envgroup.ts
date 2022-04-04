@@ -21,7 +21,7 @@ export class Envgroup extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:Envgroup';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:Envgroup';
 
     /**
      * Returns true if the given object is an instance of Envgroup.  This is designed to work even

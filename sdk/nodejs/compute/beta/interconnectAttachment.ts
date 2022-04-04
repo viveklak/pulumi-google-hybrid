@@ -22,7 +22,7 @@ export class InterconnectAttachment extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/beta:InterconnectAttachment';
+    public static readonly __pulumiType = 'google-hybrid:compute/beta:InterconnectAttachment';
 
     /**
      * Returns true if the given object is an instance of InterconnectAttachment.  This is designed to work even

@@ -14,7 +14,7 @@ export function getOrganizationSourceIamPolicy(args: GetOrganizationSourceIamPol
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:securitycenter/v1beta1:getOrganizationSourceIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:securitycenter/v1beta1:getOrganizationSourceIamPolicy", {
         "organizationId": args.organizationId,
         "sourceId": args.sourceId,
     }, opts);

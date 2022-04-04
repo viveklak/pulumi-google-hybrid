@@ -13,7 +13,7 @@ export function getEnvgroupAttachment(args: GetEnvgroupAttachmentArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getEnvgroupAttachment", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getEnvgroupAttachment", {
         "attachmentId": args.attachmentId,
         "envgroupId": args.envgroupId,
         "organizationId": args.organizationId,

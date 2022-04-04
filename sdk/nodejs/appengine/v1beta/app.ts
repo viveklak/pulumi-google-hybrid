@@ -25,7 +25,7 @@ export class App extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:appengine/v1beta:App';
+    public static readonly __pulumiType = 'google-hybrid:appengine/v1beta:App';
 
     /**
      * Returns true if the given object is an instance of App.  This is designed to work even

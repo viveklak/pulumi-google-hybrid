@@ -13,7 +13,7 @@ export function getSnapshot(args: GetSnapshotArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:file/v1:getSnapshot", {
+    return pulumi.runtime.invoke("google-hybrid:file/v1:getSnapshot", {
         "instanceId": args.instanceId,
         "location": args.location,
         "project": args.project,

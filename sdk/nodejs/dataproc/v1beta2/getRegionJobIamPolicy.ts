@@ -14,7 +14,7 @@ export function getRegionJobIamPolicy(args: GetRegionJobIamPolicyArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataproc/v1beta2:getRegionJobIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:dataproc/v1beta2:getRegionJobIamPolicy", {
         "jobId": args.jobId,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

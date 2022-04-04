@@ -13,7 +13,7 @@ export function getDestGroup(args: GetDestGroupArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:iap/v1:getDestGroup", {
+    return pulumi.runtime.invoke("google-hybrid:iap/v1:getDestGroup", {
         "destGroupId": args.destGroupId,
         "location": args.location,
         "project": args.project,

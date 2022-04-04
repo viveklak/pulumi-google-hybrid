@@ -14,7 +14,7 @@ export function getTask(args: GetTaskArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudtasks/v2beta3:getTask", {
+    return pulumi.runtime.invoke("google-hybrid:cloudtasks/v2beta3:getTask", {
         "location": args.location,
         "project": args.project,
         "queueId": args.queueId,

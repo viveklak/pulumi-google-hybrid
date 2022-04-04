@@ -13,7 +13,7 @@ export function getOrganizationBigQueryExport(args: GetOrganizationBigQueryExpor
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:securitycenter/v1:getOrganizationBigQueryExport", {
+    return pulumi.runtime.invoke("google-hybrid:securitycenter/v1:getOrganizationBigQueryExport", {
         "bigQueryExportId": args.bigQueryExportId,
         "organizationId": args.organizationId,
     }, opts);

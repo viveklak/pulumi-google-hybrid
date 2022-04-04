@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:secretmanager/v1beta1:Secret":
+            case "google-hybrid:secretmanager/v1beta1:Secret":
                 return new Secret(name, <any>undefined, { urn })
-            case "google-native:secretmanager/v1beta1:SecretIamPolicy":
+            case "google-hybrid:secretmanager/v1beta1:SecretIamPolicy":
                 return new SecretIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "secretmanager/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "secretmanager/v1beta1", _module)

@@ -13,7 +13,7 @@ export function getFhir(args: GetFhirArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1:getFhir", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1:getFhir", {
         "datasetId": args.datasetId,
         "fhirId": args.fhirId,
         "fhirId1": args.fhirId1,

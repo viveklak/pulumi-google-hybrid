@@ -33,21 +33,21 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:bigquery/v2:Dataset":
+            case "google-hybrid:bigquery/v2:Dataset":
                 return new Dataset(name, <any>undefined, { urn })
-            case "google-native:bigquery/v2:Job":
+            case "google-hybrid:bigquery/v2:Job":
                 return new Job(name, <any>undefined, { urn })
-            case "google-native:bigquery/v2:Routine":
+            case "google-hybrid:bigquery/v2:Routine":
                 return new Routine(name, <any>undefined, { urn })
-            case "google-native:bigquery/v2:RowAccessPolicyIamPolicy":
+            case "google-hybrid:bigquery/v2:RowAccessPolicyIamPolicy":
                 return new RowAccessPolicyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:bigquery/v2:Table":
+            case "google-hybrid:bigquery/v2:Table":
                 return new Table(name, <any>undefined, { urn })
-            case "google-native:bigquery/v2:TableIamPolicy":
+            case "google-hybrid:bigquery/v2:TableIamPolicy":
                 return new TableIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "bigquery/v2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "bigquery/v2", _module)

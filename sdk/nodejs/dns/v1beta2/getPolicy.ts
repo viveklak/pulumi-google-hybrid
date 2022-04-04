@@ -14,7 +14,7 @@ export function getPolicy(args: GetPolicyArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dns/v1beta2:getPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:dns/v1beta2:getPolicy", {
         "clientOperationId": args.clientOperationId,
         "policy": args.policy,
         "project": args.project,

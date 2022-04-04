@@ -14,7 +14,7 @@ export function getDomain(args: GetDomainArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:managedidentities/v1:getDomain", {
+    return pulumi.runtime.invoke("google-hybrid:managedidentities/v1:getDomain", {
         "domainId": args.domainId,
         "project": args.project,
     }, opts);

@@ -79,7 +79,9 @@ import * as healthcare from "./healthcare";
 import * as iam from "./iam";
 import * as iap from "./iap";
 import * as ids from "./ids";
+import * as iot from "./iot";
 import * as jobs from "./jobs";
+import * as kms from "./kms";
 import * as logging from "./logging";
 import * as managedidentities from "./managedidentities";
 import * as memcache from "./memcache";
@@ -91,11 +93,13 @@ import * as networkmanagement from "./networkmanagement";
 import * as networksecurity from "./networksecurity";
 import * as networkservices from "./networkservices";
 import * as notebooks from "./notebooks";
+import * as organizations from "./organizations";
 import * as orgpolicy from "./orgpolicy";
 import * as osconfig from "./osconfig";
 import * as oslogin from "./oslogin";
 import * as policysimulator from "./policysimulator";
 import * as privateca from "./privateca";
+import * as projects from "./projects";
 import * as pubsub from "./pubsub";
 import * as pubsublite from "./pubsublite";
 import * as recaptchaenterprise from "./recaptchaenterprise";
@@ -200,7 +204,9 @@ export {
     iam,
     iap,
     ids,
+    iot,
     jobs,
+    kms,
     logging,
     managedidentities,
     memcache,
@@ -212,11 +218,13 @@ export {
     networksecurity,
     networkservices,
     notebooks,
+    organizations,
     orgpolicy,
     osconfig,
     oslogin,
     policysimulator,
     privateca,
+    projects,
     pubsub,
     pubsublite,
     recaptchaenterprise,
@@ -252,10 +260,10 @@ export {
 
 import { Provider } from "./provider";
 
-pulumi.runtime.registerResourcePackage("google-native", {
+pulumi.runtime.registerResourcePackage("google-hybrid", {
     version: utilities.getVersion(),
     constructProvider: (name: string, type: string, urn: string): pulumi.ProviderResource => {
-        if (type !== "pulumi:providers:google-native") {
+        if (type !== "pulumi:providers:google-hybrid") {
             throw new Error(`unknown provider type ${type}`);
         }
         return new Provider(name, <any>undefined, { urn });

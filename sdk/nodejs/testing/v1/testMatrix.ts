@@ -25,7 +25,7 @@ export class TestMatrix extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:testing/v1:TestMatrix';
+    public static readonly __pulumiType = 'google-hybrid:testing/v1:TestMatrix';
 
     /**
      * Returns true if the given object is an instance of TestMatrix.  This is designed to work even

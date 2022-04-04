@@ -13,7 +13,7 @@ export function getRole(args: GetRoleArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:iam/v1:getRole", {
+    return pulumi.runtime.invoke("google-hybrid:iam/v1:getRole", {
         "project": args.project,
         "roleId": args.roleId,
     }, opts);

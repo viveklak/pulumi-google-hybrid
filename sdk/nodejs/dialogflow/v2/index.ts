@@ -57,37 +57,37 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:dialogflow/v2:Context":
+            case "google-hybrid:dialogflow/v2:Context":
                 return new Context(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:Conversation":
+            case "google-hybrid:dialogflow/v2:Conversation":
                 return new Conversation(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:ConversationDataset":
+            case "google-hybrid:dialogflow/v2:ConversationDataset":
                 return new ConversationDataset(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:ConversationModel":
+            case "google-hybrid:dialogflow/v2:ConversationModel":
                 return new ConversationModel(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:ConversationProfile":
+            case "google-hybrid:dialogflow/v2:ConversationProfile":
                 return new ConversationProfile(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:Document":
+            case "google-hybrid:dialogflow/v2:Document":
                 return new Document(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:EntityType":
+            case "google-hybrid:dialogflow/v2:EntityType":
                 return new EntityType(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:Environment":
+            case "google-hybrid:dialogflow/v2:Environment":
                 return new Environment(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:Evaluation":
+            case "google-hybrid:dialogflow/v2:Evaluation":
                 return new Evaluation(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:Intent":
+            case "google-hybrid:dialogflow/v2:Intent":
                 return new Intent(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:KnowledgeBase":
+            case "google-hybrid:dialogflow/v2:KnowledgeBase":
                 return new KnowledgeBase(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:Participant":
+            case "google-hybrid:dialogflow/v2:Participant":
                 return new Participant(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:SessionEntityType":
+            case "google-hybrid:dialogflow/v2:SessionEntityType":
                 return new SessionEntityType(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v2:Version":
+            case "google-hybrid:dialogflow/v2:Version":
                 return new Version(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "dialogflow/v2", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "dialogflow/v2", _module)

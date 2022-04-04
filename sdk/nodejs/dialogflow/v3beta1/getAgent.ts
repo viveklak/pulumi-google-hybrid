@@ -14,7 +14,7 @@ export function getAgent(args: GetAgentArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v3beta1:getAgent", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v3beta1:getAgent", {
         "agentId": args.agentId,
         "location": args.location,
         "project": args.project,

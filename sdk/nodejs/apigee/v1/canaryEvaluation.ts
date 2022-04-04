@@ -25,7 +25,7 @@ export class CanaryEvaluation extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:apigee/v1:CanaryEvaluation';
+    public static readonly __pulumiType = 'google-hybrid:apigee/v1:CanaryEvaluation';
 
     /**
      * Returns true if the given object is an instance of CanaryEvaluation.  This is designed to work even

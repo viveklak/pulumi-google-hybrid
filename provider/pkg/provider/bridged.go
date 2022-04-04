@@ -2376,18 +2376,18 @@ func Provider() tfbridge.ProviderInfo {
 			//},
 			//"google_compute_health_check": {Tok: gcpDataSource(gcpCompute, "getHealthCheck")},
 			//
-			//"google_container_cluster": {
-			//	Tok: gcpDataSource(gcpKubernetes, "getCluster"),
-			//	Docs: &tfbridge.DocInfo{
-			//		Source: "google_container_cluster.html.markdown",
-			//	},
-			//},
-			//"google_container_engine_versions": {
-			//	Tok: gcpDataSource(gcpKubernetes, "getEngineVersions"),
-			//	Docs: &tfbridge.DocInfo{
-			//		Source: "google_container_engine_versions.html.markdown",
-			//	},
-			//},
+			"google_container_cluster": {
+				Tok: gcpDataSource(gcpKubernetes, "getCluster"),
+				Docs: &tfbridge.DocInfo{
+					Source: "google_container_cluster.html.markdown",
+				},
+			},
+			"google_container_engine_versions": {
+				Tok: gcpDataSource(gcpKubernetes, "getEngineVersions"),
+				Docs: &tfbridge.DocInfo{
+					Source: "google_container_engine_versions.html.markdown",
+				},
+			},
 			//"google_container_registry_repository": {
 			//	Tok: gcpDataSource(gcpKubernetes, "getRegistryRepository"),
 			//	Docs: &tfbridge.DocInfo{

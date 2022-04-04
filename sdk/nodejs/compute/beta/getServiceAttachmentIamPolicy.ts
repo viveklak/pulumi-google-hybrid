@@ -14,7 +14,7 @@ export function getServiceAttachmentIamPolicy(args: GetServiceAttachmentIamPolic
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getServiceAttachmentIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getServiceAttachmentIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "region": args.region,

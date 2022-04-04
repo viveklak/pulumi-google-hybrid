@@ -14,7 +14,7 @@ export function getV1IamPolicy(args: GetV1IamPolicyArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:iap/v1:getV1IamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:iap/v1:getV1IamPolicy", {
         "v1Id": args.v1Id,
     }, opts);
 }

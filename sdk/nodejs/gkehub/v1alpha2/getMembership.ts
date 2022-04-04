@@ -14,7 +14,7 @@ export function getMembership(args: GetMembershipArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:gkehub/v1alpha2:getMembership", {
+    return pulumi.runtime.invoke("google-hybrid:gkehub/v1alpha2:getMembership", {
         "location": args.location,
         "membershipId": args.membershipId,
         "project": args.project,

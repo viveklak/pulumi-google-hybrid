@@ -23,7 +23,7 @@ export class Backup extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:bigtableadmin/v2:Backup';
+    public static readonly __pulumiType = 'google-hybrid:bigtableadmin/v2:Backup';
 
     /**
      * Returns true if the given object is an instance of Backup.  This is designed to work even

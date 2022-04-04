@@ -22,7 +22,7 @@ export class AccessLevel extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:accesscontextmanager/v1:AccessLevel';
+    public static readonly __pulumiType = 'google-hybrid:accesscontextmanager/v1:AccessLevel';
 
     /**
      * Returns true if the given object is an instance of AccessLevel.  This is designed to work even

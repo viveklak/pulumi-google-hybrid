@@ -14,7 +14,7 @@ export function getMeshIamPolicy(args: GetMeshIamPolicyArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1beta1:getMeshIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1beta1:getMeshIamPolicy", {
         "location": args.location,
         "meshId": args.meshId,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

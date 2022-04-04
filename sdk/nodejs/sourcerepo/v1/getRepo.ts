@@ -14,7 +14,7 @@ export function getRepo(args: GetRepoArgs, opts?: pulumi.InvokeOptions): Promise
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:sourcerepo/v1:getRepo", {
+    return pulumi.runtime.invoke("google-hybrid:sourcerepo/v1:getRepo", {
         "project": args.project,
         "repoId": args.repoId,
     }, opts);

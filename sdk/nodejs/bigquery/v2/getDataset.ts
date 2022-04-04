@@ -14,7 +14,7 @@ export function getDataset(args: GetDatasetArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:bigquery/v2:getDataset", {
+    return pulumi.runtime.invoke("google-hybrid:bigquery/v2:getDataset", {
         "datasetId": args.datasetId,
         "project": args.project,
     }, opts);

@@ -23,7 +23,7 @@ export class BackupRun extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:sqladmin/v1:BackupRun';
+    public static readonly __pulumiType = 'google-hybrid:sqladmin/v1:BackupRun';
 
     /**
      * Returns true if the given object is an instance of BackupRun.  This is designed to work even

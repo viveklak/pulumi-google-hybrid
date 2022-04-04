@@ -13,7 +13,7 @@ export function getTargetPool(args: GetTargetPoolArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getTargetPool", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getTargetPool", {
         "project": args.project,
         "region": args.region,
         "targetPool": args.targetPool,

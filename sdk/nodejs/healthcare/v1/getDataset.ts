@@ -13,7 +13,7 @@ export function getDataset(args: GetDatasetArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1:getDataset", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1:getDataset", {
         "datasetId": args.datasetId,
         "location": args.location,
         "project": args.project,

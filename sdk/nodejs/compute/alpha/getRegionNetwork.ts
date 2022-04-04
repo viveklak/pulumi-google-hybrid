@@ -14,7 +14,7 @@ export function getRegionNetwork(args: GetRegionNetworkArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getRegionNetwork", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getRegionNetwork", {
         "network": args.network,
         "project": args.project,
         "region": args.region,

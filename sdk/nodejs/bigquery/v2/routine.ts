@@ -23,7 +23,7 @@ export class Routine extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:bigquery/v2:Routine';
+    public static readonly __pulumiType = 'google-hybrid:bigquery/v2:Routine';
 
     /**
      * Returns true if the given object is an instance of Routine.  This is designed to work even

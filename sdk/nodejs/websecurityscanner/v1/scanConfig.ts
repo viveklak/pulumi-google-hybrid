@@ -22,7 +22,7 @@ export class ScanConfig extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:websecurityscanner/v1:ScanConfig';
+    public static readonly __pulumiType = 'google-hybrid:websecurityscanner/v1:ScanConfig';
 
     /**
      * Returns true if the given object is an instance of ScanConfig.  This is designed to work even

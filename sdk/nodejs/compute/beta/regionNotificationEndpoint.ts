@@ -22,7 +22,7 @@ export class RegionNotificationEndpoint extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/beta:RegionNotificationEndpoint';
+    public static readonly __pulumiType = 'google-hybrid:compute/beta:RegionNotificationEndpoint';
 
     /**
      * Returns true if the given object is an instance of RegionNotificationEndpoint.  This is designed to work even

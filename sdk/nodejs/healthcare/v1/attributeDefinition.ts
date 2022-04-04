@@ -22,7 +22,7 @@ export class AttributeDefinition extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:healthcare/v1:AttributeDefinition';
+    public static readonly __pulumiType = 'google-hybrid:healthcare/v1:AttributeDefinition';
 
     /**
      * Returns true if the given object is an instance of AttributeDefinition.  This is designed to work even

@@ -13,7 +13,7 @@ export function getGlobalAddress(args: GetGlobalAddressArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getGlobalAddress", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getGlobalAddress", {
         "address": args.address,
         "project": args.project,
     }, opts);

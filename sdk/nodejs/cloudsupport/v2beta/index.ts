@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudsupport/v2beta:Case":
+            case "google-hybrid:cloudsupport/v2beta:Case":
                 return new Case(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudsupport/v2beta", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudsupport/v2beta", _module)

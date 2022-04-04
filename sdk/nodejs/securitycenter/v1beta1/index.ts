@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:securitycenter/v1beta1:OrganizationSourceIamPolicy":
+            case "google-hybrid:securitycenter/v1beta1:OrganizationSourceIamPolicy":
                 return new OrganizationSourceIamPolicy(name, <any>undefined, { urn })
-            case "google-native:securitycenter/v1beta1:Source":
+            case "google-hybrid:securitycenter/v1beta1:Source":
                 return new Source(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "securitycenter/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "securitycenter/v1beta1", _module)

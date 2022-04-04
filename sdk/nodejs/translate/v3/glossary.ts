@@ -22,7 +22,7 @@ export class Glossary extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:translate/v3:Glossary';
+    public static readonly __pulumiType = 'google-hybrid:translate/v3:Glossary';
 
     /**
      * Returns true if the given object is an instance of Glossary.  This is designed to work even

@@ -14,7 +14,7 @@ export function getControl(args: GetControlArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:retail/v2beta:getControl", {
+    return pulumi.runtime.invoke("google-hybrid:retail/v2beta:getControl", {
         "catalogId": args.catalogId,
         "controlId": args.controlId,
         "location": args.location,

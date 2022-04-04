@@ -22,7 +22,7 @@ export class EntityType extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dialogflow/v3beta1:EntityType';
+    public static readonly __pulumiType = 'google-hybrid:dialogflow/v3beta1:EntityType';
 
     /**
      * Returns true if the given object is an instance of EntityType.  This is designed to work even

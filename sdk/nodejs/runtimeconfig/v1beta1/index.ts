@@ -24,17 +24,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:runtimeconfig/v1beta1:Config":
+            case "google-hybrid:runtimeconfig/v1beta1:Config":
                 return new Config(name, <any>undefined, { urn })
-            case "google-native:runtimeconfig/v1beta1:ConfigIamPolicy":
+            case "google-hybrid:runtimeconfig/v1beta1:ConfigIamPolicy":
                 return new ConfigIamPolicy(name, <any>undefined, { urn })
-            case "google-native:runtimeconfig/v1beta1:Variable":
+            case "google-hybrid:runtimeconfig/v1beta1:Variable":
                 return new Variable(name, <any>undefined, { urn })
-            case "google-native:runtimeconfig/v1beta1:Waiter":
+            case "google-hybrid:runtimeconfig/v1beta1:Waiter":
                 return new Waiter(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "runtimeconfig/v1beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "runtimeconfig/v1beta1", _module)

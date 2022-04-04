@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:composer/v1:Environment":
+            case "google-hybrid:composer/v1:Environment":
                 return new Environment(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "composer/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "composer/v1", _module)

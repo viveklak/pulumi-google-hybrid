@@ -276,183 +276,183 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:compute/v1:Address":
+            case "google-hybrid:compute/v1:Address":
                 return new Address(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Autoscaler":
+            case "google-hybrid:compute/v1:Autoscaler":
                 return new Autoscaler(name, <any>undefined, { urn })
-            case "google-native:compute/v1:BackendBucket":
+            case "google-hybrid:compute/v1:BackendBucket":
                 return new BackendBucket(name, <any>undefined, { urn })
-            case "google-native:compute/v1:BackendService":
+            case "google-hybrid:compute/v1:BackendService":
                 return new BackendService(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Disk":
+            case "google-hybrid:compute/v1:Disk":
                 return new Disk(name, <any>undefined, { urn })
-            case "google-native:compute/v1:DiskIamPolicy":
+            case "google-hybrid:compute/v1:DiskIamPolicy":
                 return new DiskIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:ExternalVpnGateway":
+            case "google-hybrid:compute/v1:ExternalVpnGateway":
                 return new ExternalVpnGateway(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Firewall":
+            case "google-hybrid:compute/v1:Firewall":
                 return new Firewall(name, <any>undefined, { urn })
-            case "google-native:compute/v1:FirewallPolicy":
+            case "google-hybrid:compute/v1:FirewallPolicy":
                 return new FirewallPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:FirewallPolicyIamPolicy":
+            case "google-hybrid:compute/v1:FirewallPolicyIamPolicy":
                 return new FirewallPolicyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:ForwardingRule":
+            case "google-hybrid:compute/v1:ForwardingRule":
                 return new ForwardingRule(name, <any>undefined, { urn })
-            case "google-native:compute/v1:GlobalAddress":
+            case "google-hybrid:compute/v1:GlobalAddress":
                 return new GlobalAddress(name, <any>undefined, { urn })
-            case "google-native:compute/v1:GlobalForwardingRule":
+            case "google-hybrid:compute/v1:GlobalForwardingRule":
                 return new GlobalForwardingRule(name, <any>undefined, { urn })
-            case "google-native:compute/v1:GlobalNetworkEndpointGroup":
+            case "google-hybrid:compute/v1:GlobalNetworkEndpointGroup":
                 return new GlobalNetworkEndpointGroup(name, <any>undefined, { urn })
-            case "google-native:compute/v1:GlobalPublicDelegatedPrefix":
+            case "google-hybrid:compute/v1:GlobalPublicDelegatedPrefix":
                 return new GlobalPublicDelegatedPrefix(name, <any>undefined, { urn })
-            case "google-native:compute/v1:HealthCheck":
+            case "google-hybrid:compute/v1:HealthCheck":
                 return new HealthCheck(name, <any>undefined, { urn })
-            case "google-native:compute/v1:HttpHealthCheck":
+            case "google-hybrid:compute/v1:HttpHealthCheck":
                 return new HttpHealthCheck(name, <any>undefined, { urn })
-            case "google-native:compute/v1:HttpsHealthCheck":
+            case "google-hybrid:compute/v1:HttpsHealthCheck":
                 return new HttpsHealthCheck(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Image":
+            case "google-hybrid:compute/v1:Image":
                 return new Image(name, <any>undefined, { urn })
-            case "google-native:compute/v1:ImageIamPolicy":
+            case "google-hybrid:compute/v1:ImageIamPolicy":
                 return new ImageIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Instance":
+            case "google-hybrid:compute/v1:Instance":
                 return new Instance(name, <any>undefined, { urn })
-            case "google-native:compute/v1:InstanceGroup":
+            case "google-hybrid:compute/v1:InstanceGroup":
                 return new InstanceGroup(name, <any>undefined, { urn })
-            case "google-native:compute/v1:InstanceGroupManager":
+            case "google-hybrid:compute/v1:InstanceGroupManager":
                 return new InstanceGroupManager(name, <any>undefined, { urn })
-            case "google-native:compute/v1:InstanceIamPolicy":
+            case "google-hybrid:compute/v1:InstanceIamPolicy":
                 return new InstanceIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:InstanceTemplate":
+            case "google-hybrid:compute/v1:InstanceTemplate":
                 return new InstanceTemplate(name, <any>undefined, { urn })
-            case "google-native:compute/v1:InstanceTemplateIamPolicy":
+            case "google-hybrid:compute/v1:InstanceTemplateIamPolicy":
                 return new InstanceTemplateIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Interconnect":
+            case "google-hybrid:compute/v1:Interconnect":
                 return new Interconnect(name, <any>undefined, { urn })
-            case "google-native:compute/v1:InterconnectAttachment":
+            case "google-hybrid:compute/v1:InterconnectAttachment":
                 return new InterconnectAttachment(name, <any>undefined, { urn })
-            case "google-native:compute/v1:License":
+            case "google-hybrid:compute/v1:License":
                 return new License(name, <any>undefined, { urn })
-            case "google-native:compute/v1:LicenseIamPolicy":
+            case "google-hybrid:compute/v1:LicenseIamPolicy":
                 return new LicenseIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:MachineImage":
+            case "google-hybrid:compute/v1:MachineImage":
                 return new MachineImage(name, <any>undefined, { urn })
-            case "google-native:compute/v1:MachineImageIamPolicy":
+            case "google-hybrid:compute/v1:MachineImageIamPolicy":
                 return new MachineImageIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Network":
+            case "google-hybrid:compute/v1:Network":
                 return new Network(name, <any>undefined, { urn })
-            case "google-native:compute/v1:NetworkEdgeSecurityService":
+            case "google-hybrid:compute/v1:NetworkEdgeSecurityService":
                 return new NetworkEdgeSecurityService(name, <any>undefined, { urn })
-            case "google-native:compute/v1:NetworkEndpointGroup":
+            case "google-hybrid:compute/v1:NetworkEndpointGroup":
                 return new NetworkEndpointGroup(name, <any>undefined, { urn })
-            case "google-native:compute/v1:NetworkFirewallPolicy":
+            case "google-hybrid:compute/v1:NetworkFirewallPolicy":
                 return new NetworkFirewallPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:NetworkFirewallPolicyIamPolicy":
+            case "google-hybrid:compute/v1:NetworkFirewallPolicyIamPolicy":
                 return new NetworkFirewallPolicyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:NodeGroup":
+            case "google-hybrid:compute/v1:NodeGroup":
                 return new NodeGroup(name, <any>undefined, { urn })
-            case "google-native:compute/v1:NodeGroupIamPolicy":
+            case "google-hybrid:compute/v1:NodeGroupIamPolicy":
                 return new NodeGroupIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:NodeTemplate":
+            case "google-hybrid:compute/v1:NodeTemplate":
                 return new NodeTemplate(name, <any>undefined, { urn })
-            case "google-native:compute/v1:NodeTemplateIamPolicy":
+            case "google-hybrid:compute/v1:NodeTemplateIamPolicy":
                 return new NodeTemplateIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:PacketMirroring":
+            case "google-hybrid:compute/v1:PacketMirroring":
                 return new PacketMirroring(name, <any>undefined, { urn })
-            case "google-native:compute/v1:PublicAdvertisedPrefix":
+            case "google-hybrid:compute/v1:PublicAdvertisedPrefix":
                 return new PublicAdvertisedPrefix(name, <any>undefined, { urn })
-            case "google-native:compute/v1:PublicDelegatedPrefix":
+            case "google-hybrid:compute/v1:PublicDelegatedPrefix":
                 return new PublicDelegatedPrefix(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionAutoscaler":
+            case "google-hybrid:compute/v1:RegionAutoscaler":
                 return new RegionAutoscaler(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionBackendService":
+            case "google-hybrid:compute/v1:RegionBackendService":
                 return new RegionBackendService(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionCommitment":
+            case "google-hybrid:compute/v1:RegionCommitment":
                 return new RegionCommitment(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionDisk":
+            case "google-hybrid:compute/v1:RegionDisk":
                 return new RegionDisk(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionDiskIamPolicy":
+            case "google-hybrid:compute/v1:RegionDiskIamPolicy":
                 return new RegionDiskIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionHealthCheck":
+            case "google-hybrid:compute/v1:RegionHealthCheck":
                 return new RegionHealthCheck(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionHealthCheckService":
+            case "google-hybrid:compute/v1:RegionHealthCheckService":
                 return new RegionHealthCheckService(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionInstanceGroupManager":
+            case "google-hybrid:compute/v1:RegionInstanceGroupManager":
                 return new RegionInstanceGroupManager(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionNetworkEndpointGroup":
+            case "google-hybrid:compute/v1:RegionNetworkEndpointGroup":
                 return new RegionNetworkEndpointGroup(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionNetworkFirewallPolicy":
+            case "google-hybrid:compute/v1:RegionNetworkFirewallPolicy":
                 return new RegionNetworkFirewallPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionNetworkFirewallPolicyIamPolicy":
+            case "google-hybrid:compute/v1:RegionNetworkFirewallPolicyIamPolicy":
                 return new RegionNetworkFirewallPolicyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionNotificationEndpoint":
+            case "google-hybrid:compute/v1:RegionNotificationEndpoint":
                 return new RegionNotificationEndpoint(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionSecurityPolicy":
+            case "google-hybrid:compute/v1:RegionSecurityPolicy":
                 return new RegionSecurityPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionSslCertificate":
+            case "google-hybrid:compute/v1:RegionSslCertificate":
                 return new RegionSslCertificate(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionTargetHttpProxy":
+            case "google-hybrid:compute/v1:RegionTargetHttpProxy":
                 return new RegionTargetHttpProxy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionTargetHttpsProxy":
+            case "google-hybrid:compute/v1:RegionTargetHttpsProxy":
                 return new RegionTargetHttpsProxy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:RegionUrlMap":
+            case "google-hybrid:compute/v1:RegionUrlMap":
                 return new RegionUrlMap(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Reservation":
+            case "google-hybrid:compute/v1:Reservation":
                 return new Reservation(name, <any>undefined, { urn })
-            case "google-native:compute/v1:ReservationIamPolicy":
+            case "google-hybrid:compute/v1:ReservationIamPolicy":
                 return new ReservationIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:ResourcePolicy":
+            case "google-hybrid:compute/v1:ResourcePolicy":
                 return new ResourcePolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:ResourcePolicyIamPolicy":
+            case "google-hybrid:compute/v1:ResourcePolicyIamPolicy":
                 return new ResourcePolicyIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Route":
+            case "google-hybrid:compute/v1:Route":
                 return new Route(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Router":
+            case "google-hybrid:compute/v1:Router":
                 return new Router(name, <any>undefined, { urn })
-            case "google-native:compute/v1:SecurityPolicy":
+            case "google-hybrid:compute/v1:SecurityPolicy":
                 return new SecurityPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:ServiceAttachment":
+            case "google-hybrid:compute/v1:ServiceAttachment":
                 return new ServiceAttachment(name, <any>undefined, { urn })
-            case "google-native:compute/v1:ServiceAttachmentIamPolicy":
+            case "google-hybrid:compute/v1:ServiceAttachmentIamPolicy":
                 return new ServiceAttachmentIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Snapshot":
+            case "google-hybrid:compute/v1:Snapshot":
                 return new Snapshot(name, <any>undefined, { urn })
-            case "google-native:compute/v1:SnapshotIamPolicy":
+            case "google-hybrid:compute/v1:SnapshotIamPolicy":
                 return new SnapshotIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:SslCertificate":
+            case "google-hybrid:compute/v1:SslCertificate":
                 return new SslCertificate(name, <any>undefined, { urn })
-            case "google-native:compute/v1:SslPolicy":
+            case "google-hybrid:compute/v1:SslPolicy":
                 return new SslPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:Subnetwork":
+            case "google-hybrid:compute/v1:Subnetwork":
                 return new Subnetwork(name, <any>undefined, { urn })
-            case "google-native:compute/v1:SubnetworkIamPolicy":
+            case "google-hybrid:compute/v1:SubnetworkIamPolicy":
                 return new SubnetworkIamPolicy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:TargetGrpcProxy":
+            case "google-hybrid:compute/v1:TargetGrpcProxy":
                 return new TargetGrpcProxy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:TargetHttpProxy":
+            case "google-hybrid:compute/v1:TargetHttpProxy":
                 return new TargetHttpProxy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:TargetHttpsProxy":
+            case "google-hybrid:compute/v1:TargetHttpsProxy":
                 return new TargetHttpsProxy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:TargetInstance":
+            case "google-hybrid:compute/v1:TargetInstance":
                 return new TargetInstance(name, <any>undefined, { urn })
-            case "google-native:compute/v1:TargetPool":
+            case "google-hybrid:compute/v1:TargetPool":
                 return new TargetPool(name, <any>undefined, { urn })
-            case "google-native:compute/v1:TargetSslProxy":
+            case "google-hybrid:compute/v1:TargetSslProxy":
                 return new TargetSslProxy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:TargetTcpProxy":
+            case "google-hybrid:compute/v1:TargetTcpProxy":
                 return new TargetTcpProxy(name, <any>undefined, { urn })
-            case "google-native:compute/v1:TargetVpnGateway":
+            case "google-hybrid:compute/v1:TargetVpnGateway":
                 return new TargetVpnGateway(name, <any>undefined, { urn })
-            case "google-native:compute/v1:UrlMap":
+            case "google-hybrid:compute/v1:UrlMap":
                 return new UrlMap(name, <any>undefined, { urn })
-            case "google-native:compute/v1:VpnGateway":
+            case "google-hybrid:compute/v1:VpnGateway":
                 return new VpnGateway(name, <any>undefined, { urn })
-            case "google-native:compute/v1:VpnTunnel":
+            case "google-hybrid:compute/v1:VpnTunnel":
                 return new VpnTunnel(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "compute/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "compute/v1", _module)

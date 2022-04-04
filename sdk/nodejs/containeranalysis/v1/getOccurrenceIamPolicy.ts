@@ -14,7 +14,7 @@ export function getOccurrenceIamPolicy(args: GetOccurrenceIamPolicyArgs, opts?: 
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:containeranalysis/v1:getOccurrenceIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:containeranalysis/v1:getOccurrenceIamPolicy", {
         "occurrenceId": args.occurrenceId,
         "project": args.project,
     }, opts);

@@ -14,7 +14,7 @@ export function getJob(args: GetJobArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataflow/v1b3:getJob", {
+    return pulumi.runtime.invoke("google-hybrid:dataflow/v1b3:getJob", {
         "jobId": args.jobId,
         "location": args.location,
         "project": args.project,

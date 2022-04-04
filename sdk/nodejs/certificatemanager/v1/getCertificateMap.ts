@@ -14,7 +14,7 @@ export function getCertificateMap(args: GetCertificateMapArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:certificatemanager/v1:getCertificateMap", {
+    return pulumi.runtime.invoke("google-hybrid:certificatemanager/v1:getCertificateMap", {
         "certificateMapId": args.certificateMapId,
         "location": args.location,
         "project": args.project,

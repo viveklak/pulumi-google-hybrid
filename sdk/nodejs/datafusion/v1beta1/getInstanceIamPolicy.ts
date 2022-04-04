@@ -14,7 +14,7 @@ export function getInstanceIamPolicy(args: GetInstanceIamPolicyArgs, opts?: pulu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datafusion/v1beta1:getInstanceIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:datafusion/v1beta1:getInstanceIamPolicy", {
         "instanceId": args.instanceId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

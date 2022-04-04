@@ -22,7 +22,7 @@ export class JobTemplate extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:transcoder/v1:JobTemplate';
+    public static readonly __pulumiType = 'google-hybrid:transcoder/v1:JobTemplate';
 
     /**
      * Returns true if the given object is an instance of JobTemplate.  This is designed to work even

@@ -14,7 +14,7 @@ export function getBillingAccountSink(args: GetBillingAccountSinkArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:logging/v2:getBillingAccountSink", {
+    return pulumi.runtime.invoke("google-hybrid:logging/v2:getBillingAccountSink", {
         "billingAccountId": args.billingAccountId,
         "sinkId": args.sinkId,
     }, opts);

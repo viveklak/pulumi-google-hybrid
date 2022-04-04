@@ -23,7 +23,7 @@ export class Version extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:appengine/v1:Version';
+    public static readonly __pulumiType = 'google-hybrid:appengine/v1:Version';
 
     /**
      * Returns true if the given object is an instance of Version.  This is designed to work even

@@ -13,7 +13,7 @@ export function getGameServerDeployment(args: GetGameServerDeploymentArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:gameservices/v1:getGameServerDeployment", {
+    return pulumi.runtime.invoke("google-hybrid:gameservices/v1:getGameServerDeployment", {
         "gameServerDeploymentId": args.gameServerDeploymentId,
         "location": args.location,
         "project": args.project,

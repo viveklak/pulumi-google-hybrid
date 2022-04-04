@@ -14,7 +14,7 @@ export function getHostQuery(args: GetHostQueryArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:apigee/v1:getHostQuery", {
+    return pulumi.runtime.invoke("google-hybrid:apigee/v1:getHostQuery", {
         "hostQueryId": args.hostQueryId,
         "organizationId": args.organizationId,
     }, opts);

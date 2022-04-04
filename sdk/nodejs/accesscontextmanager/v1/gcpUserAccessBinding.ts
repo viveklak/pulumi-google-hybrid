@@ -21,7 +21,7 @@ export class GcpUserAccessBinding extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:accesscontextmanager/v1:GcpUserAccessBinding';
+    public static readonly __pulumiType = 'google-hybrid:accesscontextmanager/v1:GcpUserAccessBinding';
 
     /**
      * Returns true if the given object is an instance of GcpUserAccessBinding.  This is designed to work even

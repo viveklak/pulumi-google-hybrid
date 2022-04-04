@@ -14,7 +14,7 @@ export function getResponsePolicyRule(args: GetResponsePolicyRuleArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dns/v2:getResponsePolicyRule", {
+    return pulumi.runtime.invoke("google-hybrid:dns/v2:getResponsePolicyRule", {
         "clientOperationId": args.clientOperationId,
         "location": args.location,
         "project": args.project,

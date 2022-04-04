@@ -14,7 +14,7 @@ export function getBuild(args: GetBuildArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudbuild/v1:getBuild", {
+    return pulumi.runtime.invoke("google-hybrid:cloudbuild/v1:getBuild", {
         "buildId": args.buildId,
         "id": args.id,
         "location": args.location,

@@ -30,19 +30,19 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:appengine/v1beta:App":
+            case "google-hybrid:appengine/v1beta:App":
                 return new App(name, <any>undefined, { urn })
-            case "google-native:appengine/v1beta:AuthorizedCertificate":
+            case "google-hybrid:appengine/v1beta:AuthorizedCertificate":
                 return new AuthorizedCertificate(name, <any>undefined, { urn })
-            case "google-native:appengine/v1beta:DomainMapping":
+            case "google-hybrid:appengine/v1beta:DomainMapping":
                 return new DomainMapping(name, <any>undefined, { urn })
-            case "google-native:appengine/v1beta:IngressRule":
+            case "google-hybrid:appengine/v1beta:IngressRule":
                 return new IngressRule(name, <any>undefined, { urn })
-            case "google-native:appengine/v1beta:Version":
+            case "google-hybrid:appengine/v1beta:Version":
                 return new Version(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "appengine/v1beta", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "appengine/v1beta", _module)

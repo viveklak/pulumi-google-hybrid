@@ -14,7 +14,7 @@ export function getDatasetHl7V2StoreIamPolicy(args: GetDatasetHl7V2StoreIamPolic
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:healthcare/v1:getDatasetHl7V2StoreIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:healthcare/v1:getDatasetHl7V2StoreIamPolicy", {
         "datasetId": args.datasetId,
         "hl7V2StoreId": args.hl7V2StoreId,
         "location": args.location,

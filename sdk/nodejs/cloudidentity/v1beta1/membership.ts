@@ -23,7 +23,7 @@ export class Membership extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudidentity/v1beta1:Membership';
+    public static readonly __pulumiType = 'google-hybrid:cloudidentity/v1beta1:Membership';
 
     /**
      * Returns true if the given object is an instance of Membership.  This is designed to work even

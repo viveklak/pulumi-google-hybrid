@@ -24,15 +24,15 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:pubsublite/v1:Reservation":
+            case "google-hybrid:pubsublite/v1:Reservation":
                 return new Reservation(name, <any>undefined, { urn })
-            case "google-native:pubsublite/v1:Subscription":
+            case "google-hybrid:pubsublite/v1:Subscription":
                 return new Subscription(name, <any>undefined, { urn })
-            case "google-native:pubsublite/v1:Topic":
+            case "google-hybrid:pubsublite/v1:Topic":
                 return new Topic(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "pubsublite/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "pubsublite/v1", _module)

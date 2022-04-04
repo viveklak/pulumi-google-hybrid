@@ -23,7 +23,7 @@ export class Job extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataproc/v1beta2:Job';
+    public static readonly __pulumiType = 'google-hybrid:dataproc/v1beta2:Job';
 
     /**
      * Returns true if the given object is an instance of Job.  This is designed to work even

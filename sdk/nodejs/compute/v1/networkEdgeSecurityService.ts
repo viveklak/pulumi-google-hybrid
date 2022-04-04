@@ -21,7 +21,7 @@ export class NetworkEdgeSecurityService extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/v1:NetworkEdgeSecurityService';
+    public static readonly __pulumiType = 'google-hybrid:compute/v1:NetworkEdgeSecurityService';
 
     /**
      * Returns true if the given object is an instance of NetworkEdgeSecurityService.  This is designed to work even

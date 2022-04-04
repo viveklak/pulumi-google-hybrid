@@ -23,7 +23,7 @@ export class EvaluationJob extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datalabeling/v1beta1:EvaluationJob';
+    public static readonly __pulumiType = 'google-hybrid:datalabeling/v1beta1:EvaluationJob';
 
     /**
      * Returns true if the given object is an instance of EvaluationJob.  This is designed to work even

@@ -54,35 +54,35 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:dialogflow/v3beta1:Agent":
+            case "google-hybrid:dialogflow/v3beta1:Agent":
                 return new Agent(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:EntityType":
+            case "google-hybrid:dialogflow/v3beta1:EntityType":
                 return new EntityType(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:Environment":
+            case "google-hybrid:dialogflow/v3beta1:Environment":
                 return new Environment(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:Experiment":
+            case "google-hybrid:dialogflow/v3beta1:Experiment":
                 return new Experiment(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:Flow":
+            case "google-hybrid:dialogflow/v3beta1:Flow":
                 return new Flow(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:Intent":
+            case "google-hybrid:dialogflow/v3beta1:Intent":
                 return new Intent(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:Page":
+            case "google-hybrid:dialogflow/v3beta1:Page":
                 return new Page(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:SecuritySetting":
+            case "google-hybrid:dialogflow/v3beta1:SecuritySetting":
                 return new SecuritySetting(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:SessionEntityType":
+            case "google-hybrid:dialogflow/v3beta1:SessionEntityType":
                 return new SessionEntityType(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:TestCase":
+            case "google-hybrid:dialogflow/v3beta1:TestCase":
                 return new TestCase(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:TransitionRouteGroup":
+            case "google-hybrid:dialogflow/v3beta1:TransitionRouteGroup":
                 return new TransitionRouteGroup(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:Version":
+            case "google-hybrid:dialogflow/v3beta1:Version":
                 return new Version(name, <any>undefined, { urn })
-            case "google-native:dialogflow/v3beta1:Webhook":
+            case "google-hybrid:dialogflow/v3beta1:Webhook":
                 return new Webhook(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "dialogflow/v3beta1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "dialogflow/v3beta1", _module)

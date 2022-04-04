@@ -13,7 +13,7 @@ export function getSession(args: GetSessionArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:spanner/v1:getSession", {
+    return pulumi.runtime.invoke("google-hybrid:spanner/v1:getSession", {
         "databaseId": args.databaseId,
         "instanceId": args.instanceId,
         "project": args.project,

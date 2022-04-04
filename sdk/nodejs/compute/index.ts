@@ -4,10 +4,12 @@
 // Export sub-modules:
 import * as alpha from "./alpha";
 import * as beta from "./beta";
+import * as classic from "./classic";
 import * as v1 from "./v1";
 
 export {
     alpha,
     beta,
+    classic,
     v1,
 };

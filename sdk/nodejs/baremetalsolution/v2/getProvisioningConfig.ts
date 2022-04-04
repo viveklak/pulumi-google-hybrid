@@ -14,7 +14,7 @@ export function getProvisioningConfig(args: GetProvisioningConfigArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:baremetalsolution/v2:getProvisioningConfig", {
+    return pulumi.runtime.invoke("google-hybrid:baremetalsolution/v2:getProvisioningConfig", {
         "location": args.location,
         "project": args.project,
         "provisioningConfigId": args.provisioningConfigId,

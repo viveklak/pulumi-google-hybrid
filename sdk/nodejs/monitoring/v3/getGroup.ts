@@ -13,7 +13,7 @@ export function getGroup(args: GetGroupArgs, opts?: pulumi.InvokeOptions): Promi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:monitoring/v3:getGroup", {
+    return pulumi.runtime.invoke("google-hybrid:monitoring/v3:getGroup", {
         "groupId": args.groupId,
         "project": args.project,
     }, opts);

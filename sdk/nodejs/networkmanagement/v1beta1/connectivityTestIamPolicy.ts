@@ -24,7 +24,7 @@ export class ConnectivityTestIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkmanagement/v1beta1:ConnectivityTestIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:networkmanagement/v1beta1:ConnectivityTestIamPolicy';
 
     /**
      * Returns true if the given object is an instance of ConnectivityTestIamPolicy.  This is designed to work even

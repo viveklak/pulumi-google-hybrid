@@ -14,7 +14,7 @@ export function getCompany(args: GetCompanyArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:jobs/v3:getCompany", {
+    return pulumi.runtime.invoke("google-hybrid:jobs/v3:getCompany", {
         "companyId": args.companyId,
         "project": args.project,
     }, opts);

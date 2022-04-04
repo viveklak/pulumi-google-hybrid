@@ -22,7 +22,7 @@ export class ServerTlsPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networksecurity/v1:ServerTlsPolicy';
+    public static readonly __pulumiType = 'google-hybrid:networksecurity/v1:ServerTlsPolicy';
 
     /**
      * Returns true if the given object is an instance of ServerTlsPolicy.  This is designed to work even

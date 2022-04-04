@@ -14,7 +14,7 @@ export function getRouter(args: GetRouterArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getRouter", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getRouter", {
         "project": args.project,
         "region": args.region,
         "router": args.router,

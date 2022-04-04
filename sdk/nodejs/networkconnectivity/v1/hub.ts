@@ -23,7 +23,7 @@ export class Hub extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkconnectivity/v1:Hub';
+    public static readonly __pulumiType = 'google-hybrid:networkconnectivity/v1:Hub';
 
     /**
      * Returns true if the given object is an instance of Hub.  This is designed to work even

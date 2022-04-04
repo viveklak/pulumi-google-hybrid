@@ -18,11 +18,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:recaptchaenterprise/v1:Key":
+            case "google-hybrid:recaptchaenterprise/v1:Key":
                 return new Key(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "recaptchaenterprise/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "recaptchaenterprise/v1", _module)

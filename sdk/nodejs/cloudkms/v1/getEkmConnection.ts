@@ -14,7 +14,7 @@ export function getEkmConnection(args: GetEkmConnectionArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudkms/v1:getEkmConnection", {
+    return pulumi.runtime.invoke("google-hybrid:cloudkms/v1:getEkmConnection", {
         "ekmConnectionId": args.ekmConnectionId,
         "location": args.location,
         "project": args.project,

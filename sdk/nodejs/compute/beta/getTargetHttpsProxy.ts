@@ -13,7 +13,7 @@ export function getTargetHttpsProxy(args: GetTargetHttpsProxyArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getTargetHttpsProxy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getTargetHttpsProxy", {
         "project": args.project,
         "targetHttpsProxy": args.targetHttpsProxy,
     }, opts);

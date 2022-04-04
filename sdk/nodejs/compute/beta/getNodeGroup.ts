@@ -14,7 +14,7 @@ export function getNodeGroup(args: GetNodeGroupArgs, opts?: pulumi.InvokeOptions
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getNodeGroup", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getNodeGroup", {
         "nodeGroup": args.nodeGroup,
         "project": args.project,
         "zone": args.zone,

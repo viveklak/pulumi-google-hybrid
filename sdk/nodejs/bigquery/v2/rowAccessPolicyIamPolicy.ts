@@ -24,7 +24,7 @@ export class RowAccessPolicyIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:bigquery/v2:RowAccessPolicyIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:bigquery/v2:RowAccessPolicyIamPolicy';
 
     /**
      * Returns true if the given object is an instance of RowAccessPolicyIamPolicy.  This is designed to work even

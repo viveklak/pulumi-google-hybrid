@@ -24,7 +24,7 @@ export class Case extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudsupport/v2beta:Case';
+    public static readonly __pulumiType = 'google-hybrid:cloudsupport/v2beta:Case';
 
     /**
      * Returns true if the given object is an instance of Case.  This is designed to work even

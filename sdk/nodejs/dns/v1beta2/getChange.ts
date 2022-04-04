@@ -14,7 +14,7 @@ export function getChange(args: GetChangeArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dns/v1beta2:getChange", {
+    return pulumi.runtime.invoke("google-hybrid:dns/v1beta2:getChange", {
         "changeId": args.changeId,
         "clientOperationId": args.clientOperationId,
         "managedZone": args.managedZone,

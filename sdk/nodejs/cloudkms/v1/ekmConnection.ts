@@ -24,7 +24,7 @@ export class EkmConnection extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudkms/v1:EkmConnection';
+    public static readonly __pulumiType = 'google-hybrid:cloudkms/v1:EkmConnection';
 
     /**
      * Returns true if the given object is an instance of EkmConnection.  This is designed to work even

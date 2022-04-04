@@ -23,7 +23,7 @@ export class WebApp extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:firebase/v1beta1:WebApp';
+    public static readonly __pulumiType = 'google-hybrid:firebase/v1beta1:WebApp';
 
     /**
      * Returns true if the given object is an instance of WebApp.  This is designed to work even

@@ -22,7 +22,7 @@ export class Workload extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:assuredworkloads/v1:Workload';
+    public static readonly __pulumiType = 'google-hybrid:assuredworkloads/v1:Workload';
 
     /**
      * Returns true if the given object is an instance of Workload.  This is designed to work even

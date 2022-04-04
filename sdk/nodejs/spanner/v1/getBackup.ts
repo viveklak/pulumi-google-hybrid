@@ -14,7 +14,7 @@ export function getBackup(args: GetBackupArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:spanner/v1:getBackup", {
+    return pulumi.runtime.invoke("google-hybrid:spanner/v1:getBackup", {
         "backupId": args.backupId,
         "instanceId": args.instanceId,
         "project": args.project,

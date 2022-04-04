@@ -23,7 +23,7 @@ export class DatacenterConnector extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:vmmigration/v1:DatacenterConnector';
+    public static readonly __pulumiType = 'google-hybrid:vmmigration/v1:DatacenterConnector';
 
     /**
      * Returns true if the given object is an instance of DatacenterConnector.  This is designed to work even

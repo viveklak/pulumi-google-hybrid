@@ -13,7 +13,7 @@ export function getTargetProject(args: GetTargetProjectArgs, opts?: pulumi.Invok
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:vmmigration/v1alpha1:getTargetProject", {
+    return pulumi.runtime.invoke("google-hybrid:vmmigration/v1alpha1:getTargetProject", {
         "location": args.location,
         "project": args.project,
         "targetProjectId": args.targetProjectId,

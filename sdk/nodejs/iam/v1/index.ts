@@ -36,23 +36,23 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:iam/v1:Key":
+            case "google-hybrid:iam/v1:Key":
                 return new Key(name, <any>undefined, { urn })
-            case "google-native:iam/v1:OrganizationRole":
+            case "google-hybrid:iam/v1:OrganizationRole":
                 return new OrganizationRole(name, <any>undefined, { urn })
-            case "google-native:iam/v1:Provider":
+            case "google-hybrid:iam/v1:Provider":
                 return new Provider(name, <any>undefined, { urn })
-            case "google-native:iam/v1:Role":
+            case "google-hybrid:iam/v1:Role":
                 return new Role(name, <any>undefined, { urn })
-            case "google-native:iam/v1:ServiceAccount":
+            case "google-hybrid:iam/v1:ServiceAccount":
                 return new ServiceAccount(name, <any>undefined, { urn })
-            case "google-native:iam/v1:ServiceAccountIamPolicy":
+            case "google-hybrid:iam/v1:ServiceAccountIamPolicy":
                 return new ServiceAccountIamPolicy(name, <any>undefined, { urn })
-            case "google-native:iam/v1:WorkloadIdentityPool":
+            case "google-hybrid:iam/v1:WorkloadIdentityPool":
                 return new WorkloadIdentityPool(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "iam/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "iam/v1", _module)

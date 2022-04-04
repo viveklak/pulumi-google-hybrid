@@ -14,7 +14,7 @@ export function getRegionSecurityPolicy(args: GetRegionSecurityPolicyArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getRegionSecurityPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getRegionSecurityPolicy", {
         "project": args.project,
         "region": args.region,
         "securityPolicy": args.securityPolicy,

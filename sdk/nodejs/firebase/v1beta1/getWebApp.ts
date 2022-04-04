@@ -13,7 +13,7 @@ export function getWebApp(args: GetWebAppArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:firebase/v1beta1:getWebApp", {
+    return pulumi.runtime.invoke("google-hybrid:firebase/v1beta1:getWebApp", {
         "project": args.project,
         "webAppId": args.webAppId,
     }, opts);

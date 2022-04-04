@@ -25,7 +25,7 @@ export class ChannelPartnerLink extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudchannel/v1:ChannelPartnerLink';
+    public static readonly __pulumiType = 'google-hybrid:cloudchannel/v1:ChannelPartnerLink';
 
     /**
      * Returns true if the given object is an instance of ChannelPartnerLink.  This is designed to work even

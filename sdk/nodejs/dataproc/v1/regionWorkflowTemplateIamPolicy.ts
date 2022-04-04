@@ -24,7 +24,7 @@ export class RegionWorkflowTemplateIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:dataproc/v1:RegionWorkflowTemplateIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:dataproc/v1:RegionWorkflowTemplateIamPolicy';
 
     /**
      * Returns true if the given object is an instance of RegionWorkflowTemplateIamPolicy.  This is designed to work even

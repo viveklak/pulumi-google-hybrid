@@ -14,7 +14,7 @@ export function getRegionCommitment(args: GetRegionCommitmentArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getRegionCommitment", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getRegionCommitment", {
         "commitment": args.commitment,
         "project": args.project,
         "region": args.region,

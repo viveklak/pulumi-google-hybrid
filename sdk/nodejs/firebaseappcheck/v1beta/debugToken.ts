@@ -21,7 +21,7 @@ export class DebugToken extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:firebaseappcheck/v1beta:DebugToken';
+    public static readonly __pulumiType = 'google-hybrid:firebaseappcheck/v1beta:DebugToken';
 
     /**
      * Returns true if the given object is an instance of DebugToken.  This is designed to work even

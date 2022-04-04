@@ -14,7 +14,7 @@ export function getInstance(args: GetInstanceArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:redis/v1:getInstance", {
+    return pulumi.runtime.invoke("google-hybrid:redis/v1:getInstance", {
         "instanceId": args.instanceId,
         "location": args.location,
         "project": args.project,

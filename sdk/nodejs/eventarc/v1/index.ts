@@ -27,17 +27,17 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:eventarc/v1:ChannelConnectionIamPolicy":
+            case "google-hybrid:eventarc/v1:ChannelConnectionIamPolicy":
                 return new ChannelConnectionIamPolicy(name, <any>undefined, { urn })
-            case "google-native:eventarc/v1:ChannelIamPolicy":
+            case "google-hybrid:eventarc/v1:ChannelIamPolicy":
                 return new ChannelIamPolicy(name, <any>undefined, { urn })
-            case "google-native:eventarc/v1:Trigger":
+            case "google-hybrid:eventarc/v1:Trigger":
                 return new Trigger(name, <any>undefined, { urn })
-            case "google-native:eventarc/v1:TriggerIamPolicy":
+            case "google-hybrid:eventarc/v1:TriggerIamPolicy":
                 return new TriggerIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "eventarc/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "eventarc/v1", _module)

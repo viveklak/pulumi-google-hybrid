@@ -14,7 +14,7 @@ export function getInstanceTemplate(args: GetInstanceTemplateArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/v1:getInstanceTemplate", {
+    return pulumi.runtime.invoke("google-hybrid:compute/v1:getInstanceTemplate", {
         "instanceTemplate": args.instanceTemplate,
         "project": args.project,
     }, opts);

@@ -14,7 +14,7 @@ export function getDataSource(args: GetDataSourceArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudsearch/v1:getDataSource", {
+    return pulumi.runtime.invoke("google-hybrid:cloudsearch/v1:getDataSource", {
         "datasourceId": args.datasourceId,
         "debugOptionsEnableDebugging": args.debugOptionsEnableDebugging,
     }, opts);

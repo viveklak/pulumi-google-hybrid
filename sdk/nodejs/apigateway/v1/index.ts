@@ -33,21 +33,21 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:apigateway/v1:Api":
+            case "google-hybrid:apigateway/v1:Api":
                 return new Api(name, <any>undefined, { urn })
-            case "google-native:apigateway/v1:ApiConfigIamPolicy":
+            case "google-hybrid:apigateway/v1:ApiConfigIamPolicy":
                 return new ApiConfigIamPolicy(name, <any>undefined, { urn })
-            case "google-native:apigateway/v1:ApiIamPolicy":
+            case "google-hybrid:apigateway/v1:ApiIamPolicy":
                 return new ApiIamPolicy(name, <any>undefined, { urn })
-            case "google-native:apigateway/v1:Config":
+            case "google-hybrid:apigateway/v1:Config":
                 return new Config(name, <any>undefined, { urn })
-            case "google-native:apigateway/v1:Gateway":
+            case "google-hybrid:apigateway/v1:Gateway":
                 return new Gateway(name, <any>undefined, { urn })
-            case "google-native:apigateway/v1:GatewayIamPolicy":
+            case "google-hybrid:apigateway/v1:GatewayIamPolicy":
                 return new GatewayIamPolicy(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "apigateway/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "apigateway/v1", _module)

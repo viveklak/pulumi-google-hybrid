@@ -14,7 +14,7 @@ export function getServiceBindingIamPolicy(args: GetServiceBindingIamPolicyArgs,
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkservices/v1beta1:getServiceBindingIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networkservices/v1beta1:getServiceBindingIamPolicy", {
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

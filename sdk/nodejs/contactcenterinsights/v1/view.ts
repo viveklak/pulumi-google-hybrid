@@ -21,7 +21,7 @@ export class View extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:contactcenterinsights/v1:View';
+    public static readonly __pulumiType = 'google-hybrid:contactcenterinsights/v1:View';
 
     /**
      * Returns true if the given object is an instance of View.  This is designed to work even

@@ -14,7 +14,7 @@ export function getCatalogItem(args: GetCatalogItemArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:recommendationengine/v1beta1:getCatalogItem", {
+    return pulumi.runtime.invoke("google-hybrid:recommendationengine/v1beta1:getCatalogItem", {
         "catalogId": args.catalogId,
         "catalogItemId": args.catalogItemId,
         "location": args.location,

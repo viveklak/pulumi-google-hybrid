@@ -14,7 +14,7 @@ export function getMigrationJobIamPolicy(args: GetMigrationJobIamPolicyArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:datamigration/v1:getMigrationJobIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:datamigration/v1:getMigrationJobIamPolicy", {
         "location": args.location,
         "migrationJobId": args.migrationJobId,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

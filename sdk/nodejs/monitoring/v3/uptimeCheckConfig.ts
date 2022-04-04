@@ -22,7 +22,7 @@ export class UptimeCheckConfig extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:monitoring/v3:UptimeCheckConfig';
+    public static readonly __pulumiType = 'google-hybrid:monitoring/v3:UptimeCheckConfig';
 
     /**
      * Returns true if the given object is an instance of UptimeCheckConfig.  This is designed to work even

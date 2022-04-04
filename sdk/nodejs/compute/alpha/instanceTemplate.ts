@@ -22,7 +22,7 @@ export class InstanceTemplate extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:compute/alpha:InstanceTemplate';
+    public static readonly __pulumiType = 'google-hybrid:compute/alpha:InstanceTemplate';
 
     /**
      * Returns true if the given object is an instance of InstanceTemplate.  This is designed to work even

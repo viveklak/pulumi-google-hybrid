@@ -14,7 +14,7 @@ export function getCryptoKeyVersion(args: GetCryptoKeyVersionArgs, opts?: pulumi
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudkms/v1:getCryptoKeyVersion", {
+    return pulumi.runtime.invoke("google-hybrid:cloudkms/v1:getCryptoKeyVersion", {
         "cryptoKeyId": args.cryptoKeyId,
         "cryptoKeyVersionId": args.cryptoKeyVersionId,
         "keyRingId": args.keyRingId,

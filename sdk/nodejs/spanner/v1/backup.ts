@@ -22,7 +22,7 @@ export class Backup extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:spanner/v1:Backup';
+    public static readonly __pulumiType = 'google-hybrid:spanner/v1:Backup';
 
     /**
      * Returns true if the given object is an instance of Backup.  This is designed to work even

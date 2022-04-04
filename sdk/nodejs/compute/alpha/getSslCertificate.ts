@@ -14,7 +14,7 @@ export function getSslCertificate(args: GetSslCertificateArgs, opts?: pulumi.Inv
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/alpha:getSslCertificate", {
+    return pulumi.runtime.invoke("google-hybrid:compute/alpha:getSslCertificate", {
         "project": args.project,
         "sslCertificate": args.sslCertificate,
     }, opts);

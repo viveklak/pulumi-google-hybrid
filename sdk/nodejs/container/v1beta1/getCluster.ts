@@ -14,7 +14,7 @@ export function getCluster(args: GetClusterArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:container/v1beta1:getCluster", {
+    return pulumi.runtime.invoke("google-hybrid:container/v1beta1:getCluster", {
         "clusterId": args.clusterId,
         "location": args.location,
         "project": args.project,

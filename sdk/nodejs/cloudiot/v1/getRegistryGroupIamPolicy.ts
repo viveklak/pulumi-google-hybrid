@@ -14,7 +14,7 @@ export function getRegistryGroupIamPolicy(args: GetRegistryGroupIamPolicyArgs, o
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudiot/v1:getRegistryGroupIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:cloudiot/v1:getRegistryGroupIamPolicy", {
         "groupId": args.groupId,
         "location": args.location,
         "project": args.project,

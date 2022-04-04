@@ -14,7 +14,7 @@ export function getDevice(args: GetDeviceArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:cloudidentity/v1beta1:getDevice", {
+    return pulumi.runtime.invoke("google-hybrid:cloudidentity/v1beta1:getDevice", {
         "deviceId": args.deviceId,
     }, opts);
 }

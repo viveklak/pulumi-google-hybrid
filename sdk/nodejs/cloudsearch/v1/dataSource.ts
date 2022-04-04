@@ -22,7 +22,7 @@ export class DataSource extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:cloudsearch/v1:DataSource';
+    public static readonly __pulumiType = 'google-hybrid:cloudsearch/v1:DataSource';
 
     /**
      * Returns true if the given object is an instance of DataSource.  This is designed to work even

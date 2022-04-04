@@ -14,7 +14,7 @@ export function getFeature(args: GetFeatureArgs, opts?: pulumi.InvokeOptions): P
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:gkehub/v1alpha:getFeature", {
+    return pulumi.runtime.invoke("google-hybrid:gkehub/v1alpha:getFeature", {
         "featureId": args.featureId,
         "location": args.location,
         "project": args.project,

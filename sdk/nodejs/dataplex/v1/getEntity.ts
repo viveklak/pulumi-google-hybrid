@@ -14,7 +14,7 @@ export function getEntity(args: GetEntityArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dataplex/v1:getEntity", {
+    return pulumi.runtime.invoke("google-hybrid:dataplex/v1:getEntity", {
         "entityId": args.entityId,
         "lakeId": args.lakeId,
         "location": args.location,

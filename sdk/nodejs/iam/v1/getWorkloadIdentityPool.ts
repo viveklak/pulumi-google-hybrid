@@ -13,7 +13,7 @@ export function getWorkloadIdentityPool(args: GetWorkloadIdentityPoolArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:iam/v1:getWorkloadIdentityPool", {
+    return pulumi.runtime.invoke("google-hybrid:iam/v1:getWorkloadIdentityPool", {
         "location": args.location,
         "project": args.project,
         "workloadIdentityPoolId": args.workloadIdentityPoolId,

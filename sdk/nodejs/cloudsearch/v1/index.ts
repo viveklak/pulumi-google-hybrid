@@ -21,13 +21,13 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:cloudsearch/v1:DataSource":
+            case "google-hybrid:cloudsearch/v1:DataSource":
                 return new DataSource(name, <any>undefined, { urn })
-            case "google-native:cloudsearch/v1:SearchApplication":
+            case "google-hybrid:cloudsearch/v1:SearchApplication":
                 return new SearchApplication(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "cloudsearch/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "cloudsearch/v1", _module)

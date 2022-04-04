@@ -22,7 +22,7 @@ export class Dashboard extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:monitoring/v1:Dashboard';
+    public static readonly __pulumiType = 'google-hybrid:monitoring/v1:Dashboard';
 
     /**
      * Returns true if the given object is an instance of Dashboard.  This is designed to work even

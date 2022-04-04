@@ -24,7 +24,7 @@ export class GatewayIamPolicy extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:networkservices/v1beta1:GatewayIamPolicy';
+    public static readonly __pulumiType = 'google-hybrid:networkservices/v1beta1:GatewayIamPolicy';
 
     /**
      * Returns true if the given object is an instance of GatewayIamPolicy.  This is designed to work even

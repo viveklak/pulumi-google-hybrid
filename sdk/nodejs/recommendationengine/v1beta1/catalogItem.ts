@@ -23,7 +23,7 @@ export class CatalogItem extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:recommendationengine/v1beta1:CatalogItem';
+    public static readonly __pulumiType = 'google-hybrid:recommendationengine/v1beta1:CatalogItem';
 
     /**
      * Returns true if the given object is an instance of CatalogItem.  This is designed to work even

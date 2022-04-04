@@ -23,7 +23,7 @@ export class Schedule extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:notebooks/v1:Schedule';
+    public static readonly __pulumiType = 'google-hybrid:notebooks/v1:Schedule';
 
     /**
      * Returns true if the given object is an instance of Schedule.  This is designed to work even

@@ -14,7 +14,7 @@ export function getTarget(args: GetTargetArgs, opts?: pulumi.InvokeOptions): Pro
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:clouddeploy/v1:getTarget", {
+    return pulumi.runtime.invoke("google-hybrid:clouddeploy/v1:getTarget", {
         "location": args.location,
         "project": args.project,
         "targetId": args.targetId,

@@ -14,7 +14,7 @@ export function getClientTlsPolicy(args: GetClientTlsPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networksecurity/v1:getClientTlsPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:networksecurity/v1:getClientTlsPolicy", {
         "clientTlsPolicyId": args.clientTlsPolicyId,
         "location": args.location,
         "project": args.project,

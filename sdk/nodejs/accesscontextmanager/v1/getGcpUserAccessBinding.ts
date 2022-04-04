@@ -13,7 +13,7 @@ export function getGcpUserAccessBinding(args: GetGcpUserAccessBindingArgs, opts?
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:accesscontextmanager/v1:getGcpUserAccessBinding", {
+    return pulumi.runtime.invoke("google-hybrid:accesscontextmanager/v1:getGcpUserAccessBinding", {
         "gcpUserAccessBindingId": args.gcpUserAccessBindingId,
         "organizationId": args.organizationId,
     }, opts);

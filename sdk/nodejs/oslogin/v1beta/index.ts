@@ -15,11 +15,11 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:oslogin/v1beta:SshPublicKey":
+            case "google-hybrid:oslogin/v1beta:SshPublicKey":
                 return new SshPublicKey(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "oslogin/v1beta", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "oslogin/v1beta", _module)

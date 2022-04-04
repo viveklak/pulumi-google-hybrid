@@ -14,7 +14,7 @@ export function getAnalysis(args: GetAnalysisArgs, opts?: pulumi.InvokeOptions):
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:contactcenterinsights/v1:getAnalysis", {
+    return pulumi.runtime.invoke("google-hybrid:contactcenterinsights/v1:getAnalysis", {
         "analysisId": args.analysisId,
         "conversationId": args.conversationId,
         "location": args.location,

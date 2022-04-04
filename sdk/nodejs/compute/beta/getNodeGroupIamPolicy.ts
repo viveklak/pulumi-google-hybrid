@@ -14,7 +14,7 @@ export function getNodeGroupIamPolicy(args: GetNodeGroupIamPolicyArgs, opts?: pu
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:compute/beta:getNodeGroupIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:compute/beta:getNodeGroupIamPolicy", {
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,
         "resource": args.resource,

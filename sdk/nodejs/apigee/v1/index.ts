@@ -110,71 +110,71 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "google-native:apigee/v1:Alias":
+            case "google-hybrid:apigee/v1:Alias":
                 return new Alias(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Api":
+            case "google-hybrid:apigee/v1:Api":
                 return new Api(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:ApiProduct":
+            case "google-hybrid:apigee/v1:ApiProduct":
                 return new ApiProduct(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:App":
+            case "google-hybrid:apigee/v1:App":
                 return new App(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:ArchiveDeployment":
+            case "google-hybrid:apigee/v1:ArchiveDeployment":
                 return new ArchiveDeployment(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:CanaryEvaluation":
+            case "google-hybrid:apigee/v1:CanaryEvaluation":
                 return new CanaryEvaluation(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:DataCollector":
+            case "google-hybrid:apigee/v1:DataCollector":
                 return new DataCollector(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Datastore":
+            case "google-hybrid:apigee/v1:Datastore":
                 return new Datastore(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:DebugSession":
+            case "google-hybrid:apigee/v1:DebugSession":
                 return new DebugSession(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Developer":
+            case "google-hybrid:apigee/v1:Developer":
                 return new Developer(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:EndpointAttachment":
+            case "google-hybrid:apigee/v1:EndpointAttachment":
                 return new EndpointAttachment(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Envgroup":
+            case "google-hybrid:apigee/v1:Envgroup":
                 return new Envgroup(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:EnvgroupAttachment":
+            case "google-hybrid:apigee/v1:EnvgroupAttachment":
                 return new EnvgroupAttachment(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Environment":
+            case "google-hybrid:apigee/v1:Environment":
                 return new Environment(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Export":
+            case "google-hybrid:apigee/v1:Export":
                 return new Export(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:HostQuery":
+            case "google-hybrid:apigee/v1:HostQuery":
                 return new HostQuery(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Instance":
+            case "google-hybrid:apigee/v1:Instance":
                 return new Instance(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:InstanceAttachment":
+            case "google-hybrid:apigee/v1:InstanceAttachment":
                 return new InstanceAttachment(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Keystore":
+            case "google-hybrid:apigee/v1:Keystore":
                 return new Keystore(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:NatAddress":
+            case "google-hybrid:apigee/v1:NatAddress":
                 return new NatAddress(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Organization":
+            case "google-hybrid:apigee/v1:Organization":
                 return new Organization(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:OrganizationEnvironmentIamPolicy":
+            case "google-hybrid:apigee/v1:OrganizationEnvironmentIamPolicy":
                 return new OrganizationEnvironmentIamPolicy(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Override":
+            case "google-hybrid:apigee/v1:Override":
                 return new Override(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Query":
+            case "google-hybrid:apigee/v1:Query":
                 return new Query(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:RatePlan":
+            case "google-hybrid:apigee/v1:RatePlan":
                 return new RatePlan(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Reference":
+            case "google-hybrid:apigee/v1:Reference":
                 return new Reference(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Report":
+            case "google-hybrid:apigee/v1:Report":
                 return new Report(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Resourcefile":
+            case "google-hybrid:apigee/v1:Resourcefile":
                 return new Resourcefile(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Sharedflow":
+            case "google-hybrid:apigee/v1:Sharedflow":
                 return new Sharedflow(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:Subscription":
+            case "google-hybrid:apigee/v1:Subscription":
                 return new Subscription(name, <any>undefined, { urn })
-            case "google-native:apigee/v1:TargetServer":
+            case "google-hybrid:apigee/v1:TargetServer":
                 return new TargetServer(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("google-native", "apigee/v1", _module)
+pulumi.runtime.registerResourceModule("google-hybrid", "apigee/v1", _module)

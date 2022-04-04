@@ -14,7 +14,7 @@ export function getRegistrationIamPolicy(args: GetRegistrationIamPolicyArgs, opt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:domains/v1alpha2:getRegistrationIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:domains/v1alpha2:getRegistrationIamPolicy", {
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,
         "project": args.project,

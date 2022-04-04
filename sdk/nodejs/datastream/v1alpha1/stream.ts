@@ -23,7 +23,7 @@ export class Stream extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:datastream/v1alpha1:Stream';
+    public static readonly __pulumiType = 'google-hybrid:datastream/v1alpha1:Stream';
 
     /**
      * Returns true if the given object is an instance of Stream.  This is designed to work even

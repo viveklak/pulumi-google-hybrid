@@ -14,7 +14,7 @@ export function getCaPoolIamPolicy(args: GetCaPoolIamPolicyArgs, opts?: pulumi.I
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:privateca/v1:getCaPoolIamPolicy", {
+    return pulumi.runtime.invoke("google-hybrid:privateca/v1:getCaPoolIamPolicy", {
         "caPoolId": args.caPoolId,
         "location": args.location,
         "optionsRequestedPolicyVersion": args.optionsRequestedPolicyVersion,

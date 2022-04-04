@@ -22,7 +22,7 @@ export class Group extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:monitoring/v3:Group';
+    public static readonly __pulumiType = 'google-hybrid:monitoring/v3:Group';
 
     /**
      * Returns true if the given object is an instance of Group.  This is designed to work even

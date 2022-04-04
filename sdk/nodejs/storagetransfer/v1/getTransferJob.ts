@@ -14,7 +14,7 @@ export function getTransferJob(args: GetTransferJobArgs, opts?: pulumi.InvokeOpt
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:storagetransfer/v1:getTransferJob", {
+    return pulumi.runtime.invoke("google-hybrid:storagetransfer/v1:getTransferJob", {
         "projectId": args.projectId,
         "transferJobId": args.transferJobId,
     }, opts);

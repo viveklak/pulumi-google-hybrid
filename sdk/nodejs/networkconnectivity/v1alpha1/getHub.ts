@@ -13,7 +13,7 @@ export function getHub(args: GetHubArgs, opts?: pulumi.InvokeOptions): Promise<G
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:networkconnectivity/v1alpha1:getHub", {
+    return pulumi.runtime.invoke("google-hybrid:networkconnectivity/v1alpha1:getHub", {
         "hubId": args.hubId,
         "project": args.project,
     }, opts);

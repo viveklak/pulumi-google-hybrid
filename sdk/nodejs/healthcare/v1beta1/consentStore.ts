@@ -21,7 +21,7 @@ export class ConsentStore extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'google-native:healthcare/v1beta1:ConsentStore';
+    public static readonly __pulumiType = 'google-hybrid:healthcare/v1beta1:ConsentStore';
 
     /**
      * Returns true if the given object is an instance of ConsentStore.  This is designed to work even

@@ -14,7 +14,7 @@ export function getScanConfig(args: GetScanConfigArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:websecurityscanner/v1beta:getScanConfig", {
+    return pulumi.runtime.invoke("google-hybrid:websecurityscanner/v1beta:getScanConfig", {
         "project": args.project,
         "scanConfigId": args.scanConfigId,
     }, opts);

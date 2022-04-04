@@ -14,7 +14,7 @@ export function getEvaluation(args: GetEvaluationArgs, opts?: pulumi.InvokeOptio
     }
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-    return pulumi.runtime.invoke("google-native:dialogflow/v2:getEvaluation", {
+    return pulumi.runtime.invoke("google-hybrid:dialogflow/v2:getEvaluation", {
         "conversationModelId": args.conversationModelId,
         "evaluationId": args.evaluationId,
         "location": args.location,
